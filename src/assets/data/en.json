@@ -1,0 +1,85 @@
+{
+    "hero": {
+        "title": "<web-developer>",
+        "text": "I am a front-end developer, with a passion for web development.",
+        "svg": "profile.svg"
+    },
+    "skills": {
+        "title": "<brain-skills>",
+        "left": [
+            {
+                "name": "HTML",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "name": "CSS",
+                "icon": "css3-alt",
+                "color": ""
+            },
+            {
+                "name": "SASS",
+                "icon": "sass",
+                "color": ""
+            },
+            {
+                "name": "JavaScript",
+                "icon": "square-js",
+                "color": ""
+            },
+            {
+                "name": "Vue.js",
+                "icon": "vuejs",
+                "color": ""
+            },
+            {
+                "name": "Nuxt.js",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "name": "Figma",
+                "icon": "figma",
+                "color": ""
+            }
+
+        ],
+        "right": [
+            {
+                "name": "Firebase",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "name": "SQL",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "name": "Mongoose",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "name": "Node.js",
+                "icon": "node-js",
+                "color": ""
+            },
+            {
+                "name": "MongoDB",
+                "icon": "",
+                "color": ""
+            },
+            {
+                "name": "EJS",
+                "text": "<%",
+                "color": ""
+            },
+            {
+                "name": "GIT",
+                "icon": "git-alt",
+                "color": ""
+            }
+        ]
+    }
+}
