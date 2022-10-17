@@ -13,8 +13,7 @@ export default {
     name: "BaseContainer",
     props: {
         marginY: { type: Number, default: 0},
-        minHeight: { type: Number, default: 80 },
-        
+        minHeight: { type: Number, default: 90 },
         horizontal: { type: Boolean, default: false },
         alignCenter: {type: Boolean, default: false },
         justifyCenter: {type: Boolean, default: false },

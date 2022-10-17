@@ -81,5 +81,21 @@
                 "color": ""
             }
         ]
+    },
+    "projects": {
+        "title": "<projects>",
+        "list": [
+            {
+                "title": "Greek Geek",
+                "img": "greek-geek.png",
+                "text": "An app to inspire users to do pushup anywhere.",
+                "tech": ["Vue", "Firebase", "SASS"],
+                "github": "https://github.com/galeb9/GreekGeek",
+                "liveAt": "https://pushups-150a1.web.app",
+                "video": "test-video.mp4",
+                "description": "An app to inspire users to do pushup anywhere. \n\nYou can use it to set you daily goal and track how much you do in a single day. \n\nIt is possible to add friends and make arenas (groups), where you can see who is winning for most pushups today. You can also check your pushup history and status for each day by months."
+            }
+      
+        ]
     }
 }

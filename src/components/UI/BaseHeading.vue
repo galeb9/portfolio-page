@@ -1,6 +1,9 @@
 <template>
-    <div :class="['base-heading', animation]">
-        <component :is="element">{{ text }}</component>
+    <div :class="['base-heading', animation, {'base-heading--center': center}]" :style="{ margin: margin }">
+        <component :is="element">
+            <font-awesome-icon v-if="icon" class="base-heading__icon" :icon="['fa', icon]" />
+            {{ text }}
+        </component>
     </div>
 </template>
 
@@ -10,9 +13,11 @@ export default {
     props: {
         element: { type: String, default: "h2"},
         text: { type: String, default: "Some text"},
-        animation: { type: String, default: ""}
+        animation: { type: String, default: ""},
+        margin: { type: String, default: "0"},
+        center: { type: Boolean, default: false},
+        icon: { type: String, default: ""},
     }
-
 }
 </script>
 
@@ -23,12 +28,18 @@ export default {
             letter-spacing: 0.15em;
             white-space: nowrap; /* Keeps the content on a single line */
         }
+
         h1 { font-size: 50px }
         h2 { font-size: 40px }
-        //mobile
+        h3 { 
+            font-size: 24px;
+            letter-spacing: 0.08em;
+        }
 
     }
-   
+    .base-heading--center {
+        text-align: center;
+    }
     .typewriter h1,
     .typewriter h2,
     .typewriter h3,
@@ -49,12 +60,9 @@ export default {
 
     @media only screen and (max-width: 768px) {
         .base-heading {
-            h1 {
-                font-size: 30px;
-            }
-            h2 {
-                font-size: 24px;
-            }
+            h1 { font-size: 30px }
+            h2 { font-size: 24px }
+            h3 { font-size: 18px }
         }
         .typewriter h1,
         .typewriter h2,

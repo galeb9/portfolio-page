@@ -3,7 +3,12 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { 
     faBars,
     faXmark,
-    faCircleHalfStroke
+    faCircleHalfStroke,
+    faEye,
+    faImage,
+    faVideo,
+    faArrowRightLong
+
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -14,7 +19,8 @@ import {
     faSquareJs,
     faGitAlt,
     faVuejs,
-    faNodeJs
+    faNodeJs,
+    faGithub
 
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -22,6 +28,12 @@ const icons = [
     faBars,
     faXmark,
     faCircleHalfStroke,
+    faEye,
+    faImage,
+    faVideo,
+    faArrowRightLong,
+    
+    faGithub,
     faFigma,
     faCss3Alt,
     faHtml5,

@@ -30,9 +30,7 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 60px;
-    // border: 3px solid $lightText;
     .brain {
-      // border: 3px solid coral;
       width: 100%;
       padding: 0 80px;
       .brain-skills {
@@ -42,12 +40,12 @@ export default {
         display: flex;
         justify-content: center;
         gap: 30px;
-        // border: 3px solid $lightText;
       }
     }
     @media only screen and (max-width: 800px) {
       gap: 30px;
       justify-content: flex-start;
+      padding-bottom: 80px;
       .brain {
         justify-content: center;
         align-items: flex-start;

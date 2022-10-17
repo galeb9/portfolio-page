@@ -11,6 +11,10 @@ import BaseButton from "@/components/UI/BaseButton"
 import BaseContainer from "@/components/UI/BaseContainer"
 import BaseText from "@/components/UI/BaseText"
 import BaseHeading from "@/components/UI/BaseHeading"
+import BasePopup from "@/components/UI/BasePopup"
+import BaseOverlay from "@/components/UI/BaseOverlay"
+import BaseHTMLtext from "@/components/UI/BaseHTMLtext" 
+import BaseVideoDisplay from "@/components/UI/BaseVideoDisplay" 
 
 
 const app = createApp(App)
@@ -19,7 +23,11 @@ app.component("BaseButton", BaseButton)
     .component("BaseContainer", BaseContainer)
     .component("BaseText", BaseText)
     .component("BaseHeading", BaseHeading)
+    .component("BasePopup", BasePopup)
+    .component("BaseOverlay", BaseOverlay)
+    .component("BaseHTMLtext", BaseHTMLtext)
+    .component("BaseVideoDisplay", BaseVideoDisplay)
     .component("font-awesome-icon", FontAwesomeIcon)
-
+    
 app.use(router)
 app.mount('#app')

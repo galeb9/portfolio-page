@@ -6,6 +6,7 @@
 					<component class="active-component" :is="Component" />
 			</transition>
 		</RouterView>
+
 		<div class="light-mode__container non-select" @click="toggleLightMode">
 			<font-awesome-icon class="light-mode__icon" :icon="['fa', 'circle-half-stroke']"/>
 		</div>
@@ -51,6 +52,32 @@ export default {
 	margin: 0;
 	box-sizing: border-box;
 }
+// scrollbar 
+::-webkit-scrollbar {
+	width: 10px;
+	height: 8px;
+	background: $bgDark;
+	border-radius: 10px ;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(59, 206, 172, 0.678); 
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(59, 206, 172, 0.808); ; 
+}
+
+.non-select {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+}
 #app.light-mode {
 	transition: all .2s ease-in;
 	background: $bgLight ;
@@ -65,8 +92,10 @@ export default {
 		}
 		.skill-item__pointer-line {
 			background: rgba(5, 5, 5, 0.521);
-
 		}
+	}
+	::-webkit-scrollbar {
+		background: $bgLight;
 	}
 }
 #app {
@@ -85,15 +114,8 @@ export default {
 		border-bottom: none;
 		color: inherit;
 	}
-	.non-select {
-		-webkit-user-select: none; /* Safari */        
-		-moz-user-select: none; /* Firefox */
-		-ms-user-select: none; /* IE10+/Edge */
-		user-select: none; /* Standard */ 
-	}
-
 	.main {
-		max-width: 1200px;
+		max-width: 1280px;
 		min-height: 100vh;
 		padding: 0 40px;
 		margin: 0 auto;
@@ -108,6 +130,7 @@ export default {
 			position: fixed;
 			bottom: 20px;
 			right: 20px;
+			z-index: 11 ;
 			cursor: pointer;
 			.light-mode__icon {
 				font-size: 36px;
