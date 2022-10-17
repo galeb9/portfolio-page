@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # my portfolio page
+=======
+# my-portfolio-page
+>>>>>>> 4ec4df6c0889332adbc78ead33eb508bc6962afe
 
 ## Project setup
 ```
