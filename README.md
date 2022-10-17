@@ -1,4 +1,4 @@
-# tvoja-lepotilnica
+# my-portfolio-page
 
 ## Project setup
 ```
