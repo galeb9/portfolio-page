@@ -10,7 +10,7 @@
 		<div class="light-mode__container non-select" @click="toggleLightMode">
 			<font-awesome-icon class="light-mode__icon" :icon="['fa', 'circle-half-stroke']"/>
 		</div>
-		<TheFooter />
+		<TheFooter v-if="false" />
 	</div>
 
 
