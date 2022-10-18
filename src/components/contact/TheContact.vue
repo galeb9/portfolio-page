@@ -56,7 +56,7 @@ export default {
                 background: $secondary;
                 width: max-content;
                 transform: translateY(30px);
-                border: 2px solid $secondary;
+                border: 2px solid $blue;
                 border-radius: 50%;
                 background: radial-gradient( $primary ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg) !important;
                 filter: contrast(100%) brightness(100%);
