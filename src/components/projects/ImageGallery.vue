@@ -1,6 +1,6 @@
 <template>
   <div class="image-gallery">
-        <BaseImageGallery 
+        <ImageGalleryRow 
             v-for="(images, index) in galleryImages" 
             :key="index"
             :images="images"
@@ -11,8 +11,12 @@
 </template>
 
 <script>
+import ImageGalleryRow from "./ImageGalleryRow.vue"
 export default {
     name: "ImageGallery",
+    components: {
+        ImageGalleryRow
+    },
     props: {
         images: { type: Array, default: () => [] },
         rowSizeLimit: { type: Number, default: 5},

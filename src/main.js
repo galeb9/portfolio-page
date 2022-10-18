@@ -15,7 +15,6 @@ import BasePopup from "@/components/UI/BasePopup"
 import BaseOverlay from "@/components/UI/BaseOverlay"
 import BaseHTMLtext from "@/components/UI/BaseHTMLtext" 
 import BaseVideoDisplay from "@/components/UI/BaseVideoDisplay" 
-import BaseImageGallery from "@/components/UI/BaseImageGallery" 
 
 
 
@@ -30,7 +29,6 @@ app.component("BaseButton", BaseButton)
     .component("BaseOverlay", BaseOverlay)
     .component("BaseHTMLtext", BaseHTMLtext)
     .component("BaseVideoDisplay", BaseVideoDisplay)
-    .component("BaseImageGallery", BaseImageGallery)
     .component("font-awesome-icon", FontAwesomeIcon)
 
     

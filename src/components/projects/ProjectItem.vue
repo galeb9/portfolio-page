@@ -62,15 +62,17 @@ export default {
             margin-bottom: 8px;
             .project-item__img {
                 width: 100%;
-                border-radius: $radius $radius 0 0;
+                border-radius: $radius ;
             }
             .project-item__main-info {
+                border-radius: 0 0 $radius $radius ;
+                width: 100%;
                 position: absolute;
                 min-height: 140px;
-                bottom: -6px;
+                bottom: -10px;
                 left: 0;
                 right: 0;
-                padding: 10px 16px 30px;
+                padding: 10px 20px 30px;
                 color: white;
                 transition: $transition;
             }

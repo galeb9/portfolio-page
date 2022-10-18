@@ -7,7 +7,8 @@ import {
     faEye,
     faImage,
     faVideo,
-    faArrowRightLong
+    faArrowRightLong,
+    faArrowDownLong
 
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,6 +33,7 @@ const icons = [
     faImage,
     faVideo,
     faArrowRightLong,
+    faArrowDownLong,
     
     faGithub,
     faFigma,

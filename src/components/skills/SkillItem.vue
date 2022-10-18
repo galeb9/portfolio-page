@@ -75,6 +75,10 @@ export default {
         @media only screen and (min-width: 801px) {
             &:hover {
                 background: radial-gradient( $secondary ,  transparent 120% );
+                .skill-item__icon,
+                .skill-item__text-icon {
+                    color: white;
+                }
                 .skill-item__pointer {
                     .skill-item__pointer-text {
                         color: $secondary !important;
@@ -111,9 +115,7 @@ export default {
      
     }
     .noise {
-        // box-shadow: inset  $secondary;
         background: radial-gradient( $primary ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg);
-        // background: transparent url(https://grainy-gradients.vercel.app/noise.svg);
         filter: contrast(100%) brightness(100%);
     }
 </style>

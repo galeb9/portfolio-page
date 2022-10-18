@@ -3,8 +3,8 @@
 
 $primary: #dee2e6;
 $secondary: #3bceac;
-
-$bgDark: radial-gradient(ellipse at top right, $secondary -92%, #3d405b 34%);
+$blue: #3d405b;
+$bgDark: radial-gradient(ellipse at top right, $secondary -92%, $blue 34%);
 $bgLight: radial-gradient(ellipse at top right, $secondary -92%, $primary 34%);
 // $bgLight: linear-gradient(30deg, $secondary, $primary);
 

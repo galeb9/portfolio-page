@@ -3,7 +3,7 @@
 		<TheHeader />
 		<RouterView class="router-view" v-slot="{ Component }">
 			<transition name="fade-in" mode="out-in">
-					<component class="active-component" :is="Component" />
+				<component class="active-component" :is="Component" />
 			</transition>
 		</RouterView>
 
@@ -35,6 +35,7 @@ export default {
 	toggleLightMode () {
 		const app = document.querySelector("#app")
 		app.classList.contains("light-mode") ? app.classList.remove("light-mode") : ''
+
 		if(this.isLight) {
 			app.classList.remove("light-mode")
 		} else {
@@ -83,6 +84,7 @@ img {
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none;
 }
+// light-mode
 #app.light-mode {
 	transition: all .2s ease-in;
 	background: $bgLight ;

@@ -61,7 +61,6 @@ export default {
                     width: 100%;
                     height: 100%;
                     opacity: 1;
-                    // transform: scale(0.95);
                 }
                 &:hover .img--single {
                     width: auto;
@@ -73,7 +72,7 @@ export default {
                     height: 100%;
                     object-fit: cover; 
                     transition: all .5s;
-                    opacity: 0.3;
+                    opacity: 0.7;
                 }
                 .img--single {
                     width: auto;

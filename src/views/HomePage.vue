@@ -3,6 +3,7 @@
     <HomeHero :data="$options.hero" />
     <BrainSkills :data="$options.skills" />
     <ProjectsList :data="$options.projects" />
+    <TheContact :data="$options.contact" />
   </div>
 </template>
 
@@ -10,13 +11,14 @@
 import HomeHero from '@/components/hero/HomeHero.vue'
 import BrainSkills from '@/components/skills/BrainSkills.vue'
 import ProjectsList from '@/components/projects/ProjectsList.vue'
+import TheContact from '@/components/contact/TheContact.vue'
 
-import { hero, skills, projects } from '@/assets/data/en.json'
+import { hero, skills, projects, contact } from '@/assets/data/en.json'
 
 export default {
     name: "HomePage",
-    components: { HomeHero, BrainSkills, ProjectsList },
-    hero, skills, projects
+    components: { HomeHero, BrainSkills, ProjectsList, TheContact },
+    hero, skills, projects, contact
 }
 </script>
 
