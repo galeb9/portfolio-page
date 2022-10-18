@@ -43,7 +43,6 @@ export default {
         this.popupVisible = true
         this.viewedItem = item
         this.viewedItemHeading = this.viewedItem.title
-        console.log(this.viewedItem)
       }
     }
 }

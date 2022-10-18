@@ -32,25 +32,28 @@ export default {
         .base-image-gallery {
             height: 50vh;
             display: flex;
+            justify-content: center;
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             .base-image-gallery__item {
                 flex: 1;
                 overflow: hidden;
                 transition: 0.5s;
                 line-height: 0;
-                &:hover { flex: 1 1 50%; }
+                &:hover { flex: 1 1 78%; }
         
                 .base-image-gallery__item-img {
                     border-radius: $radius;
                     width: 100%;
                     height: 100%;
                     object-fit: cover; 
-                    transition: .5s;
+                    transition: all .5s;
+                    opacity: 0.5;
                 }
                 &:hover .base-image-gallery__item-img {
                     width: 100%;
-                    // height: 100%;
+                    opacity: 1;
+                    // transform: scale(0.95);
                 }
             }
 

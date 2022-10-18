@@ -94,7 +94,7 @@
                 "liveAt": "https://pushups-150a1.web.app",
                 "video": "greek-geek.mp4",
                 "description": "An app to inspire users to do pushups anywhere. \n\nYou can use it to set you daily goal and track how much you do in a single day. \n\nIt is possible to add friends and make arenas (groups), where you can see who is winning for most pushups today. You can also check your pushup history and status for each day by months.",
-                "images": ["brain.png", "brain.png", "brain.png", "brain.png", "brain.png"] 
+                "images": ["brain.png", "greek-geek.png", "brain.png", "greek-geek.png","brain.png", "greek-geek.png", "brain.png", "greek-geek.png", "greek-geek.png"] 
             }
       
         ]
