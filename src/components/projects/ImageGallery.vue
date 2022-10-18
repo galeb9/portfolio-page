@@ -4,6 +4,7 @@
             v-for="(images, index) in galleryImages" 
             :key="index"
             :images="images"
+            :imagePath="imagePath"
         />
   </div>
 </template>
@@ -13,7 +14,9 @@ export default {
     name: "ImageGallery",
     props: {
         images: { type: Array, default: () => [] },
-        rowSizeLimit: { type: Number, default: 4}
+        rowSizeLimit: { type: Number, default: 5},
+        imagePath: { type: String, default: "" },
+        
     },
     data () {
         return {
@@ -24,25 +27,19 @@ export default {
     created () {
         this.incomingData = [...this.images]
         this.galleryImages = this.breakIntoRows(this.incomingData, this.rowSizeLimit)
+        console.log(this.imagePath)
     },
     methods: {
         breakIntoRows (items, size) {
-            const chunks = []
+            const rows = []
             items = [].concat(...items)
             while (items.length) {
-                chunks.push(
+                rows.push(
                 items.splice(0, size)
                 )
             }
-            return chunks
+            return rows
         }
     }
-    
 }
 </script>
-
-<style lang="scss">
-    .image-gallery {
-
-    }
-</style>

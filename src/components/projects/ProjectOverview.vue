@@ -4,20 +4,17 @@
 
     <div class="project-overview__video-container">
         <BaseHeading icon="video" element="h4" margin="10px 0 15px" text="Video of the app" :center="true" />
-        <BaseVideoDisplay :file="item.video" maxWidth="50" />
+        <BaseVideoDisplay :file="item.video" maxWidth="0" />
     </div>
 
     <div class="project-overview__images-gallery">
         <BaseHeading icon="image" element="h4" margin="10px 0 15px" text="Images of the app" :center="true" />
-
-        <ImageGallery :images="item.images" />
-
-        <!-- <BaseImageGallery :images="item.images" />
-        <BaseImageGallery :images="item.images" />  -->
-
+        <ImageGallery 
+            :imagePath="item.imagePath" 
+            :images="item.images" 
+            :rowSizeLimit="item.imagesPerRow" 
+        />
     </div>
-
-    <!-- <p>{{ item }} </p> -->
   </div>
 </template>
 
@@ -32,8 +29,6 @@ export default {
     props: {
         item :{ type: Object, default: () => {} }
     }
-    
-
 }
 </script>
 

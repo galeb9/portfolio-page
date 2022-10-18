@@ -17,7 +17,7 @@ export default {
         isVisible: { type: Boolean, default: false},
         align: { type: String, default: ""},
         type: { type: String, default: ""},
-    }
+    },
 }
 </script>
 

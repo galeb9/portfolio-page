@@ -1,6 +1,6 @@
 <template>
   <div v-if="file" class="base-video-display">
-    <video class="base-video-display__video" :style="{'max-width': maxWidth + '%'}" controls>
+    <video class="base-video-display__video" :style="{'max-height': bodyHeight + 'px'}" controls>
         <source ref="baseVideo" :src="require('@/assets/video/' + file)" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
         Your browser does not support the video tag.
@@ -14,7 +14,14 @@ export default {
     props: {
         file: { type: String, default: ""},
         maxWidth: { type: String, default: ""}
-
+    },
+    data () {
+        return {
+            bodyHeight: null
+        }
+    },
+    mounted () {
+        this.bodyHeight= document.querySelector(".base-popup__body").offsetHeight - 50
     }
 }
 </script>
@@ -25,6 +32,7 @@ export default {
         display: flex;
         justify-content: center;
         .base-video-display__video {
+            width: auto;
             border-radius: $radius;
         }
         @media only screen and (max-width: 768px) {
