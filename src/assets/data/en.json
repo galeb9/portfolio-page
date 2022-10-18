@@ -89,7 +89,7 @@
                 "title": "Greek Geek",
                 "img": "greek-geek.png",
                 "text": "An app to inspire users to do pushups anywhere.",
-                "tech": ["Vue", "Firebase", "SASS"],
+                "tech": ["Vue", "Firebase", "Sass"],
                 "github": "https://github.com/galeb9/GreekGeek",
                 "liveAt": "https://pushups-150a1.web.app",
                 "video": "greek-geek.mp4",

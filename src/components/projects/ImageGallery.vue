@@ -5,6 +5,7 @@
             :key="index"
             :images="images"
             :imagePath="imagePath"
+            :isSingle="singleInRow(images)"
         />
   </div>
 </template>
@@ -21,13 +22,17 @@ export default {
     data () {
         return {
             incomingData: null,
-            galleryImages: null
+            galleryImages: null,
+            isSingle: null
         }
     },
     created () {
         this.incomingData = [...this.images]
         this.galleryImages = this.breakIntoRows(this.incomingData, this.rowSizeLimit)
         console.log(this.imagePath)
+    },
+    computed: {
+  
     },
     methods: {
         breakIntoRows (items, size) {
@@ -39,6 +44,9 @@ export default {
                 )
             }
             return rows
+        },
+        singleInRow (images) {
+            return images.length === 1 ? true : false 
         }
     }
 }

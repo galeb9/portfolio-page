@@ -7,7 +7,7 @@
                 :key="index"
             >
                 <img 
-                    :class="['base-image-gallery__item-img', { 'img--single': singleInRow }]"
+                    :class="['base-image-gallery__item-img', { 'img--single': isSingle }]"
                     :src="require('@/assets/images/' + imagePath + img)" 
                     alt="Gallery image"
                 >
@@ -22,23 +22,16 @@ export default {
     name: "BaseImageGallery",
     props: {
         images: { type: Array, default: () => {} },
-        imagePath: { type: String, default: "" }
+        imagePath: { type: String, default: "" },
+        isSingle: { type: Boolean, default: false }
     },
     data() {
         return {
             bodyHeight: null,
-            isSingle: false,
         }
     },
     mounted () {
         this.bodyHeight= document.querySelector(".base-popup__body").offsetHeight - 50
-        this.singleInRow()
-    },
-    methods: {
-        singleInRow () {
-            this.isSingle = this.images.length === 1 ? true : false 
-            console.log(this.isSingle)
-        }
     }
 }
 </script>
@@ -80,11 +73,12 @@ export default {
                     height: 100%;
                     object-fit: cover; 
                     transition: all .5s;
-                    opacity: 0.9;
+                    opacity: 0.3;
                 }
                 .img--single {
                     width: auto;
                     height: 100%;
+                    opacity: 1;
                 }
             }
         }
