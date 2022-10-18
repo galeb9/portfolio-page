@@ -41,7 +41,7 @@ export default {
         .base-popup__body {
             height: 100%;
             overflow-y: auto;
-            margin: 0 10px 30px;
+            margin: 0 15px 30px 0px;
             padding: 30px 50px;
         }
   
@@ -50,8 +50,10 @@ export default {
             max-height: 85vh;
             margin: 15vh auto 0;
             border-radius: 18px 18px 0 0;
+            bottom: -10px;
             .base-popup__body {
                 padding: 12px 30px 30px;
+                margin: 0 0 30px 0;
             }
         }
 

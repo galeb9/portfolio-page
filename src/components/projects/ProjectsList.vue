@@ -53,6 +53,8 @@ export default {
   .projects-list__container {
 
     .projects-list {
+      display: flex;
+      justify-content: center;
     }
   }
 </style>

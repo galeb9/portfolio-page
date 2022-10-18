@@ -16,7 +16,7 @@ export default {
 	.base-html-text {
         white-space: pre-line;
 		@media only screen and (max-width: 768px) { 
-			font-size: 14px;
+			font-size: 15px;
 		}
 
 	}

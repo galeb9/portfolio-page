@@ -1,7 +1,7 @@
 <template>
   <div v-if="file" class="base-video-display">
-    <video :width="width" :height="height" controls>
-        <source :src="require('@/assets/video/' + file)" type="video/mp4">
+    <video class="base-video-display__video" :style="{'max-width': maxWidth + '%'}" controls>
+        <source ref="baseVideo" :src="require('@/assets/video/' + file)" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
         Your browser does not support the video tag.
     </video>
@@ -13,13 +13,24 @@ export default {
     name: "BaseVideoDisplay",
     props: {
         file: { type: String, default: ""},
-        width: { type: Number, default: 320 },
-        height: { type: Number, default: 240 },
-    }
+        maxWidth: { type: String, default: ""}
 
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+    .base-video-display {
+        min-height: 200px;
+        display: flex;
+        justify-content: center;
+        .base-video-display__video {
+            border-radius: $radius;
+        }
+        @media only screen and (max-width: 768px) {
+            .base-video-display__video {
+                max-width: 100% !important;
+            }
+        }
+    }
 </style>

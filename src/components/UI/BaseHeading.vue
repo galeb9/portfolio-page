@@ -1,8 +1,9 @@
 <template>
     <div :class="['base-heading', animation, {'base-heading--center': center}]" :style="{ margin: margin }">
         <component :is="element">
-            <font-awesome-icon v-if="icon" class="base-heading__icon" :icon="['fa', icon]" />
+            <font-awesome-icon v-if="icon && iconPlacement === 'before'" class="base-heading__icon" :icon="['fa', icon]" />
             {{ text }}
+            <font-awesome-icon v-if="icon && iconPlacement === 'after'" class="base-heading__icon" :icon="['fa', icon]" />
         </component>
     </div>
 </template>
@@ -17,6 +18,7 @@ export default {
         margin: { type: String, default: "0"},
         center: { type: Boolean, default: false},
         icon: { type: String, default: ""},
+        iconPlacement: { type: String, default: "after" } // before, after
     }
 }
 </script>
@@ -24,6 +26,10 @@ export default {
 <style lang="scss">
     .base-heading {
         margin-bottom: 14px;
+        .base-heading__icon {
+            padding: 0 6px ;
+            font-size: 14px;
+        }
         h1,h2 { 
             letter-spacing: 0.15em;
             white-space: nowrap; /* Keeps the content on a single line */

@@ -52,23 +52,28 @@ export default {
 	margin: 0;
 	box-sizing: border-box;
 }
-// scrollbar 
-::-webkit-scrollbar {
-	width: 10px;
-	height: 8px;
-	background: $bgDark;
-	border-radius: 10px ;
+img {
+	max-width: 100%;
+	height: auto;
 }
-::-webkit-scrollbar-track {
-	border-radius: 10px;
+
+@media only screen and (min-width: 768px) {
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 8px;
+		background: $bgDark;
+		border-radius: 10px ;
+	}
+	::-webkit-scrollbar-thumb {
+		background: rgba(59, 206, 172, 0.678); 
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: rgba(59, 206, 172, 0.808); ; 
+	}
 }
-::-webkit-scrollbar-thumb {
-	background: rgba(59, 206, 172, 0.678); 
-	border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-	background: rgba(59, 206, 172, 0.808); ; 
-}
+
+
 
 .non-select {
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -83,8 +88,8 @@ export default {
 	background: $bgLight ;
 	color: black ;
 	.light-mode__icon {
-		color: black ; 
 		transition: $transition;
+		color: rgba(0, 0, 0, 0.767) !important ; 
 	}
 	.skill-item__pointer {
 		.skill-item__pointer-text {
@@ -150,8 +155,6 @@ export default {
 			.display-on-desktop { display: none }
 			.display-on-mobile { display: block }
 		}
-
-
 	}
 
 	// device sizes -> text, side padding
