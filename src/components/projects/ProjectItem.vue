@@ -66,6 +66,7 @@ export default {
             }
             .project-item__main-info {
                 position: absolute;
+                min-height: 140px;
                 bottom: -6px;
                 left: 0;
                 right: 0;

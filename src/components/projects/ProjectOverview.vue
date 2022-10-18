@@ -2,12 +2,12 @@
   <div class="project-overview">
     <BaseHTMLtext :text="item.description" />
 
-    <div class="project-overview__video-container">
+    <div v-if="item.video" class="project-overview__video-container">
         <BaseHeading icon="video" element="h4" margin="10px 0 15px" text="Video of the app" :center="true" />
         <BaseVideoDisplay :file="item.video" maxWidth="0" />
     </div>
 
-    <div class="project-overview__images-gallery">
+    <div v-if="item.images.length" class="project-overview__images-gallery">
         <BaseHeading icon="image" element="h4" margin="10px 0 15px" text="Images of the app" :center="true" />
         <ImageGallery 
             :imagePath="item.imagePath" 

@@ -54,6 +54,11 @@ export default {
     .projects-list {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 80px;
+      @media only screen and (max-width: 768px) {
+        // gap: 30px;
+      }
     }
   }
 </style>

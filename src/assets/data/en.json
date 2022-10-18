@@ -87,8 +87,8 @@
         "list": [
             {
                 "title": "Greek Geek",
-                "img": "greek-geek.png",
-                "text": "An app to inspire users to do pushups anywhere.",
+                "img": "greek-geek/greek-geek.png",
+                "text": "An app to inspire users to do pushups anywhere and track their progress from their phone.",
                 "tech": ["Vue", "Firebase", "Sass"],
                 "github": "https://github.com/galeb9/GreekGeek",
                 "liveAt": "https://pushups-150a1.web.app",
@@ -110,6 +110,21 @@
                     "arena-groups.jpg",
                     "arena-single.jpg",
                     "add-arena.jpg"
+                ] 
+            },
+            {
+                "title": "Order food app",
+                "img": "order-food-app/order-food.jpg",
+                "text": "A front-end app where you can order food online.",
+                "tech": ["Vue", "Firebase", "Sass"],
+                "github": "https://github.com/galeb9/web-food-app",
+                "liveAt": "https://order-food-app-f84eb.web.app",
+                "video": "",
+                "description": "A front-end app where you can order food online. \n\nThe idea is for user to order food from a nice looking app. \n\n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n\n Order can be placed after you have added some of the  items to the order list, add a credit card and your location.",
+                "imagePath": "greek-geek/",
+                "imagesPerRow": 4,
+                "images": [
+
                 ] 
             }
         ]
