@@ -13,7 +13,7 @@
 
     </div>
     <a href="mailto:matej.grimsic@gmail.com">
-        <BaseButton :text="data.btn" type="dark" aligment="center" />
+        <BaseButton :text="data.btn" type="dark" aligment="center"  />
     </a>
     <div class="contact__or-message">
         <BaseText :text="data.or" />
@@ -41,6 +41,7 @@ export default {
     .contact__container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 30px;
         .contact__icon {
@@ -51,6 +52,7 @@ export default {
             align-items: center;
             justify-content: center;
             margin-bottom: 30px;
+
             .contact__icon-plane {
                 padding: 20px;
                 background: $secondary;
@@ -60,12 +62,15 @@ export default {
                 border-radius: 50%;
                 background: radial-gradient( $primary ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg) !important;
                 filter: contrast(100%) brightness(100%);
+
                 .contact__icon-plane-img {
                     max-width: 50px
                 }   
+                @media only screen and (max-width: 768px) {
+                transform: translateY(0px);
+                    
+                }
             }
-            .contact__icon-hands {}
-            
         }
         .contact__or-message {
             display: flex;
