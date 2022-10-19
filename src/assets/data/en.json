@@ -114,17 +114,23 @@
             },
             {
                 "title": "Order food app",
-                "img": "order-food-app/order-food.jpg",
+                "img": "order-food/order-food.jpg",
                 "text": "A front-end app where you can order food online.",
                 "tech": ["Vue", "Firebase", "Sass"],
                 "github": "https://github.com/galeb9/web-food-app",
                 "liveAt": "https://order-food-app-f84eb.web.app",
-                "video": "",
-                "description": "A front-end app where you can order food online. \nThe idea is for user to order food from a nice looking app. \n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n Users Order can be placed after you have added some of the  items to the order list, add a credit card and your location.",
-                "imagePath": "greek-geek/",
+                "video": "order-food.mp4",
+                "description": "A front-end app where you can order food online. \nThe idea is for user to order food from a nice looking app. \n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n Users order can be placed after you have added some of the items to the order list, add a credit card and your location.",
+                "imagePath": "order-food/",
                 "imagesPerRow": 4,
                 "images": [
-
+                    "welcome.jpg",
+                    "choice.jpg",
+                    "item1.jpg",
+                    "item2.jpg",
+                    "order.jpg",
+                    "order-error.jpg",
+                    "order-success.jpg"
                 ] 
             }
         ]
@@ -132,7 +138,7 @@
     "contact": {
         "title": "<get in touch>",
         "btn": "Open mail client",
-        "or": "Or copy email bellow"
-
+        "or": "Or copy email bellow",
+        "email": "matej.grimsic@gmail.com"
     }
 }

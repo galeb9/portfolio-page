@@ -33,7 +33,7 @@ export default {
         justify-content: center;
         .base-video-display__video {
             width: auto;
-            border-radius: $radius;
+            // border-radius: $radius;
         }
         @media only screen and (max-width: 768px) {
             .base-video-display__video {

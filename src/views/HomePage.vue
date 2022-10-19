@@ -18,7 +18,18 @@ import { hero, skills, projects, contact } from '@/assets/data/en.json'
 export default {
     name: "HomePage",
     components: { HomeHero, BrainSkills, ProjectsList, TheContact },
-    hero, skills, projects, contact
+    hero, skills, projects, contact,
+    created() {
+      // this.scrollTop()
+    },
+    methods: {
+      scrollTop () {
+        document.querySelector(".home-page").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        })
+      }
+    }
 }
 </script>
 

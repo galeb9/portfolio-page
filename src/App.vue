@@ -31,6 +31,7 @@ export default {
 		isLight: false
 	}
   },
+
   methods: {
 	toggleLightMode () {
 		const app = document.querySelector("#app")
@@ -42,7 +43,7 @@ export default {
 			app.classList.add("light-mode")
 		}
 		this.isLight = !this.isLight
-	}
+	},
   }
 }
 </script>

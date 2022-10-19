@@ -1,6 +1,6 @@
 <template>
   <BaseContainer class="projects-list__container">
-    <BaseHeading element="h2" :text="data.title" margin="0 0 80px" :center="true" />
+    <BaseHeading element="h2" :text="data.title" margin="0" :center="true" />
 
     <div class="projects-list">
       <ProjectItem 
@@ -50,14 +50,20 @@ export default {
 
 <style lang="scss">
   .projects-list__container {
-
     .projects-list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 80px;
-      @media only screen and (max-width: 768px) {
-        // gap: 30px;
+      margin-top: 100px;
+
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 80px 0;
+    padding-bottom: 50px;
+
+      .projects-list {
+        margin-top: 50px;
       }
     }
   }

@@ -1,5 +1,5 @@
 <template>
-    <BaseContainer class="home-hero">
+    <BaseContainer class="home-hero" :minHeight="100">
         <div class="home-hero__column">
             <BaseHeading animation="typewriter" :text="data.title" element="h1" />
             <BaseText class="home-hero__text" :text="data.text" />

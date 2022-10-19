@@ -3,7 +3,7 @@
     <BaseHeading :text="data.title" :center="true" margin="0 0 20px 0"/>
     <div class="contact__icon">
 
-        <div class="contact__icon-plane">
+        <div :class="['contact__icon-plane', {'move__plane-icon' : movePlane}]">
             <img class="contact__icon-plane-img plane--dark" :src="require('@/assets/images/plane.png')" alt="Plane image">
         </div>
 
@@ -17,14 +17,19 @@
     </a>
     <div class="contact__or-message">
         <BaseText :text="data.or" />
-        <font-awesome-icon class="hamburger__icon" :icon="['fa', 'arrow-down-long']"/>
+        <font-awesome-icon :icon="['fa', 'arrow-down-long']"/>
 
     </div>
-    <a class="contact__copy-email" href="mailto:matej.grimsic@gmail.com">
-        matej.grimsic@gmail.com
-    </a>
+    <div class="contact__copy-email" @click="copyText(data.email)">
+        <p>{{ data.email }}</p>
+        <font-awesome-icon class="copy-icon" :icon="['far', 'clone']"/>
 
-
+    </div>
+    <div class="copied-notification__container">
+        <transition name="fade-in-from-bottom">
+            <p v-show="isCopied" class="notification--copied">Email copied to clipboard</p>
+        </transition>
+    </div>
   </BaseContainer>
 </template>
 
@@ -33,6 +38,23 @@ export default {
     name: "TheContact",
     props: {
         data: { type: Object, default: () => {} }
+    },
+    data () {
+        return {
+            isCopied: false,
+            movePlane: false,
+        }
+    },
+    methods: {
+        openMailClient() {
+            this.movePlane = true;
+        },
+        async copyText (text) {
+            this.isCopied = true
+            this.movePlane = true
+            setTimeout(() => this.isCopied = false, 4000)
+            return await navigator.clipboard.writeText(text)
+        }
     }
 }
 </script>
@@ -52,7 +74,6 @@ export default {
             align-items: center;
             justify-content: center;
             margin-bottom: 30px;
-
             .contact__icon-plane {
                 padding: 20px;
                 background: $secondary;
@@ -67,9 +88,12 @@ export default {
                     max-width: 50px
                 }   
                 @media only screen and (max-width: 768px) {
-                transform: translateY(0px);
-                    
+                    transform: translateY(0px);
                 }
+            }
+            .move__plane-icon {
+                transform: translateY(100%);
+                transition: transform 1s ease-in-out;
             }
         }
         .contact__or-message {
@@ -83,6 +107,24 @@ export default {
         .contact__copy-email {
             font-size: 18px;
             font-weight: 700;
+            display: flex;
+            gap: 8px;
+            transition: $transition;
+            cursor: pointer;
+            &:hover {
+                color: $secondary;
+                // text-shadow:
+                //     0 0 7px $secondary,
+                //     0 0 10px $secondary,
+                //     0 0 21px $secondary;
+            }
+        }
+        .copied-notification__container {
+            min-height: 30px;
+            .notification--copied {
+                text-align: center;
+                text-shadow: none;
+            }
         }
     }
 </style>

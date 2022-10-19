@@ -25,6 +25,7 @@ export default {
   .base-button {
     background: $primary;
     color: $lightText;
+    font-weight: 700;
     padding: 0.7em 2.1em;
     border: none;
     border-radius: $radius;
@@ -36,7 +37,7 @@ export default {
   }
   // types
   .base-btn--dark {
-    background: rgba($color: $secondary, $alpha: 0.7)
+    background: rgba($color: $secondary, $alpha: 0.8)
   }
   // aligment 
   .base-btn--center {

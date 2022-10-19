@@ -15,52 +15,46 @@
 
 
                 <!-- nav2 -->
-                <div class="nav2">
+                <!-- <div class="nav2">
                     <div v-for="(link, index) in navLinks2" :key="index" class="navigation__link">
                         <router-link :to="'/' + link.path" >{{ link.text }}</router-link>
                     </div>
-                </div>
+                </div> -->
             </nav>
         </Transition>
     </div>
 
     <div class="navigation--mobile">
-        <!-- mobile top of nav -->
         <div class="display-on-mobile nav-top--mobile">
             <div class="logo" @click="$router.push('/')" >Logo</div>
-            <div class="hamburger__container" @click="toggleMenu">
+            <!-- <div class="hamburger__container" @click="toggleMenu">
                 <font-awesome-icon v-if="!hamburgerActive" class="hamburger__icon" :icon="['fa', 'bars']"/>
                 <font-awesome-icon v-else class="hamburger__icon" :icon="['fa', 'xmark']"/>
-            </div>
+            </div> -->
         </div>
-         <Transition name="move-in-top">
-            <nav class="navigation" v-if="hamburgerActive">
-                <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div>
+            <Transition name="move-in-top">
+                <nav class="navigation" v-if="hamburgerActive">
+                    <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div>
+                    
+                    <!-- <div class="nav1">
+                        <div v-for="(link, index) in navLinks1" :key="index" class="navigation__link">
+                            <router-link :to="link.path" >{{ link.text }}</router-link>
+                        </div>
+                    </div>  -->
 
-                <!-- nav1 -->
-                <!-- <div class="nav1">
-                    <div v-for="(link, index) in navLinks1" :key="index" class="navigation__link">
-                        <router-link :to="link.path" >{{ link.text }}</router-link>
-                    </div>
-                </div> -->
+                    <!-- <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div> -->
 
-                <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div>
+                    <!-- <div class="nav2">
+                        <div v-for="(link, index) in navLinks2" :key="index" class="navigation__link">
+                            <router-link :to="'/' + link.path" >{{ link.text }}</router-link>
+                        </div>
+                        <BaseButton text="Spletno naročanje" />
+                    </div> -->
+                </nav>
+            </Transition>
+        </div>
 
-                <!-- nav2 -->
-                <div class="nav2">
-                    <div v-for="(link, index) in navLinks2" :key="index" class="navigation__link">
-                        <router-link :to="'/' + link.path" >{{ link.text }}</router-link>
-                    </div>
-                    <!-- <BaseButton text="Spletno naročanje" /> -->
-                </div>
-            </nav>
-        </Transition>
-    </div>
-
-
-
-
-  </div>
+     </div>
 </template>
 
 <script>
@@ -93,45 +87,29 @@ export default {
         .navigation--mobile {
             display: none;
         }
-        .navigation--desktop {
-        }
         .navigation {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             .nav1, 
             .nav2 {
                 display: flex;
                 align-items: center;
                 gap: 30px;
                 flex: 1;
-                .navigation__link {
-                    width: max-content;
-                }
+                .navigation__link { width: max-content }
             }
-            .nav2 {
-                justify-content: flex-end;
-            }
+            .nav2 { justify-content: flex-end }
         }
-        .logo {
-            cursor: pointer;
-            // padding: 0 20px;
-        }
+        .logo { cursor: pointer }
         @media only screen and (max-width: 768px) {
             padding: 15px 0;
-
-            .navigation--desktop {
-                display: none;
-            }
-            .navigation--mobile {
-                display: block;
-            }
+            .navigation--desktop { display: none }
+            .navigation--mobile { display: block }
             .nav-top--mobile {
                 display: flex !important;
                 justify-content: space-between;
                 align-items: center;
-                // margin-bottom: 30px;
                 width: 100%;
                 .hamburger__container {
                     padding: 5px 10px;
@@ -154,20 +132,12 @@ export default {
                     align-items: flex-start;
                     gap: 15px;
                     flex: 1;
-                    .navigation__link {
-                        width: 100%;
-                    }
+                    .navigation__link { width: 100% }
                 }
-                .nav1 {
-                    margin-bottom: 15px;
-                }
-                .nav2 {
-                    justify-content: flex-end;
-                }
+                .nav1 { margin-bottom: 15px }
+                .nav2 { justify-content: flex-end }
             }
-            .logo {
-                padding: 0;
-            }
+            .logo { padding: 0 }
         }
     }
 </style>
