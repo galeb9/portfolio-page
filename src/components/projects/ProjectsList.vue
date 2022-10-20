@@ -58,20 +58,18 @@ export default {
       justify-content: center;
       .projects-list {
         display: flex;
-        // justify-content: center;
         flex-wrap: wrap;
         gap: 20px;
         margin-top: 100px;
-   
       }
     }
-
     @media only screen and (max-width: 768px) {
       margin: 80px 0;
-    padding-bottom: 50px;
-
+      padding-bottom: 50px;
       .projects-list {
         margin-top: 50px;
+        flex-wrap: nowrap;
+        flex-direction: column;
       }
     }
   }

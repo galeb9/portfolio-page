@@ -28,7 +28,9 @@
 
     <div class="navigation--mobile">
         <div class="display-on-mobile nav-top--mobile">
-            <div class="logo" @click="$router.push('/')" >Logo</div>
+            <div class="logo" @click="$router.push('/')" >
+                <img class="logo__img" src="@/assets/images/logo-colored.png" alt="">
+            </div>
             <!-- <div class="hamburger__container" @click="toggleMenu">
                 <font-awesome-icon v-if="!hamburgerActive" class="hamburger__icon" :icon="['fa', 'bars']"/>
                 <font-awesome-icon v-else class="hamburger__icon" :icon="['fa', 'xmark']"/>
@@ -36,7 +38,9 @@
         </div>
             <Transition name="move-in-top">
                 <nav class="navigation" v-if="hamburgerActive">
-                    <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div>
+                    <div class="logo display-on-desktop" @click="$router.push('/')" >
+                        <img class="logo__img" src="@/assets/images/logo-colored.png" alt="">
+                    </div>
                     
                     <!-- <div class="nav1">
                         <div v-for="(link, index) in navLinks1" :key="index" class="navigation__link">

@@ -167,5 +167,10 @@ export default {
         .view-more__color {
             color: $secondary !important;
         }
+        @media only screen and (max-width: 768px) {
+            max-width: 350px;
+            min-width: 220px;
+            
+        }
     }
 </style>
