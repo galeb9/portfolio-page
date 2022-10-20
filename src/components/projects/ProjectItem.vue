@@ -5,7 +5,8 @@
         class="project-item__main" 
         @mouseenter="addClassToViewMore" 
         @mouseleave="removeClassFromViewMore"
-        @click="$emit('viewMore', item)"
+        @click="openViewMore"
+        ref="projectMain"
     >
         <img class="project-item__img" :src="require('@/assets/images/' + item.img )" alt="Project image">
         <div class="project-item__main-info glass-bg">
@@ -15,11 +16,11 @@
     </div>
 
     <div v-if="item.tech.length" class="project-item__tech glass-bg">
-        <span 
+        <p 
             class="project-item__tech-item"
             v-for="(el, index) in item.tech"
             :key="index"
-        >{{ '#' + el }}</span>
+        >{{ '#' + el }}</p>
     </div>
 
     <div v-if="linksVisible" class="project-item__links-container glass-bg">
@@ -50,11 +51,26 @@ export default {
         }
     },
     methods: {
+        openViewMore () {
+            if(this.item.description) {
+                this.$emit('viewMore', this.item)
+            }
+        },
         addClassToViewMore () {
+            // for verfying it has popup?
+            if(!this.item.description) {
+                this.$refs.projectMain.style.cursor="auto"
+                return;
+            }
             const viewMore = this.$refs.openPopup
             viewMore.classList.add("view-more__color")
         },
         removeClassFromViewMore () {
+            // for verfying it has popup?
+            if(!this.item.description) {
+                this.$refs.projectMain.style.cursor="auto"
+                return;
+            }
             const viewMore = this.$refs.openPopup
             viewMore.classList.remove("view-more__color")
         }
@@ -64,12 +80,12 @@ export default {
 
 <style lang="scss">
     .project-item {
-        max-width: 350px;
+        max-width: 270px;
         .glass-bg {
             background: rgba($color: black, $alpha: 0.54);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(9px);
-            -webkit-backdrop-filter: blur(9px);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
             margin-bottom: 10px;
             color: $lightText;
             box-shadow: $shadow2;
@@ -102,9 +118,12 @@ export default {
         }
     
         .project-item__tech {
-            padding: 10px 16px;
+            padding: 10px 20px;
             border-radius: $radius $radius;
             font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             .project-item__tech-item {
                 opacity: 0.7;
                 transition: $transition;
@@ -112,13 +131,10 @@ export default {
                     opacity: 1;
                 }
             }
-            .project-item__tech-item + .project-item__tech-item {
-                margin-left: 8px;
-            }
         }
 
         .project-item__links-container {
-            padding: 10px 16px;
+            padding: 10px 20px;
             border-radius: $radius $radius;
             display: flex;
             .open-popup__btn {

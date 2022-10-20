@@ -27,7 +27,7 @@ export default {
         width: 80%;
         max-height: 70vh;
         margin: 15vh auto;
-        max-width: 700px;
+        max-width: 800px;
         position: fixed;
         z-index: 101;
         top: 0;
@@ -64,10 +64,6 @@ export default {
     }
     // type of popup
     .popup--blured {
-        // background: rgba(172, 171, 171, 0.358);
-        // -webkit-backdrop-filter: blur(5px);
-        // backdrop-filter: blur(5px);
-
         background: rgba($color: black, $alpha: 0.54);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(9px);

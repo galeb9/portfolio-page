@@ -39,7 +39,7 @@ export default {
         h2 { font-size: 40px }
         h3 { 
             font-size: 24px;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.03em;
         }
 
     }

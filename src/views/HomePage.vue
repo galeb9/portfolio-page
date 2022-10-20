@@ -19,8 +19,8 @@ export default {
     name: "HomePage",
     components: { HomeHero, BrainSkills, ProjectsList, TheContact },
     hero, skills, projects, contact,
-    created() {
-      // this.scrollTop()
+    mounted() {
+      window.scrollTo(0, 0)
     },
     methods: {
       scrollTop () {

@@ -9,76 +9,75 @@
         "left": [
             {
                 "name": "HTML",
-                "icon": "",
-                "color": ""
+                "img": "html.png",
+                "color": "#e34f26"
             },
             {
                 "name": "CSS",
                 "icon": "css3-alt",
-                "color": ""
+                "color": "#2465F1"
             },
             {
                 "name": "SASS",
                 "icon": "sass",
-                "color": ""
+                "color": "#CD6799"
             },
             {
                 "name": "JavaScript",
                 "icon": "square-js",
-                "color": ""
+                "color": "#f7df1e"
             },
             {
                 "name": "Vue.js",
                 "icon": "vuejs",
-                "color": ""
+                "color": "#42b883"
             },
             {
                 "name": "Nuxt.js",
-                "icon": "",
-                "color": ""
+                "img": "nuxt.png",
+                "color": "#41b883"
             },
             {
                 "name": "Figma",
                 "icon": "figma",
-                "color": ""
+                "color": "#ff3b00, #ae4dff, #00beff, #00d47b"
             }
-
         ],
         "right": [
             {
                 "name": "Firebase",
-                "icon": "",
-                "color": ""
+                "img": "firebase.png",
+                "color": "#FFCB2B"
             },
             {
                 "name": "SQL",
-                "icon": "",
-                "color": ""
+                "img": "sql.png",
+                "color": "#00758f"
             },
             {
                 "name": "Mongoose",
-                "icon": "",
-                "color": ""
+                "img": "mongoose.png",
+                "color": "#890000"
             },
             {
                 "name": "Node.js",
                 "icon": "node-js",
-                "color": ""
+                "color": "#6cc24a"
             },
             {
                 "name": "MongoDB",
-                "icon": "",
-                "color": ""
+                "img": "mongoDB.png",
+                "color": "#589636"
             },
             {
                 "name": "EJS",
                 "text": "<%",
-                "color": ""
+                "color": "#567B3A"
             },
             {
                 "name": "GIT",
                 "icon": "git-alt",
-                "color": ""
+                "color": "#f1502f"
             }
         ]
     },
@@ -113,7 +112,7 @@
                 ] 
             },
             {
-                "title": "Order food app",
+                "title": "Food order app",
                 "img": "order-food/order-food.jpg",
                 "text": "A front-end app where you can order food online.",
                 "tech": ["Vue", "Firebase", "Sass"],
@@ -132,6 +131,27 @@
                     "order-error.jpg",
                     "order-success.jpg"
                 ] 
+            },
+            {
+                "title": "Food Check",
+                "img": "food-check/food-check-bg.png",
+                "text": "A front-end app where you can order food online.",
+                "tech": ["Mongoose", "MongoDB", "Vue", "Sass", "Node.js", "Vue"],
+                "github": "https://github.com/galeb9/FoodCheck",
+                "description": "A full-stack MEVN app for checking when does the food you have expire. \n\nIt is currently in the early stages of development. \n\nIt uses Mongoose for connecting Node.js to MongoDB. Uses the MVC software design pattern.. \n\nA user can save food he has into the app and keep track of when it expires, so he does not throw food away.  \n\n In the future, the user will be able to register and log in,  have statistics of how much food he has thrown away, be able to put it on to store list and many more things.",
+                "imagePath": "food-check/",
+                "imagesPerRow": 2,
+                "images": [
+                    "food-list.png",
+                    "add-item.png"
+                ] 
+            },
+            {
+                "title": "Portfolio page",
+                "img": "portfolio-project-bg.png",
+                "text": "My portfolio page you are currently viewing.",
+                "tech": ["Vue", "Sass"],
+                "github": "https://github.com/galeb9/portfolio-page"
             }
         ]
     },

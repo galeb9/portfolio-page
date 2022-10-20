@@ -4,7 +4,9 @@
     <div class="navigation--desktop">
         <Transition name="move-in-top">
             <nav class="navigation">
-                <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div>
+                <div class="logo display-on-desktop" @click="$router.push('/')" >
+                    <img class="logo__img" src="@/assets/images/logo-colored.png" alt="">
+                </div>
 
                 <!-- nav1 -->
                 <!-- <div class="nav1">
@@ -101,7 +103,13 @@ export default {
             }
             .nav2 { justify-content: flex-end }
         }
-        .logo { cursor: pointer }
+        .logo { 
+            cursor: pointer;
+
+            .logo__img {
+                max-height: 30px;
+            }   
+        }
         @media only screen and (max-width: 768px) {
             padding: 15px 0;
             .navigation--desktop { display: none }

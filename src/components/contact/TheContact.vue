@@ -12,8 +12,8 @@
         </div>
 
     </div>
-    <a href="mailto:matej.grimsic@gmail.com">
-        <BaseButton :text="data.btn" type="dark" aligment="center"  />
+    <a :href="'mailto:' + data.email">
+        <BaseButton @click="openMailClient" :text="data.btn" type="dark" aligment="center"  />
     </a>
     <div class="contact__or-message">
         <BaseText :text="data.or" />

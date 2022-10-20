@@ -1,8 +1,14 @@
 <template>
-  <div class="skill-item noise">
+  <div class="skill-item" ref="skillItem" @mouseenter="changeColor" @mouseleave="changeColorBack">
         <div class="skill-item__icon-container">
             <font-awesome-icon class="skill-item__icon" v-if="item.icon" :icon="['fab', item.icon]" />
-            <p v-else class="skill-item__text-icon">{{ item.text }}</p>
+            <p v-if="item.text" class="skill-item__text-icon">{{ item.text }}</p>
+            <img 
+                v-if="item.img" 
+                :class="['skill-item__img', { 'mongoose__img' : item.img === 'mongoose.png' ? true : false }]" 
+                :src="require('@/assets/images/skills/' + item.img)" 
+                alt="Skill image"
+            >
         </div>
         <div :class="['skill-item__pointer', side]">
             <p class="skill-item__pointer-text">{{ item.name || 'name' }}</p>
@@ -17,12 +23,26 @@ export default {
     props: {
         item: { type: Object, default: () => {} },
         side: { type: String, default: "left"},
-    }
-}
+    },
+    data () {
+        return {
+            
+        }
+    },
+    methods: {
+        changeColor () {
+            this.$refs.skillItem.style.background = `linear-gradient( ${this.item.color} , transparent   120% )`
+        },
+        changeColorBack () {
+            this.$refs.skillItem.style.background = `linear-gradient( #dee2e6 ,  transparent 120% )`
+        }
+    }   
+} 
 </script>
 
 <style lang="scss">
     .skill-item {
+        user-select: none;
         border-radius: $radius;
         width: 50px;
         height: 50px;
@@ -37,6 +57,9 @@ export default {
         transition: $transition;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         position: relative;
+        background: linear-gradient( $primary ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg);
+
+        filter: contrast(100%) brightness(100%);
         .skill-item__icon-container {
             .skill-item__text-icon {
                 font-weight: 700;
@@ -45,6 +68,12 @@ export default {
             }
             .skill-item__icon {
                 font-size: 22px;
+            }
+            .skill-item__img {
+                max-height: 20px;
+            }
+            .mongoose__img {
+                max-height: 15px;
             }
         }
         .skill-item__pointer {
@@ -74,11 +103,6 @@ export default {
         
         @media only screen and (min-width: 801px) {
             &:hover {
-                background: radial-gradient( $secondary ,  transparent 120% );
-                .skill-item__icon,
-                .skill-item__text-icon {
-                    color: white;
-                }
                 .skill-item__pointer {
                     .skill-item__pointer-text {
                         color: $secondary !important;
@@ -91,8 +115,19 @@ export default {
             }
         }
         @media only screen and (max-width: 800px) {
+            &:hover {
+                .skill-item__pointer {
+                    .skill-item__pointer-text {
+                        font-size: 16px;
+                        color: $secondary;
+                    }
+                    .skill-item__pointer-line {
+                        width: 50vw;
+                        background: $secondary;
+                    }
+                }
+            }
             .skill-item__pointer {
-
                 .skill-item__pointer-text {
                     font-size: 14px;
                 }
@@ -100,6 +135,7 @@ export default {
                     width: calc(100vw - 300px);
                 }
             }
+
         }
         @media only screen and (max-width: 520px) {
             .skill-item__pointer .skill-item__pointer-line {
@@ -113,9 +149,5 @@ export default {
         }
 
      
-    }
-    .noise {
-        background: radial-gradient( $primary ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg);
-        filter: contrast(100%) brightness(100%);
     }
 </style>

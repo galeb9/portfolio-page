@@ -31,7 +31,6 @@ export default {
 		isLight: false
 	}
   },
-
   methods: {
 	toggleLightMode () {
 		const app = document.querySelector("#app")
@@ -64,11 +63,9 @@ img {
 		width: 10px;
 		height: 8px;
 		background: $bgDark;
-		border-radius: 10px ;
 	}
 	::-webkit-scrollbar-thumb {
 		background: rgba(59, 206, 172, 0.678); 
-		border-radius: 10px;
 	}
 	::-webkit-scrollbar-thumb:hover {
 		background: rgba(59, 206, 172, 0.808); ; 

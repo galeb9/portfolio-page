@@ -2,14 +2,17 @@
   <BaseContainer class="projects-list__container">
     <BaseHeading element="h2" :text="data.title" margin="0" :center="true" />
 
-    <div class="projects-list">
-      <ProjectItem 
-        v-for="(project, index) in data.list" 
-        :key="index" 
-        :item="project"
-        @view-more="open"
-      />
+    <div class="projects-list__parent">
+      <div class="projects-list">
+        <ProjectItem 
+          v-for="(project, index) in data.list" 
+          :key="index" 
+          :item="project"
+          @view-more="open"
+        />
+      </div>
     </div>
+
 
     <BasePopup :isVisible="popupVisible" type="blured" :heading="viewedItemHeading">
       <ProjectOverview :item="viewedItem" />
@@ -50,14 +53,19 @@ export default {
 
 <style lang="scss">
   .projects-list__container {
-    .projects-list {
+    .projects-list__parent {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 80px;
-      margin-top: 100px;
-
+      .projects-list {
+        display: flex;
+        // justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 100px;
+   
+      }
     }
+
     @media only screen and (max-width: 768px) {
       margin: 80px 0;
     padding-bottom: 50px;
