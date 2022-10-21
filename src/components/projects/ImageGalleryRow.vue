@@ -34,16 +34,16 @@ export default {
     mounted () {
         this.bodyHeight= document.querySelector(".base-popup__body").offsetHeight - 50
 
-        this.logImages()
+        // this.logImages()
     },
     methods: {
-        logImages () {
-            for(let i = 0; i < this.images.length; i++) {
-                let refItem = 'galleryImage' + i
-                console.log(refItem)
-                console.log(this.$refs[refItem])
-            }
-        },
+        // logImages () {
+            // for(let i = 0; i < this.images.length; i++) {
+            //     let refItem = 'galleryImage' + i
+            //     console.log(refItem)
+            //     console.log(this.$refs[refItem])
+            // }
+        // },
         setAspectRatio(img, expected) {
             if ( img.naturalWidth === 'undefined' ) return;
             

@@ -1,8 +1,8 @@
 <template>
     <BaseContainer class="home-hero" :minHeight="100">
         <div class="home-hero__column">
-            <BaseHeading animation="typewriter" :text="data.title" element="h1" />
-            <BaseText class="home-hero__text" :text="data.text" />
+            <BaseHeading animation="typewriter" :text="data.title" element="h1" margin="0 0 18px" />
+            <BaseText class="home-hero__text" :text="data.text" :moreLines="true" />
         </div>
         <div class="home-hero__column column--svg">
             <img class="home-hero__svg non-select" :src="require('@/assets/svg/' + data.svg)" alt="">

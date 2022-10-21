@@ -1,7 +1,7 @@
 {
     "hero": {
         "title": "<web-developer>",
-        "text": "I am a front-end developer, with a passion for web development.",
+        "text": "I am a front-end developer, with a passion for web development. \n\n Currently I am finishing my studies at B2 Higher vocational school to become an IT engineer.",
         "svg": "profile.svg"
     },
     "skills": {
@@ -40,7 +40,7 @@
             {
                 "name": "Figma",
                 "icon": "figma",
-                "color": "#ff3b00, #ae4dff, #00beff, #00d47b"
+                "color": "grey"
             }
         ],
         "right": [

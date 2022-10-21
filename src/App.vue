@@ -48,6 +48,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -104,15 +106,12 @@ img {
 	}
 }
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: $bgDark;
 	color: $lightText;
 	height: 100%;
-
-	// temp: 
-	// overflow-x: hidden;
 	a:link,
 	a:visited {
 		text-decoration: none;

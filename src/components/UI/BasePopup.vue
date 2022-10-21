@@ -1,7 +1,11 @@
 <template>
     <transition name="fade-in-from-bottom"> 
         <div v-if="isVisible" :class="['base-popup', 'popup--' + type]">
-            <BaseHeading :text="heading" margin="18px 0 10px" element="h3" :center="true" />
+            <div class="base-popup__header">
+                <BaseHeading :text="heading"  element="h3" />
+                <font-awesome-icon class="close-icon" @click="$emit('close')" :icon="['fa', 'xmark']"/>
+            </div>
+            <!-- <div class="base-popup__draggable"></div> -->
             <div :class="['base-popup__body', align]">
                 <slot></slot>
             </div>
@@ -16,8 +20,8 @@ export default {
         heading: { type: String, default: "Title"},
         isVisible: { type: Boolean, default: false},
         align: { type: String, default: ""},
-        type: { type: String, default: ""},
-    },
+        type: { type: String, default: ""}
+    }
 }
 </script>
 
@@ -38,22 +42,37 @@ export default {
         display: flex;
         flex-direction: column;
         border-radius: 18px;
+        padding: 30px 50px;
+        .base-popup__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .close-icon {
+                padding: 10px;
+                padding-right: 0;
+                cursor: pointer;
+                transition: $transition;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
         .base-popup__body {
             height: 100%;
             overflow-y: auto;
-            margin: 0 15px 30px 0px;
-            padding: 30px 50px;
+            margin-top: 30px;
+            padding: 0 20px 30px 0;
         }
-  
         @media only screen and (max-width: 768px) {
+            bottom: -10px;
             width: 100%;
             max-height: 85vh;
             margin: 15vh auto 0;
             border-radius: 18px 18px 0 0;
-            bottom: -10px;
+            padding: 20px 30px 30px;
             .base-popup__body {
-                padding: 12px 30px 30px;
-                margin: 0 0 30px 0;
+                padding: 0 15px 20px 0;
+                margin-top: 10px;
             }
         }
 

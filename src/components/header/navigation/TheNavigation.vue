@@ -109,7 +109,6 @@ export default {
         }
         .logo { 
             cursor: pointer;
-
             .logo__img {
                 max-height: 30px;
             }   
@@ -149,7 +148,12 @@ export default {
                 .nav1 { margin-bottom: 15px }
                 .nav2 { justify-content: flex-end }
             }
-            .logo { padding: 0 }
+            .logo { 
+                padding: 0;
+                .logo__img {
+                    max-height: 24px;
+                }   
+            }
         }
     }
 </style>

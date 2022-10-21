@@ -14,7 +14,7 @@
     </div>
 
 
-    <BasePopup :isVisible="popupVisible" type="blured" :heading="viewedItemHeading">
+    <BasePopup :isVisible="popupVisible" @close="close" type="blured" :heading="viewedItemHeading">
       <ProjectOverview :item="viewedItem" />
     </BasePopup>
     <BaseOverlay v-if="popupVisible" @close="close" />
