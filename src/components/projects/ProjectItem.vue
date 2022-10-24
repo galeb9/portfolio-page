@@ -107,7 +107,7 @@ export default {
                 border-radius: 0 0 $radius $radius ;
                 width: 100%;
                 position: absolute;
-                min-height: 140px;
+                min-height: 170px;
                 bottom: -10px;
                 left: 0;
                 right: 0;

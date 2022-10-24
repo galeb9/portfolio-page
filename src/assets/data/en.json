@@ -135,8 +135,8 @@
             {
                 "title": "Food Check",
                 "img": "food-check/food-check-bg.png",
-                "text": "A front-end app where you can order food online.",
-                "tech": ["Mongoose", "MongoDB", "Vue", "Sass", "Node.js", "Vue"],
+                "text": "A full-stack MEVN app for checking when does the food you have expire.",
+                "tech": ["Mongoose", "Vue", "Sass", "Node.js", "Vue"],
                 "github": "https://github.com/galeb9/FoodCheck",
                 "description": "A full-stack MEVN app for checking when does the food you have expire. \n\nIt is currently in the early stages of development. \n\nIt uses Mongoose for connecting Node.js to MongoDB. Uses the MVC software design pattern.. \n\nA user can save food he has into the app and keep track of when it expires, so he does not throw food away.  \n\n In the future, the user will be able to register and log in,  have statistics of how much food he has thrown away, be able to put it on to store list and many more things.",
                 "imagePath": "food-check/",
@@ -156,9 +156,9 @@
         ]
     },
     "contact": {
-        "title": "<get in touch>",
+        "title": "<get-in-touch>",
         "btn": "Open mail client",
-        "or": "Or copy email bellow",
+        "or": "or copy email below",
         "email": "matej.grimsic@gmail.com"
     }
 }
