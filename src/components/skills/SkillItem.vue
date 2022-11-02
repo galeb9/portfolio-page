@@ -34,7 +34,7 @@ export default {
             this.$refs.skillItem.style.background = `linear-gradient( ${this.item.color} , transparent   120% )`
         },
         changeColorBack () {
-            this.$refs.skillItem.style.background = `linear-gradient( #dee2e6 ,  transparent 120% )`
+            this.$refs.skillItem.style.background = `linear-gradient( #dee2e6 ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg)`
         }
     }   
 } 

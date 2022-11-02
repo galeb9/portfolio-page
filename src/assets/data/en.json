@@ -1,7 +1,7 @@
 {
     "hero": {
         "title": "<web-developer>",
-        "text": "I am a front-end developer, with a passion for web development. \n\n Currently I am finishing my studies at B2 Higher vocational school to become an IT engineer.",
+        "text": "I am a front-end developer, with a passion for web development.",
         "svg": "profile.svg"
     },
     "skills": {
