@@ -7,7 +7,7 @@
         <BaseVideoDisplay :file="item.video" maxWidth="0" />
     </div>
 
-    <div v-if="item.images.length" class="project-overview__images-gallery">
+    <div v-if="item.images" class="project-overview__images-gallery">
         <BaseHeading icon="image" element="h4" margin="10px 0 15px" text="Images of the app" :center="true" />
         <ImageGallery 
             :imagePath="item.imagePath" 

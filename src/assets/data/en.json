@@ -153,6 +153,22 @@
                 ] 
             },
             {
+                "title": "Blog website",
+                "img": "blog/blog-bg.png",
+                "text": "A full-stack AWS blog website in development.",
+                "tech": ["Angular", "AWS", "Sass"],
+                "liveAt": "https://d8t3mhq4b52yq.cloudfront.net",
+                "github": "https://github.com/galeb9/blog-website",
+                "description": "A full-stack AWS blog website in development. \n\n This project is helping me learn AWS (Amazon Web Services) usage. I am using Amplify's authentication, Gateway API, DynamoDB and Cognito users. \n\nThe User can view blogs, if not logged in and must loggin in for other functionality. \n\n  Other functionality is creating blogs, commeting blogs, comment chaining, liking/disliking blog posts and comments. A logged in user can also update and delete  their comments and  blogs."
+            },
+            {
+                "title": "Portfolio page",
+                "img": "portfolio-project-bg.png",
+                "text": "My portfolio page you are currently viewing.",
+                "tech": ["Vue", "Sass"],
+                "github": "https://github.com/galeb9/portfolio-page"
+            },
+            {
                 "title": "Food Check",
                 "img": "food-check/food-check-bg.png",
                 "text": "A full-stack MEVN app for checking when does the food you have expire.",
@@ -167,11 +183,12 @@
                 ] 
             },
             {
-                "title": "Portfolio page",
-                "img": "portfolio-project-bg.png",
-                "text": "My portfolio page you are currently viewing.",
-                "tech": ["Vue", "Sass"],
-                "github": "https://github.com/galeb9/portfolio-page"
+                "title": "Bucket storage",
+                "img": "bucket-storage/bucket-storage-bg.png",
+                "text": "A front-end project with mock json server and use of bootstrap.",
+                "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
+                "github": "https://github.com/galeb9/bucket-storage",
+                "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls."
             }
         ]
     },
