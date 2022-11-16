@@ -1,5 +1,5 @@
 <template>
-  <BaseContainer class="contact__container">
+  <BaseContainer minHeight="100" class="contact__container">
     <BaseHeading :text="data.title" :center="true" margin="0 0 20px 0"/>
     <div class="contact__icon">
 
