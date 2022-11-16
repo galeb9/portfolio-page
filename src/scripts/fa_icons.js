@@ -24,7 +24,11 @@ import {
     faGitAlt,
     faVuejs,
     faNodeJs,
-    faGithub
+    faGithub,
+    faAngular,
+    faBootstrap,
+    faAws,
+    faReact
 
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -37,9 +41,7 @@ const icons = [
     faVideo,
     faArrowRightLong,
     faArrowDownLong,
-
     faClone,
-
     faGithub,
     faFigma,
     faCss3Alt,
@@ -48,7 +50,11 @@ const icons = [
     faSquareJs,
     faGitAlt,
     faVuejs,
-    faNodeJs
+    faNodeJs,
+    faAngular,
+    faBootstrap,
+    faAws,
+    faReact
 ]
 
 for(let i = 0; i < icons.length; i++){

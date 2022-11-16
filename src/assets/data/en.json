@@ -40,7 +40,17 @@
             {
                 "name": "Figma",
                 "icon": "figma",
-                "color": "grey"
+                "color": "rgba(128, 128, 128, 0.5)"
+            },
+            {
+                "name": "Angular",
+                "icon": "angular",
+                "color": "#a6120d"
+            },
+            {
+                "name": "Bootstrap",
+                "icon": "bootstrap",
+                "color": "#563d7c"
             }
         ],
         "right": [
@@ -78,6 +88,16 @@
                 "name": "GIT",
                 "icon": "git-alt",
                 "color": "#f1502f"
+            },
+            {
+                "name": "AWS",
+                "icon": "aws",
+                "color": "#FF9900"
+            },
+            {
+                "name": "React basics",
+                "icon": "react",
+                "color": "#61DBFB"
             }
         ]
     },

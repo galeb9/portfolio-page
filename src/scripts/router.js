@@ -15,18 +15,6 @@ const router = createRouter({
             name: 'HomePage',
             component: HomePage,
         },
-        // { for learning purposes
-        //     path: '/business/:name',
-        //     name: 'HomePage',
-        //     component: HomePage,
-        //     children: [
-        //         // {
-        //         //     path: 'home',
-        //         //     name: 'HomePage',
-        //         //     component: HomePage,
-        //         // }
-        //     ]
-        // },
         {
             path: '/:catchAll(.*)',
             name: 'NotFound',

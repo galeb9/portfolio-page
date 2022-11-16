@@ -1,10 +1,15 @@
 <template>
   <div class="skill-item" ref="skillItem" @mouseenter="changeColor" @mouseleave="changeColorBack">
         <div class="skill-item__icon-container">
-            <font-awesome-icon class="skill-item__icon" v-if="item.icon" :icon="['fab', item.icon]" />
+            <font-awesome-icon 
+                class="skill-item__icon" 
+                v-if="item.icon" 
+                :icon="['fab', item.icon]" 
+            />
             <p v-if="item.text" class="skill-item__text-icon">{{ item.text }}</p>
             <img 
                 v-if="item.img" 
+                ref="skillImage"
                 :class="['skill-item__img', { 'mongoose__img' : item.img === 'mongoose.png' ? true : false }]" 
                 :src="require('@/assets/images/skills/' + item.img)" 
                 alt="Skill image"
@@ -32,9 +37,12 @@ export default {
     methods: {
         changeColor () {
             this.$refs.skillItem.style.background = `linear-gradient( ${this.item.color} , transparent   120% )`
+            this.$refs.skillImage.style.filter = "invert(100%)"
+            this.$refs.skillImage.style.filter = "invert(100%)"
         },
         changeColorBack () {
             this.$refs.skillItem.style.background = `linear-gradient( #dee2e6 ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg)`
+            this.$refs.skillImage.style.filter = "none"
         }
     }   
 } 
@@ -58,19 +66,26 @@ export default {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         position: relative;
         background: linear-gradient( $primary ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg);
-
         filter: contrast(100%) brightness(100%);
+
+        &:hover .skill-item__icon, 
+        &:hover .skill-item__text-icon {
+            color: white;
+        }
         .skill-item__icon-container {
             .skill-item__text-icon {
                 font-weight: 700;
                 letter-spacing: 1.5px;
                 font-size: 14px;
+                transition: $transition;
             }
             .skill-item__icon {
                 font-size: 22px;
+                transition: $transition;
             }
             .skill-item__img {
                 max-height: 20px;
+                transition: $transition;
             }
             .mongoose__img {
                 max-height: 15px;
