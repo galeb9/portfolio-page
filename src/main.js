@@ -16,9 +16,6 @@ import BaseOverlay from "@/components/UI/BaseOverlay"
 import BaseHTMLtext from "@/components/UI/BaseHTMLtext" 
 import BaseVideoDisplay from "@/components/UI/BaseVideoDisplay" 
 
-
-
-
 const app = createApp(App)
 
 app.component("BaseButton", BaseButton)

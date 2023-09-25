@@ -1,201 +1,217 @@
 {
-    "hero": {
-        "title": "<web-developer>",
-        "text": "I am a front-end developer, with a passion for web development.",
-        "svg": "profile.svg"
-    },
-    "skills": {
-        "title": "<brain-skills>",
-        "left": [
-            {
-                "name": "HTML",
-                "img": "html.png",
-                "color": "#e34f26"
-            },
-            {
-                "name": "CSS",
-                "icon": "css3-alt",
-                "color": "#2465F1"
-            },
-            {
-                "name": "SASS",
-                "icon": "sass",
-                "color": "#CD6799"
-            },
-            {
-                "name": "JavaScript",
-                "icon": "square-js",
-                "color": "#f7df1e"
-            },
-            {
-                "name": "Vue.js",
-                "icon": "vuejs",
-                "color": "#42b883"
-            },
-            {
-                "name": "Nuxt.js",
-                "img": "nuxt.png",
-                "color": "#41b883"
-            },
-            {
-                "name": "Figma",
-                "icon": "figma",
-                "color": "rgba(128, 128, 128, 0.5)"
-            },
-            {
-                "name": "Angular",
-                "icon": "angular",
-                "color": "#a6120d"
-            },
-            {
-                "name": "Bootstrap",
-                "icon": "bootstrap",
-                "color": "#563d7c"
-            }
-        ],
-        "right": [
-            {
-                "name": "Firebase",
-                "img": "firebase.png",
-                "color": "#FFCB2B"
-            },
-            {
-                "name": "SQL",
-                "img": "sql.png",
-                "color": "#00758f"
-            },
-            {
-                "name": "Mongoose",
-                "img": "mongoose.png",
-                "color": "#890000"
-            },
-            {
-                "name": "Node.js",
-                "icon": "node-js",
-                "color": "#6cc24a"
-            },
-            {
-                "name": "MongoDB",
-                "img": "mongoDB.png",
-                "color": "#589636"
-            },
-            {
-                "name": "EJS",
-                "text": "<%",
-                "color": "#567B3A"
-            },
-            {
-                "name": "GIT",
-                "icon": "git-alt",
-                "color": "#f1502f"
-            },
-            {
-                "name": "AWS",
-                "icon": "aws",
-                "color": "#FF9900"
-            },
-            {
-                "name": "React basics",
-                "icon": "react",
-                "color": "#61DBFB"
-            }
+  "hero": {
+    "title": "<web-developer>",
+    "text": "I am a front-end developer, with a passion for all web development & other programing options. \n\nAlways on the lookout for new tech to be better and improving my skills on my journey to mastery.",
+    "img": "profile-03.png"
+  },
+  "skills": {
+    "title": "<brain-skills>",
+    "left": [
+      {
+        "name": "HTML",
+        "img": "html.png",
+        "color": "#e34f26"
+      },
+      {
+        "name": "CSS",
+        "icon": "css3-alt",
+        "color": "#2465F1"
+      },
+      {
+        "name": "SASS",
+        "icon": "sass",
+        "color": "#CD6799"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "square-js",
+        "color": "#f7df1e"
+      },
+      {
+        "name": "Vue.js",
+        "icon": "vuejs",
+        "color": "#42b883"
+      },
+      {
+        "name": "Nuxt.js",
+        "img": "nuxt.png",
+        "color": "#41b883"
+      },
+      {
+        "name": "Figma",
+        "icon": "figma",
+        "color": "rgba(128, 128, 128, 0.5)"
+      },
+      {
+        "name": "Angular",
+        "icon": "angular",
+        "color": "#a6120d"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "bootstrap",
+        "color": "#563d7c"
+      }
+    ],
+    "right": [
+      {
+        "name": "Firebase",
+        "img": "firebase.png",
+        "color": "#FFCB2B"
+      },
+      {
+        "name": "Python",
+        "img": "python.png",
+        "color": "#ffc331"
+      },
+      {
+        "name": "GIT",
+        "icon": "git-alt",
+        "color": "#f1502f"
+      },
+      {
+        "name": "PHP",
+        "img": "php.png",
+        "color": "#7777ac"
+      },
+      {
+        "name": "SQL",
+        "img": "sql.png",
+        "color": "#00758f"
+      },
+      {
+        "name": "Mongoose",
+        "img": "mongoose.png",
+        "color": "#890000"
+      },
+      {
+        "name": "Node.js",
+        "icon": "node-js",
+        "color": "#6cc24a"
+      },
+      {
+        "name": "MongoDB",
+        "img": "mongoDB.png",
+        "color": "#589636"
+      },
+
+      {
+        "name": "React basics",
+        "icon": "react",
+        "color": "#61DBFB"
+      }
+    ]
+  },
+  "projects": {
+    "title": "<projects>",
+    "list": [
+      {
+        "title": "Greek Geek",
+        "img": "greek-geek/greek-geek.png",
+        "text": "An app to inspire users to do pushups anywhere and track their progress from their phone.",
+        "tech": ["Vue", "Firebase", "Sass", "Figma"],
+        "github": "https://github.com/galeb9/GreekGeek",
+        "liveAt": "https://pushups-150a1.web.app",
+        "video": "greek-geek.mp4",
+        "description": "An app to inspire users to do pushups anywhere. \n\nYou can use it to set you daily goal and track how much you do in a single day. \n\nIt is possible to add friends and make arenas (groups), where you can see who is winning for most pushups today. You can also check your pushup history and status for each day by months. \n\nUsers must login or register for use of app.",
+        "imagePath": "greek-geek/",
+        "imagesPerRow": 4,
+        "images": [
+          "register.jpg",
+          "home.jpg",
+          "add-pushups.jpg",
+          "stats-present.jpg",
+          "stats-past.jpg",
+          "my-profile.jpg",
+          "notifications.jpg",
+          "add-friend.jpg",
+          "add-friend.jpg",
+          "arenas-cta.jpg",
+          "arena-groups.jpg",
+          "arena-single.jpg",
+          "add-arena.jpg"
         ]
-    },
-    "projects": {
-        "title": "<projects>",
-        "list": [
-            {
-                "title": "Greek Geek",
-                "img": "greek-geek/greek-geek.png",
-                "text": "An app to inspire users to do pushups anywhere and track their progress from their phone.",
-                "tech": ["Vue", "Firebase", "Sass"],
-                "github": "https://github.com/galeb9/GreekGeek",
-                "liveAt": "https://pushups-150a1.web.app",
-                "video": "greek-geek.mp4",
-                "description": "An app to inspire users to do pushups anywhere. \n\nYou can use it to set you daily goal and track how much you do in a single day. \n\nIt is possible to add friends and make arenas (groups), where you can see who is winning for most pushups today. You can also check your pushup history and status for each day by months. \n\nUsers must login or register for use of app.",
-                "imagePath": "greek-geek/",
-                "imagesPerRow": 4,
-                "images": [
-                    "register.jpg",
-                    "home.jpg",
-                    "add-pushups.jpg",
-                    "stats-present.jpg",
-                    "stats-past.jpg",
-                    "my-profile.jpg",
-                    "notifications.jpg",
-                    "add-friend.jpg",
-                    "add-friend.jpg",
-                    "arenas-cta.jpg",
-                    "arena-groups.jpg",
-                    "arena-single.jpg",
-                    "add-arena.jpg"
-                ] 
-            },
-            {
-                "title": "Food order app",
-                "img": "order-food/order-food.jpg",
-                "text": "A front-end app where you can order food online.",
-                "tech": ["Vue", "Firebase", "Sass"],
-                "github": "https://github.com/galeb9/web-food-app",
-                "liveAt": "https://order-food-app-f84eb.web.app",
-                "video": "order-food.mp4",
-                "description": "A front-end app where you can order food online. \nThe idea is for user to order food from a nice looking app. \n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n Users order can be placed after you have added some of the items to the order list, add a credit card and your location.",
-                "imagePath": "order-food/",
-                "imagesPerRow": 4,
-                "images": [
-                    "welcome.jpg",
-                    "choice.jpg",
-                    "item1.jpg",
-                    "item2.jpg",
-                    "order.jpg",
-                    "order-error.jpg",
-                    "order-success.jpg"
-                ] 
-            },
-            {
-                "title": "Blog website",
-                "img": "blog/blog-bg.png",
-                "text": "A full-stack AWS blog website in development.",
-                "tech": ["Angular", "AWS", "Sass"],
-                "liveAt": "https://d8t3mhq4b52yq.cloudfront.net",
-                "github": "https://github.com/galeb9/blog-website",
-                "description": "A full-stack AWS blog website in development. \n\n This project is helping me learn AWS (Amazon Web Services) usage. I am using Amplify's authentication, Gateway API, DynamoDB and Cognito users. \n\nThe User can view blogs, if not logged in and must loggin in for other functionality. \n\n  Other functionality is creating blogs, commeting blogs, comment chaining, liking/disliking blog posts and comments. A logged in user can also update and delete  their comments and  blogs."
-            },
-            {
-                "title": "Portfolio page",
-                "img": "portfolio-project-bg.png",
-                "text": "My portfolio page you are currently viewing.",
-                "tech": ["Vue", "Sass"],
-                "github": "https://github.com/galeb9/portfolio-page"
-            },
-            {
-                "title": "Food Check",
-                "img": "food-check/food-check-bg.png",
-                "text": "A full-stack MEVN app for checking when does the food you have expire.",
-                "tech": ["Mongoose", "Vue", "Sass", "Node.js", "Vue"],
-                "github": "https://github.com/galeb9/FoodCheck",
-                "description": "A full-stack MEVN app for checking when does the food you have expire. \n\nIt is currently in the early stages of development. \n\nIt uses Mongoose for connecting Node.js to MongoDB. Uses the MVC software design pattern.. \n\nA user can save food he has into the app and keep track of when it expires, so he does not throw food away.  \n\n In the future, the user will be able to register and log in,  have statistics of how much food he has thrown away, be able to put it on to store list and many more things.",
-                "imagePath": "food-check/",
-                "imagesPerRow": 2,
-                "images": [
-                    "food-list.png",
-                    "add-item.png"
-                ] 
-            },
-            {
-                "title": "Bucket storage",
-                "img": "bucket-storage/bucket-storage-bg.png",
-                "text": "A front-end project with mock json server and use of bootstrap.",
-                "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
-                "github": "https://github.com/galeb9/bucket-storage",
-                "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls."
-            }
+      },
+      {
+        "title": "Food order app",
+        "img": "order-food/order-food.jpg",
+        "text": "A front-end app where you can order food online. For mobile only.",
+        "tech": ["Vue", "Firebase", "Sass", "Figma"],
+        "github": "https://github.com/galeb9/web-food-app",
+        "liveAt": "https://order-food-app-f84eb.web.app",
+        "video": "order-food.mp4",
+        "description": "A front-end app where you can order food online. \nThe idea is for user to order food from a nice looking app. \n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n Users order can be placed after you have added some of the items to the order list, add a credit card and your location.",
+        "imagePath": "order-food/",
+        "imagesPerRow": 4,
+        "images": [
+          "welcome.jpg",
+          "choice.jpg",
+          "item1.jpg",
+          "item2.jpg",
+          "order.jpg",
+          "order-error.jpg",
+          "order-success.jpg"
         ]
-    },
-    "contact": {
-        "title": "<get-in-touch>",
-        "btn": "Open mail client",
-        "or": "or copy email below",
-        "email": "matej.grimsic@gmail.com"
-    }
+      },
+      {
+        "title": "Portfolio page",
+        "img": "portfolio-project-bg.png",
+        "text": "My portfolio page you are currently viewing.",
+        "tech": ["Vue", "Sass", "Figma"],
+        "github": "https://github.com/galeb9/portfolio-page"
+      },
+      {
+        "title": "Food Check",
+        "img": "food-check/food-check-bg.png",
+        "text": "A full-stack MEVN app for checking when does the food you have expire.",
+        "tech": ["Mongoose", "Vue", "Sass", "Node.js", "Vue", "Figma"],
+        "github": "https://github.com/galeb9/FoodCheck",
+        "description": "A full-stack MEVN app for checking when does the food you have expire. \n\nIt is currently in the early stages of development. \n\nIt uses Mongoose for connecting Node.js to MongoDB. Uses the MVC software design pattern.. \n\nA user can save food he has into the app and keep track of when it expires, so he does not throw food away.  \n\n In the future, the user will be able to register and log in,  have statistics of how much food he has thrown away, be able to put it on to store list and many more things.",
+        "imagePath": "food-check/",
+        "imagesPerRow": 2,
+        "images": ["food-list.png", "add-item.png"]
+      },
+      {
+        "title": "Bucket storage",
+        "img": "bucket-storage/bucket-storage-bg.png",
+        "text": "A front-end project with mock json server and use of bootstrap.",
+        "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
+        "github": "https://github.com/galeb9/bucket-storage",
+        "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls."
+      },
+      {
+        "title": "Cinema scroll",
+        "img": "cinema/cinema-logo.png",
+        "text": "A front-end project where I implement infinite scroll for movies.",
+        "tech": ["Vue", "Sass", "TMDBApi"],
+        "github": "https://github.com/galeb9/moviesTMDB",
+        "description": "A front-end project where I implement infinite scroll for movies. \n\nThis was a project where I was given a design and did to pixel perfect perfection.",
+        "imagePath": "cinema/",
+        "imagesPerRow": 2,
+        "images": ["pic1.png", "pic2.png"]
+      },
+      {
+        "title": "Hudlajf website",
+        "img": "hudlajf/hudlajf-logo.png",
+        "text": "A website made for a company where I did my internship.",
+        "tech": ["Vue", "Nuxt", "Sass"],
+        "liveAt": "https://www.hudlajf.com/sl/",
+        "description": "I was given all the design files and coded the website working closely with the design team, checking back for the best possible outcome"
+      },
+      {
+        "title": "Gabi tvoja lepotilnica",
+        "img": "gabi-website/nails-bg2.png",
+        "text": "A website for a nails saloon, I am making for a friend.",
+        "tech": ["Vue", "Sass", "Figma"],
+        "liveAt": "https://beauty-salon-3f72c.web.app/",
+        "description": "I have taken the requests of the client, made the design and now I am coding the website in my spare time."
+      }
+    ]
+  },
+  "contact": {
+    "title": "<get-in-touch>",
+    "btn": "Open mail client",
+    "or": "or copy email below",
+    "email": "matej.grimsic@gmail.com"
+  }
 }
