@@ -21,3 +21,16 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase configuration and environment files
+/firebase.json
+/.firebaserc
+/.env
+
+# Firebase SDK config files
+/src/environments/firebase.config.ts
+
+# Firebase hosting files (if applicable)
+/public
+/.firebase
+/firebase-debug.log

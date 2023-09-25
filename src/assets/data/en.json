@@ -157,6 +157,7 @@
         "title": "Portfolio page",
         "img": "portfolio-project-bg.png",
         "text": "My portfolio page you are currently viewing.",
+        "description": "I have made my own designs in Figma and coded them to reality with the Vue.js framework, using Firebase as the hosting service.",
         "tech": ["Vue", "Sass", "Figma"],
         "github": "https://github.com/galeb9/portfolio-page"
       },

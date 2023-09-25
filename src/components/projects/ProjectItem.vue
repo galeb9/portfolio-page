@@ -12,9 +12,9 @@
         :src="require('@/assets/images/' + item.img)"
         alt="Project image"
       />
-      <div class="project-item__main-info glass-bg">
+      <div class="project-item__main-info glass-bg expanding-div">
         <BaseHeading element="h3" :text="item.title" margin="10px 0" />
-        <BaseText class="project-item__main-info-text" :text="item.text" />
+        <BaseText class="hidden-text" :text="item.text" />
       </div>
     </div>
 
@@ -141,19 +141,38 @@ export default {
       right: 0;
       padding: 10px 20px;
       color: white;
-      transition: $transition;
-      &-text {
-        height: 0;
-        transition: all 0.3s linear;
-        height: max-content;
-        display: none;
-      }
+      // transition: $transition;
+      // &-text {
+      //   height: 0;
+      //   transition: all 0.3s linear;
+      //   height: max-content;
+      //   display: none;
+      // }
     }
     // for project-item__main
-    &:hover .project-item__main-info-text {
-      height: max-content;
-      padding-bottom: 20px;
-      display: block;
+    // &:hover .project-item__main-info-text {
+    //   height: max-content;
+    //   padding-bottom: 20px;
+    //   display: block;
+    // }
+
+    .expanding-div {
+      height: 100px;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out; /* Add a smooth height transition */
+    }
+
+    .expanding-div:hover {
+      height: 180px; /* Expand the div on hover */
+    }
+
+    .hidden-text {
+      display: none; /* Initially hide the text */
+      padding-bottom: 10px;
+    }
+
+    .expanding-div:hover .hidden-text {
+      display: block; /* Show the text when the parent div is hovered */
     }
   }
 
