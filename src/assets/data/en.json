@@ -165,7 +165,7 @@
         "title": "Food Check",
         "img": "food-check/food-check-bg.png",
         "text": "A full-stack MEVN app for checking when does the food you have expire.",
-        "tech": ["Mongoose", "Vue", "Sass", "Node.js", "Vue", "Figma"],
+        "tech": ["Mongoose", "Vue", "Sass", "Node.js", "Figma"],
         "github": "https://github.com/galeb9/FoodCheck",
         "description": "A full-stack MEVN app for checking when does the food you have expire. \n\nIt is currently in the early stages of development. \n\nIt uses Mongoose for connecting Node.js to MongoDB. Uses the MVC software design pattern.. \n\nA user can save food he has into the app and keep track of when it expires, so he does not throw food away.  \n\n In the future, the user will be able to register and log in,  have statistics of how much food he has thrown away, be able to put it on to store list and many more things.",
         "imagePath": "food-check/",
@@ -197,7 +197,7 @@
         "text": "A website made for a company where I did my internship.",
         "tech": ["Vue", "Nuxt", "Sass"],
         "liveAt": "https://www.hudlajf.com/sl/",
-        "description": "I was given all the design files and coded the website working closely with the design team, checking back for the best possible outcome"
+        "description": "I was given all the design files and coded the website working closely with the design team, checking back for the best possible outcome."
       },
       {
         "title": "Gabi tvoja lepotilnica",

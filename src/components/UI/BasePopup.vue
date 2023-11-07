@@ -9,7 +9,6 @@
           :icon="['fa', 'xmark']"
         />
       </div>
-      <!-- <div class="base-popup__draggable"></div> -->
       <div :class="['base-popup__body', align]">
         <slot></slot>
       </div>
@@ -68,6 +67,7 @@ export default {
   }
   @media only screen and (max-width: 768px) {
     bottom: -10px;
+    top: auto;
     width: 100%;
     max-height: 85vh;
     margin: 15vh auto 0;
