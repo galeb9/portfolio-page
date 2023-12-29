@@ -10,12 +10,6 @@
       <BaseText class="home-hero__text" :text="data.text" :moreLines="true" />
     </div>
     <div class="home-hero__column column--svg">
-      <!-- <img
-        v-if="data.svg"
-        class="home-hero__svg non-select"
-        :src="require('@/assets/svg/' + data.svg)"
-        alt="Home hero image"
-      /> -->
       <img
         v-if="data.img"
         class="home-hero__svg non-select"
@@ -52,10 +46,11 @@ export default {
     justify-content: flex-end;
   }
   .home-hero__svg {
-    max-width: 380px;
+    max-width: 400px;
     width: 100%;
     border-radius: 50%;
     opacity: 0.9;
+    margin-bottom: 50px;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column-reverse;
