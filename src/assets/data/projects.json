@@ -1,107 +1,4 @@
 {
-  "hero": {
-    "title": "<web-developer>",
-    "text": "I am a front-end developer, with a passion for all web development & other programing options. \n\nAlways on the lookout for new tech to be better and improving my skills on my journey to mastery.",
-    "img": "profile-04.png"
-  },
-  "skills": {
-    "title": "<brain-skills>",
-    "left": [
-      {
-        "name": "HTML",
-        "img": "html.png",
-        "color": "#e34f26"
-      },
-      {
-        "name": "CSS",
-        "icon": "css3-alt",
-        "color": "#2465F1"
-      },
-      {
-        "name": "SASS",
-        "icon": "sass",
-        "color": "#CD6799"
-      },
-      {
-        "name": "JavaScript",
-        "icon": "square-js",
-        "color": "#f7df1e"
-      },
-      {
-        "name": "Vue.js",
-        "icon": "vuejs",
-        "color": "#42b883"
-      },
-      {
-        "name": "Nuxt.js",
-        "img": "nuxt.png",
-        "color": "#41b883"
-      },
-      {
-        "name": "Figma",
-        "icon": "figma",
-        "color": "rgba(128, 128, 128, 0.5)"
-      },
-      {
-        "name": "Angular",
-        "icon": "angular",
-        "color": "#a6120d"
-      },
-      {
-        "name": "Bootstrap",
-        "icon": "bootstrap",
-        "color": "#563d7c"
-      }
-    ],
-    "right": [
-      {
-        "name": "Firebase",
-        "img": "firebase.png",
-        "color": "#FFCB2B"
-      },
-      {
-        "name": "Python",
-        "img": "python.png",
-        "color": "#ffc331"
-      },
-      {
-        "name": "GIT",
-        "icon": "git-alt",
-        "color": "#f1502f"
-      },
-      {
-        "name": "PHP",
-        "img": "php.png",
-        "color": "#7777ac"
-      },
-      {
-        "name": "SQL",
-        "img": "sql.png",
-        "color": "#00758f"
-      },
-      {
-        "name": "Mongoose",
-        "img": "mongoose.png",
-        "color": "#890000"
-      },
-      {
-        "name": "Node.js",
-        "icon": "node-js",
-        "color": "#6cc24a"
-      },
-      {
-        "name": "MongoDB",
-        "img": "mongoDB.png",
-        "color": "#589636"
-      },
-
-      {
-        "name": "React basics",
-        "icon": "react",
-        "color": "#61DBFB"
-      }
-    ]
-  },
   "projects": {
     "title": "<projects>",
     "list": [
@@ -159,8 +56,18 @@
         "text": "My portfolio page you are currently viewing.",
         "description": "I have made my own designs in Figma and coded them to reality with the Vue.js framework, using Firebase as the hosting service.",
         "tech": ["Vue", "Sass", "Figma"],
-        "liveAt": "https://matej-grimsic.web.app/home",
         "github": "https://github.com/galeb9/portfolio-page"
+      },
+      {
+        "title": "Food Check",
+        "img": "food-check/food-check-bg.png",
+        "text": "A full-stack MEVN app for checking when does the food you have expire.",
+        "tech": ["Mongoose", "Vue", "Sass", "Node.js", "Figma"],
+        "github": "https://github.com/galeb9/FoodCheck",
+        "description": "A full-stack MEVN app for checking when does the food you have expire. \n\nIt is currently in the early stages of development. \n\nIt uses Mongoose for connecting Node.js to MongoDB. Uses the MVC software design pattern.. \n\nA user can save food he has into the app and keep track of when it expires, so he does not throw food away.  \n\n In the future, the user will be able to register and log in,  have statistics of how much food he has thrown away, be able to put it on to store list and many more things.",
+        "imagePath": "food-check/",
+        "imagesPerRow": 2,
+        "images": ["food-list.png", "add-item.png"]
       },
       {
         "title": "Bucket storage",
@@ -192,17 +99,11 @@
       {
         "title": "Gabi tvoja lepotilnica",
         "img": "gabi-website/nails-bg2.png",
-        "text": "A website for a beauty salon, I am making for a friend.",
+        "text": "A website for a nails saloon, I am making for a friend.",
         "tech": ["Vue", "Sass", "Figma"],
-        "liveAt": "https://gabi.si",
+        "liveAt": "https://beauty-salon-3f72c.web.app/",
         "description": "I have taken the requests of the client, made the design and now I am coding the website in my spare time."
       }
     ]
-  },
-  "contact": {
-    "title": "<get-in-touch>",
-    "btn": "Open mail client",
-    "or": "or copy email below",
-    "email": "matej.grimsic@gmail.com"
   }
 }
