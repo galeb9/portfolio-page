@@ -2,9 +2,7 @@
   <div class="project-item">
     <div
       class="project-item__main"
-      @mouseenter="addClassToViewMore"
-      @mouseleave="removeClassFromViewMore"
-      @click="openViewMore"
+      @click="navigateToProject"
       ref="projectMain"
     >
       <img
@@ -50,10 +48,11 @@
           <font-awesome-icon class="project-link__icon" :icon="['fa', 'eye']" />
         </a>
       </div>
-      <span
+
+      <router-link
         v-if="item.description"
-        @click="$emit('viewMore', item)"
-        class="project-item__links-item open-popup__btn"
+        :to="`/projects/${item.id}`"
+        class="view-more project-item__links-item open-popup__btn"
         ref="openPopup"
       >
         View more
@@ -61,7 +60,7 @@
           class="project-link__icon"
           :icon="['fa', 'arrow-right-long']"
         />
-      </span>
+      </router-link>
     </div>
   </div>
 </template>
@@ -78,28 +77,8 @@ export default {
     },
   },
   methods: {
-    openViewMore() {
-      if (this.item.description) {
-        this.$emit("viewMore", this.item);
-      }
-    },
-    addClassToViewMore() {
-      // for verfying it has popup?
-      if (!this.item.description) {
-        this.$refs.projectMain.style.cursor = "auto";
-        return;
-      }
-      const viewMore = this.$refs.openPopup;
-      viewMore.classList.add("view-more__color");
-    },
-    removeClassFromViewMore() {
-      // for verfying it has popup?
-      if (!this.item.description) {
-        this.$refs.projectMain.style.cursor = "auto";
-        return;
-      }
-      const viewMore = this.$refs.openPopup;
-      viewMore.classList.remove("view-more__color");
+    navigateToProject() {
+      this.$router.push(`/projects/${this.item.id}`);
     },
   },
 };
@@ -108,6 +87,9 @@ export default {
 <style lang="scss">
 .project-item {
   max-width: 270px;
+  &:hover .view-more {
+    color: $secondary !important;
+  }
   .glass-bg {
     background: rgba($color: black, $alpha: 0.54);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -123,9 +105,6 @@ export default {
     margin-bottom: 8px;
     transition: $transition;
     cursor: pointer;
-    &:hover .open-popup__btn .project-link__icon {
-      color: $secondary;
-    }
 
     .project-item__img {
       width: 100%;
@@ -141,21 +120,7 @@ export default {
       right: 0;
       padding: 10px 20px;
       color: white;
-      // transition: $transition;
-      // &-text {
-      //   height: 0;
-      //   transition: all 0.3s linear;
-      //   height: max-content;
-      //   display: none;
-      // }
     }
-    // for project-item__main
-    // &:hover .project-item__main-info-text {
-    //   height: max-content;
-    //   padding-bottom: 20px;
-    //   display: block;
-    // }
-
     .expanding-div {
       height: 100px;
       overflow: hidden;
@@ -196,7 +161,7 @@ export default {
     padding: 10px 20px;
     border-radius: $radius $radius;
     display: flex;
-    .open-popup__btn {
+    .view-more {
       margin-left: auto;
       display: flex;
       gap: 8px;

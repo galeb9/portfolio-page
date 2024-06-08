@@ -106,6 +106,7 @@
     "title": "<projects>",
     "list": [
       {
+        "id": 1,
         "title": "Greek Geek",
         "img": "greek-geek/greek-geek.png",
         "text": "An app to inspire users to do pushups anywhere and track their progress from their phone.",
@@ -130,9 +131,11 @@
           "arena-groups.jpg",
           "arena-single.jpg",
           "add-arena.jpg"
-        ]
+        ],
+        "type": "app"
       },
       {
+        "id": 2,
         "title": "Food order app",
         "img": "order-food/order-food.jpg",
         "text": "A front-end app where you can order food online. For mobile only.",
@@ -151,26 +154,23 @@
           "order.jpg",
           "order-error.jpg",
           "order-success.jpg"
-        ]
+        ],
+        "type": "app"
       },
       {
+        "id": 3,
         "title": "Portfolio page",
         "img": "portfolio-project-bg.png",
         "text": "My portfolio page you are currently viewing.",
         "description": "I have made my own designs in Figma and coded them to reality with the Vue.js framework, using Firebase as the hosting service.",
         "tech": ["Vue", "Sass", "Figma"],
         "liveAt": "https://matej-grimsic.web.app/home",
-        "github": "https://github.com/galeb9/portfolio-page"
+        "github": "https://github.com/galeb9/portfolio-page",
+        "type": "website"
       },
+
       {
-        "title": "Bucket storage",
-        "img": "bucket-storage/bucket-storage-bg.png",
-        "text": "A front-end project with mock json server and use of bootstrap.",
-        "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
-        "github": "https://github.com/galeb9/bucket-storage",
-        "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls."
-      },
-      {
+        "id": 4,
         "title": "Cinema scroll",
         "img": "cinema/cinema-logo.png",
         "text": "A front-end project where I implement infinite scroll for movies.",
@@ -179,23 +179,38 @@
         "description": "A front-end project where I implement infinite scroll for movies. \n\nThis was a project where I was given a design and did to pixel perfect perfection.",
         "imagePath": "cinema/",
         "imagesPerRow": 2,
-        "images": ["pic1.png", "pic2.png"]
+        "images": ["pic1.png", "pic2.png"],
+        "type": "other"
       },
       {
+        "id": 5,
         "title": "Hudlajf website",
         "img": "hudlajf/hudlajf-logo.png",
         "text": "A website made for a company where I did my internship.",
         "tech": ["Vue", "Nuxt", "Sass"],
         "liveAt": "https://www.hudlajf.com/sl/",
-        "description": "I was given all the design files and coded the website working closely with the design team, checking back for the best possible outcome."
+        "description": "I was given all the design files and coded the website working closely with the design team, checking back for the best possible outcome.",
+        "type": "website"
       },
       {
+        "id": 6,
         "title": "Gabi tvoja lepotilnica",
         "img": "gabi-website/nails-bg2.png",
-        "text": "A website for a beauty salon, I am making for a friend.",
+        "text": "A website for a nails saloon, I am making for a friend.",
         "tech": ["Vue", "Sass", "Figma"],
         "liveAt": "https://gabi.si",
-        "description": "I have taken the requests of the client, made the design and now I am coding the website in my spare time."
+        "description": "I have taken the requests of the client, made the design and now I am coding the website in my spare time.",
+        "type": "website"
+      },
+      {
+        "id": 7,
+        "title": "Bucket storage",
+        "img": "bucket-storage/bucket-storage-bg.png",
+        "text": "A front-end project with mock json server and use of bootstrap.",
+        "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
+        "github": "https://github.com/galeb9/bucket-storage",
+        "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls.",
+        "type": "app"
       }
     ]
   },

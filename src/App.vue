@@ -112,6 +112,11 @@ img {
   ::-webkit-scrollbar {
     background: $bgLight;
   }
+  @media only screen and (max-width: 768px) {
+    .navigation__container .navigation {
+      background: $bgLight;
+    }
+  }
 }
 #app {
   font-family: "Montserrat", sans-serif;
@@ -166,7 +171,6 @@ img {
     }
     @media only screen and (max-width: 768px) {
       padding: 0 20px; // app padding at sides
-
       .display-on-desktop {
         display: none;
       }
@@ -175,7 +179,5 @@ img {
       }
     }
   }
-
-  // device sizes -> text, side padding
 }
 </style>

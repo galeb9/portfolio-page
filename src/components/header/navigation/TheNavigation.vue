@@ -11,19 +11,15 @@
             />
           </div>
 
-          <!-- nav1 -->
-          <!-- <div class="nav1">
-                    <div v-for="(link, index) in navLinks1" :key="index" class="navigation__link">
-                        <router-link :to="link.path" >{{ link.text }}</router-link>
-                    </div>
-                </div> -->
-
-          <!-- nav2 -->
-          <!-- <div class="nav2">
-                    <div v-for="(link, index) in navLinks2" :key="index" class="navigation__link">
-                        <router-link :to="'/' + link.path" >{{ link.text }}</router-link>
-                    </div>
-                </div> -->
+          <div class="nav2">
+            <div
+              v-for="(link, index) in navLinks"
+              :key="index"
+              class="navigation__link"
+            >
+              <router-link :to="'/' + link.path">{{ link.text }}</router-link>
+            </div>
+          </div>
         </nav>
       </Transition>
     </div>
@@ -37,10 +33,18 @@
             alt=""
           />
         </div>
-        <!-- <div class="hamburger__container" @click="toggleMenu">
-                <font-awesome-icon v-if="!hamburgerActive" class="hamburger__icon" :icon="['fa', 'bars']"/>
-                <font-awesome-icon v-else class="hamburger__icon" :icon="['fa', 'xmark']"/>
-            </div> -->
+        <div class="hamburger__container" @click="toggleMenu">
+          <font-awesome-icon
+            v-if="!hamburgerActive"
+            class="hamburger__icon"
+            :icon="['fa', 'bars']"
+          />
+          <font-awesome-icon
+            v-else
+            class="hamburger__icon"
+            :icon="['fa', 'xmark']"
+          />
+        </div>
       </div>
       <Transition name="move-in-top">
         <nav class="navigation" v-if="hamburgerActive">
@@ -52,20 +56,18 @@
             />
           </div>
 
-          <!-- <div class="nav1">
-                        <div v-for="(link, index) in navLinks1" :key="index" class="navigation__link">
-                            <router-link :to="link.path" >{{ link.text }}</router-link>
-                        </div>
-                    </div>  -->
+          <div class="logo display-on-desktop" @click="$router.push('/')"></div>
 
-          <!-- <div class="logo display-on-desktop" @click="$router.push('/')" >Logo</div> -->
-
-          <!-- <div class="nav2">
-                        <div v-for="(link, index) in navLinks2" :key="index" class="navigation__link">
-                            <router-link :to="'/' + link.path" >{{ link.text }}</router-link>
-                        </div>
-                        <BaseButton text="Spletno naročanje" />
-                    </div> -->
+          <div class="nav2">
+            <div
+              v-for="(link, index) in navLinks"
+              :key="index"
+              class="navigation__link"
+            >
+              <router-link :to="'/' + link.path">{{ link.text }}</router-link>
+            </div>
+            <!-- <BaseButton text="Get in touch" /> -->
+          </div>
         </nav>
       </Transition>
     </div>
@@ -77,10 +79,10 @@ export default {
   name: "TheNavigation",
   data() {
     return {
-      navLinks1: [{ text: "Home", path: "" }],
-      navLinks2: [
-        { text: "Home", path: "home" },
-        { text: "Item", path: "akdslf" },
+      navLinks: [
+        { text: "Home", path: "" },
+        { text: "Skills", path: "skills" },
+        { text: "Projects", path: "projects" },
       ],
       hamburgerActive: false,
     };
@@ -99,8 +101,6 @@ export default {
 <style lang="scss">
 .navigation__container {
   padding: 20px 0;
-  //   position: absolute;
-  //   top: 0;
   .navigation--mobile {
     display: none;
   }
