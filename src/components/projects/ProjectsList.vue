@@ -12,7 +12,7 @@
         />
       </div>
     </div>
-
+    <!-- 
     <BasePopup
       :isVisible="popupVisible"
       @close="close"
@@ -21,17 +21,16 @@
     >
       <ProjectOverview :item="viewedItem" />
     </BasePopup>
-    <BaseOverlay v-if="popupVisible" @close="close" />
+    <BaseOverlay v-if="popupVisible" @close="close" /> -->
   </BaseContainer>
 </template>
 
 <script>
-import ProjectItem from "./ProjectItem.vue";
-import ProjectOverview from "./ProjectOverview.vue";
+import ProjectItem from "@/components/projects/ProjectItem.vue";
 
 export default {
   name: "ProjectsList",
-  components: { ProjectItem, ProjectOverview },
+  components: { ProjectItem },
   props: {
     data: { type: Object, default: () => {} },
   },

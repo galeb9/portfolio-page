@@ -2,7 +2,7 @@
   <div class="project-item">
     <div
       class="project-item__main"
-      @click="navigateToProject"
+      @click="hasDescription ? navigateToProject() : null"
       ref="projectMain"
     >
       <img
@@ -50,7 +50,7 @@
       </div>
 
       <router-link
-        v-if="item.description"
+        v-if="item.description && hasDescription"
         :to="`/projects/${item.id}`"
         class="view-more project-item__links-item open-popup__btn"
         ref="openPopup"
@@ -70,6 +70,7 @@ export default {
   name: "ProjectItem",
   props: {
     item: { type: Object, default: () => {} },
+    hasDescription: { type: Boolean, default: true },
   },
   computed: {
     linksVisible() {
