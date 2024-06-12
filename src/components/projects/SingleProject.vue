@@ -1,7 +1,7 @@
 <template>
   <BaseContainer>
     <ProjectOverview :item="item">
-      <ProjectItem :item="item" :hasDescription="false" />
+      <ProjectItem class="floating" :item="item" :hideOnDetail="true" />
     </ProjectOverview>
   </BaseContainer>
 </template>
@@ -22,4 +22,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.project-item__main {
+  cursor: default;
+}
+</style>

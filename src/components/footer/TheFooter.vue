@@ -1,19 +1,29 @@
 <template>
-  <div class="footer">
-
+  <div class="footer border-top">
+    <BaseLogo />
+    <BaseSocialIcons :links="data.links" />
   </div>
 </template>
 
 <script>
-export default {
-    name: "TheFooter"
+import BaseSocialIcons from "@/components/UI/BaseSocialIcons.vue";
+import BaseLogo from "@/components/UI/BaseLogo.vue";
 
-}
+export default {
+  name: "TheFooter",
+  components: { BaseSocialIcons, BaseLogo },
+  props: {
+    data: { type: Object, default: () => {} },
+  },
+};
 </script>
 
 <style lang="scss">
 .footer {
-    min-height: 20vh;
+  min-height: 10vh;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 </style>

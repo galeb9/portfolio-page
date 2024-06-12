@@ -1,9 +1,9 @@
 <template>
-  <BaseContainer class="projects-list__container">
+  <BaseContainer class="projects-list">
     <BaseHeading element="h2" :text="data.title" margin="0" :center="true" />
 
-    <div class="projects-list__parent">
-      <div class="projects-list">
+    <div class="projects-list__container">
+      <div class="projects-items">
         <ProjectItem
           v-for="(project, index) in data.list"
           :key="index"
@@ -12,16 +12,6 @@
         />
       </div>
     </div>
-    <!-- 
-    <BasePopup
-      :isVisible="popupVisible"
-      @close="close"
-      type="blured"
-      :heading="viewedItemHeading"
-    >
-      <ProjectOverview :item="viewedItem" />
-    </BasePopup>
-    <BaseOverlay v-if="popupVisible" @close="close" /> -->
   </BaseContainer>
 </template>
 
@@ -55,11 +45,11 @@ export default {
 </script>
 
 <style lang="scss">
-.projects-list__container {
-  .projects-list__parent {
+.projects-list {
+  &__container {
     display: flex;
     justify-content: center;
-    .projects-list {
+    .projects-items {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
@@ -69,10 +59,11 @@ export default {
   @media only screen and (max-width: 768px) {
     margin: 80px 0;
     padding-bottom: 50px;
-    .projects-list {
+    .projects-items {
       margin-top: 50px;
       flex-wrap: nowrap;
       flex-direction: column;
+      gap: 60px;
     }
   }
 }

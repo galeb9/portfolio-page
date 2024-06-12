@@ -1,56 +1,73 @@
 <template>
-  <button
-    :class="[
-      'base-button',
-      'base-btn--' + type,
-      'base-btn--' + aligment,
-      'base-btn--size-' + size,
-    ]"
+  <component
+    :is="tag"
+    v-bind="attributes"
+    :class="['base-btn', 'base-btn--s-' + size]"
   >
-    {{ text }}
-  </button>
+    <slot></slot>
+  </component>
 </template>
 
 <script>
 export default {
   name: "BaseButton",
   props: {
-    text: { type: String, default: "btn text" },
-    type: { type: String, default: "" },
-    aligment: { type: String, default: "" }, // center
+    tag: {
+      type: String,
+      default: "button",
+      validator: (value) => ["a", "button", "router-link"].includes(value),
+    },
+    to: String,
+    link: String,
     size: { type: String, default: "m" }, // s, m, l
+  },
+  computed: {
+    attributes() {
+      const options = {
+        a: { href: this.link },
+        "router-link": { to: this.link },
+      };
+
+      return options[this.tag] || {};
+    },
   },
 };
 </script>
 
 <style lang="scss">
-.base-button {
-  background: $primary;
-  color: $lightText;
+.base-btn {
+  color: $lightText !important;
+  border-radius: $radius;
+  box-shadow: $shadow3;
   font-weight: 700;
   padding: 0.7em 2.1em;
   border: none;
-  border-radius: $radius;
   width: max-content;
+  transition: $transition 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
+  filter: contrast(100%) brightness(100%);
+  background: linear-gradient($secondary, transparent 105%),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow2;
+  }
   @media only screen and (max-width: 768px) {
     font-size: 16px !important;
   }
 }
-// types
-.base-btn--dark {
-  background: rgba($color: $secondary, $alpha: 0.8);
-}
-// aligment
-
 // sizes
-.base-btn--size-s {
-  font-size: 16px;
+.base-btn--s-s {
+  font-size: 14px;
 }
-.base-btn--size-m {
+.base-btn--s-m {
   font-size: 18px;
 }
-.base-btn--size-l {
+.base-btn--s-l {
   font-size: 20px;
 }
 </style>

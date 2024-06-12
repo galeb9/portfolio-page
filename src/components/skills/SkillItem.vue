@@ -7,19 +7,19 @@
   >
     <div class="skill-item__icon-container">
       <font-awesome-icon
-        class="skill-item__icon"
         v-if="item.icon"
         :icon="['fab', item.icon]"
+        class="skill-item__icon"
       />
       <p v-if="item.text" class="skill-item__text-icon">{{ item.text }}</p>
       <img
         v-if="item.img"
-        ref="skillImage"
         :class="[
           'skill-item__img',
-          { mongoose__img: item.img === 'mongoose.png' ? true : false },
+          { mongoose__img: item.img === 'mongoose.png' },
         ]"
         :src="require('@/assets/images/skills/' + item.img)"
+        ref="skillImage"
         alt="Skill image"
       />
     </div>
@@ -73,7 +73,7 @@ export default {
   gap: 3px;
   cursor: pointer;
   z-index: 10;
-  color: $text;
+  color: $darkText;
   transition: $transition;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
@@ -108,7 +108,6 @@ export default {
     position: absolute;
     top: 2px;
     .skill-item__pointer-text {
-      color: white;
       padding: 0 6px 2px;
       font-weight: 700;
     }
@@ -116,7 +115,7 @@ export default {
       transition: $transition;
       width: 190px;
       height: 2px;
-      background: $primary;
+      background: rgba(5, 5, 5, 0.521);
     }
   }
 

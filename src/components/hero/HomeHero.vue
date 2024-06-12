@@ -8,21 +8,24 @@
         margin="0 0 18px"
       />
       <BaseText class="home-hero__text" :text="data.text" :moreLines="true" />
+      <div class="home-hero__btns">
+        <BaseButton tag="a" link="#contact">Get in touch</BaseButton>
+        <BaseSocialIcons :links="data.links" :iconsOnly="true" />
+      </div>
     </div>
-    <div class="home-hero__column column--svg">
-      <img
-        v-if="data.img"
-        class="home-hero__svg non-select"
-        :src="require('@/assets/images/' + data.img)"
-        alt="Home hero image"
-      />
-    </div>
+    <HeroImage :img="data.img" class="home-hero__column img-flex-end" />
   </BaseContainer>
+  <ScrollDownMouse />
 </template>
 
 <script>
+import BaseSocialIcons from "@/components/UI/BaseSocialIcons.vue";
+import HeroImage from "@/components/hero/HeroImage.vue";
+import ScrollDownMouse from "@/components/UI/ScrollDownMouse.vue";
+
 export default {
   name: "HomeHero",
+  components: { BaseSocialIcons, HeroImage, ScrollDownMouse },
   props: {
     data: { type: Object, default: () => {} },
   },
@@ -34,31 +37,40 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  .home-hero__column {
-    flex: 1;
-    .home-hero__text {
-      padding-left: 10px;
-    }
+  gap: 60px;
+  &__column {
+    width: 50%;
   }
-  .column--svg {
+  &__text {
+    padding-left: 12px;
+    padding-bottom: 30px;
+  }
+  &__btns {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 30px;
+  }
+  .img-flex-end {
     display: flex;
     justify-content: flex-end;
   }
-  .home-hero__svg {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 50%;
-    opacity: 0.9;
-    margin-bottom: 50px;
-  }
+
   @media only screen and (max-width: 768px) {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
-    gap: 50px;
-    .home-hero__column {
-      flex: none;
+    gap: 30px;
+    &__column {
+      width: 100%;
+    }
+
+    &__btns {
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    .img-flex-end {
+      justify-content: center;
     }
   }
 }

@@ -1,34 +1,21 @@
 <template>
-  <SingleProject v-if="project" :item="$options.projects.list[0]" />
+  <SingleProject v-if="project" :item="project" />
 </template>
 
 <script>
-import { projects } from "@/assets/data/en.json";
 import SingleProject from "@/components/projects/SingleProject.vue";
+import { projects } from "@/assets/data/en.json";
 
 export default {
   name: "ProjectPage",
   components: { SingleProject },
   projects,
-  data() {
-    return {
-      project: null,
-    };
-  },
-  methods: {
-    async pickProjectById() {
-      return await this.$options.projects.list.filter(
-        (project) => project.id === this.$route.params.id
-      );
+  computed: {
+    project() {
+      return this.$options.projects.list.filter(
+        (project) => project.id == this.$route.params.id
+      )[0];
     },
-  },
-  created() {
-    this.project = this.$options.projects.list[0];
-
-    // this.project = this.pickProjectById();
-    console.log(this.project);
   },
 };
 </script>
-
-<style></style>

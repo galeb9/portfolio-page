@@ -1,52 +1,35 @@
 <template>
   <div class="project-overview">
     <div class="project-overview__main">
-      <div>
+      <div class="project-overview__main-img">
         <slot></slot>
       </div>
-      <BaseHTMLtext :text="item.description" />
-    </div>
+      <div class="project-overview__main-text">
+        <div>
+          <BaseHeading
+            :text="item.title"
+            element="h3"
+            class="border-bottom"
+            margin="10px 0"
+          />
+          <BaseHTMLtext :text="item.description" />
+        </div>
 
-    <div class="base-tabs">
-      <!-- make tabs -->
-      <!-- move them to component -->
-      <div v-if="item.video" class="project-overview__video-container">
-        <BaseHeading
-          icon="video"
-          element="h4"
-          margin="10px 0 15px"
-          text="Video of the app"
-          :center="true"
-        />
-        <BaseVideoDisplay :file="item.video" maxWidth="0" />
-      </div>
-
-      <div v-if="item.images" class="project-overview__images-gallery">
-        <BaseHeading
-          icon="image"
-          element="h4"
-          margin="10px 0 15px"
-          text="Images of the app"
-          :center="true"
-        />
-        <ImageGallery
-          :imagePath="item.imagePath"
-          :images="item.images"
-          :rowSizeLimit="item.imagesPerRow"
-        />
+        <BaseButton tag="router-link" link="/projects" size="s">
+          Projects
+          <font-awesome-icon :icon="['fas', 'arrow-right-long']" />
+        </BaseButton>
       </div>
     </div>
+    <ProjectTabs :item="item" />
   </div>
 </template>
 
 <script>
-import ImageGallery from "./ImageGallery.vue";
-
+import ProjectTabs from "@/components/projects/ProjectTabs.vue";
 export default {
   name: "ProjectOverview",
-  components: {
-    ImageGallery,
-  },
+  components: { ProjectTabs },
   props: {
     item: { type: Object, default: () => {} },
   },
@@ -59,20 +42,33 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
+    margin-bottom: 30px;
+
     & > div {
-      //   background: red;
-      width: 50%;
+      width: 100%;
+    }
+    &-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-item {
+      max-width: 330px;
+    }
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      text-align: center;
+      .base-heading {
+        margin-bottom: 20px !important;
+      }
     }
   }
 
   &__video-container,
   &__images-gallery {
     margin-top: 60px;
-  }
-  .base-tabs {
-    display: flex;
-    gap: 30px;
   }
 }
 </style>

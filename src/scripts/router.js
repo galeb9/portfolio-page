@@ -14,6 +14,10 @@ const router = createRouter({
       component: HomePage,
     },
     {
+      path: "/home",
+      redirect: "/",
+    },
+    {
       path: "/skills",
       name: "skills",
       component: SkillsPage,

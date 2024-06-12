@@ -1,8 +1,21 @@
 {
   "hero": {
     "title": "<web-developer>",
-    "text": "I am a front-end developer, with a passion for all web development & other programing options. \n\nAlways on the lookout for new tech to be better and improving my skills on my journey to mastery.",
-    "img": "profile-04.png"
+    "text": "I am a programmer with a passion for web development and various programming challenges.\n\nAlways on the lookout for new technologies, I am dedicated to enhancing my skills and continually striving for mastery on my journey.",
+    "img": "profile/profile-07.jpg",
+    "btn": "Get in touch",
+    "links": [
+      {
+        "text": "Github",
+        "link": "https://github.com/galeb9",
+        "icon": { "prefix": "fab", "name": "github" }
+      },
+      {
+        "text": "Linkedin",
+        "link": "https://www.linkedin.com/in/matej-grimsic/",
+        "icon": { "prefix": "fab", "name": "linkedin" }
+      }
+    ]
   },
   "skills": {
     "title": "<brain-skills>",
@@ -219,5 +232,24 @@
     "btn": "Open mail client",
     "or": "or copy email below",
     "email": "matej.grimsic@gmail.com"
+  },
+  "footer": {
+    "links": [
+      {
+        "text": "matej.grimsic@gmail.com",
+        "link": "",
+        "icon": { "prefix": "fas", "name": "envelope" }
+      },
+      {
+        "text": "Github",
+        "link": "https://github.com/galeb9",
+        "icon": { "prefix": "fab", "name": "github" }
+      },
+      {
+        "text": "Linkedin",
+        "link": "https://www.linkedin.com/in/matej-grimsic/",
+        "icon": { "prefix": "fab", "name": "linkedin" }
+      }
+    ]
   }
 }

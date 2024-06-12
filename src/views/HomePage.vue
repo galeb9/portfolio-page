@@ -26,12 +26,12 @@ export default {
     window.scrollTo(0, 0);
   },
   methods: {
-    scrollTop() {
-      document.querySelector(".home-page").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    },
+    // scrollTop() {
+    //   document.querySelector(".home-page").scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
+    // },
   },
 };
 </script>

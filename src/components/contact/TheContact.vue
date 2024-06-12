@@ -1,5 +1,5 @@
 <template>
-  <BaseContainer :minHeight="100" class="contact__container">
+  <BaseContainer id="contact" :minHeight="100" class="contact__container">
     <BaseHeading :text="data.title" :center="true" margin="0 0 20px 0" />
     <div class="contact__icon">
       <div :class="['contact__icon-plane', { 'move__plane-icon': movePlane }]">
@@ -18,14 +18,26 @@
         />
       </div>
     </div>
-    <a :href="'mailto:' + data.email">
+    <div class="contact__btns">
+      <BaseButton
+        tag="a"
+        link="/files/m_grimsic_cv_eng.pdf"
+        target="_blank"
+        download
+      >
+        <font-awesome-icon :icon="['fas', 'circle-down']" />
+        CV
+      </BaseButton>
       <BaseButton
         @click="openMailClient"
-        :text="data.btn"
-        type="dark"
-        aligment="center"
-      />
-    </a>
+        tag="a"
+        link="mailto:matej.grimsic@gmail.com"
+      >
+        <font-awesome-icon class="download-icon" :icon="['fas', 'envelope']" />
+        {{ data.btn }}
+      </BaseButton>
+    </div>
+
     <div class="contact__or-message">
       <BaseText :text="data.or" />
       <font-awesome-icon :icon="['fa', 'arrow-down-long']" />
@@ -85,7 +97,7 @@ export default {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    .contact__icon-plane {
+    &-plane {
       padding: 20px;
       background: $secondary;
       width: max-content;
@@ -96,7 +108,7 @@ export default {
         url(https://grainy-gradients.vercel.app/noise.svg) !important;
       filter: contrast(100%) brightness(100%);
 
-      .contact__icon-plane-img {
+      &-img {
         max-width: 50px;
       }
       @media only screen and (max-width: 768px) {
@@ -107,6 +119,11 @@ export default {
       transform: translateY(100%);
       transition: transform 1s ease-in-out;
     }
+  }
+  .contact__btns {
+    display: flex;
+    align-items: center;
+    gap: 40px;
   }
   .contact__or-message {
     display: flex;
@@ -125,10 +142,6 @@ export default {
     cursor: pointer;
     &:hover {
       color: $secondary;
-      // text-shadow:
-      //     0 0 7px $secondary,
-      //     0 0 10px $secondary,
-      //     0 0 21px $secondary;
     }
   }
   .copied-notification__container {

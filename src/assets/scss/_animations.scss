@@ -52,3 +52,28 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+// floating
+.floating {
+  animation: floating 2.5s ease-in-out infinite;
+  // margin-left: 30px;
+  margin-top: 5px;
+  &:hover {
+    animation-play-state: paused;
+  }
+  .project-item__main {
+    cursor: default;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}

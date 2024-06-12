@@ -2,15 +2,18 @@
   <div class="project-item">
     <div
       class="project-item__main"
-      @click="hasDescription ? navigateToProject() : null"
+      @click="!hideOnDetail ? navigateToProject() : null"
       ref="projectMain"
     >
       <img
-        class="project-item__img"
         :src="require('@/assets/images/' + item.img)"
+        class="project-item__img"
         alt="Project image"
       />
-      <div class="project-item__main-info glass-bg expanding-div">
+      <div
+        v-if="!hideOnDetail"
+        class="project-item__main-info glass-bg expanding-div"
+      >
         <BaseHeading element="h3" :text="item.title" margin="10px 0" />
         <BaseText class="hidden-text" :text="item.text" />
       </div>
@@ -50,7 +53,7 @@
       </div>
 
       <router-link
-        v-if="item.description && hasDescription"
+        v-if="item.description && !hideOnDetail"
         :to="`/projects/${item.id}`"
         class="view-more project-item__links-item open-popup__btn"
         ref="openPopup"
@@ -70,7 +73,7 @@ export default {
   name: "ProjectItem",
   props: {
     item: { type: Object, default: () => {} },
-    hasDescription: { type: Boolean, default: true },
+    hideOnDetail: { type: Boolean, default: false },
   },
   computed: {
     linksVisible() {
@@ -91,15 +94,6 @@ export default {
   &:hover .view-more {
     color: $secondary !important;
   }
-  .glass-bg {
-    background: rgba($color: black, $alpha: 0.54);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    margin-bottom: 10px;
-    color: $lightText;
-    box-shadow: $shadow2;
-  }
 
   .project-item__main {
     position: relative;
@@ -115,7 +109,6 @@ export default {
       border-radius: 0 0 $radius $radius;
       width: 100%;
       position: absolute;
-      //   min-height: 170px;
       bottom: -10px;
       left: 0;
       right: 0;

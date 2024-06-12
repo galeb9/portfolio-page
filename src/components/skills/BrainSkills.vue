@@ -1,10 +1,14 @@
 <template>
-  <BaseContainer class="brain-skills__container">
+  <BaseContainer id="skills" class="brain-skills__container">
     <BaseHeading :text="data.title" element="h2" />
     <div class="brain">
       <div class="brain-skills">
-        <BrainPart class="left-part" :skills="data.left" />
-        <BrainPart class="right-part" side="right" :skills="data.right" />
+        <BrainPart class="left-part floating" :skills="data.left" />
+        <BrainPart
+          class="right-part floating"
+          side="right"
+          :skills="data.right"
+        />
       </div>
     </div>
   </BaseContainer>
@@ -40,6 +44,9 @@ export default {
       display: flex;
       justify-content: center;
       gap: 30px;
+      .right-part {
+        animation-delay: 0.4s !important;
+      }
     }
   }
   @media only screen and (max-width: 800px) {
