@@ -1,15 +1,15 @@
 <template>
-  <BaseContainer class="projects-list">
-    <BaseHeading element="h2" :text="data.title" margin="0" :center="true" />
-
-    <div class="projects-list__container">
-      <div class="projects-items">
-        <ProjectItem
-          v-for="(project, index) in data.list"
-          :key="index"
-          :item="project"
-          @view-more="open"
-        />
+  <BaseContainer :title="data.title">
+    <div class="projects-list">
+      <div class="projects-list__container">
+        <div class="projects-items">
+          <ProjectItem
+            v-for="(project, index) in data.list"
+            :key="index"
+            :item="project"
+            @view-more="open"
+          />
+        </div>
       </div>
     </div>
   </BaseContainer>
@@ -53,14 +53,12 @@ export default {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      margin-top: 100px;
     }
   }
   @media only screen and (max-width: 768px) {
-    margin: 80px 0;
-    padding-bottom: 50px;
+    // margin: 80px 0;
+    // padding-bottom: 50px;
     .projects-items {
-      margin-top: 50px;
       flex-wrap: nowrap;
       flex-direction: column;
       gap: 60px;

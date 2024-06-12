@@ -1,14 +1,15 @@
 <template>
-  <BaseContainer id="skills" class="brain-skills__container">
-    <BaseHeading :text="data.title" element="h2" />
-    <div class="brain">
-      <div class="brain-skills">
-        <BrainPart class="left-part floating" :skills="data.left" />
-        <BrainPart
-          class="right-part floating"
-          side="right"
-          :skills="data.right"
-        />
+  <BaseContainer id="skills" :title="data.title">
+    <div class="brain-skills__container">
+      <div class="brain">
+        <div class="brain-skills">
+          <BrainPart class="left-part floating" :skills="data.left" />
+          <BrainPart
+            class="right-part floating"
+            side="right"
+            :skills="data.right"
+          />
+        </div>
       </div>
     </div>
   </BaseContainer>
@@ -75,6 +76,11 @@ export default {
         gap: 0px;
       }
     }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .base-container {
+    display: block !important;
   }
 }
 </style>

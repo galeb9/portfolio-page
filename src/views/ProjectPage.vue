@@ -1,13 +1,15 @@
 <template>
-  <SingleProject v-if="project" :item="project" />
+  <SingleProject :item="project" />
 </template>
 
 <script>
 import SingleProject from "@/components/projects/SingleProject.vue";
 import { projects } from "@/assets/data/en.json";
+import scrollToTop from "@/mixins/scrollToTop";
 
 export default {
   name: "ProjectPage",
+  mixins: [scrollToTop],
   components: { SingleProject },
   projects,
   computed: {

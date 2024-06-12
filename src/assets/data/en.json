@@ -129,7 +129,6 @@
         "video": "greek-geek.mp4",
         "description": "An app to inspire users to do pushups anywhere. \n\nYou can use it to set you daily goal and track how much you do in a single day. \n\nIt is possible to add friends and make arenas (groups), where you can see who is winning for most pushups today. You can also check your pushup history and status for each day by months. \n\nUsers must login or register for use of app.",
         "imagePath": "greek-geek/",
-        "imagesPerRow": 4,
         "images": [
           "register.jpg",
           "home.jpg",
@@ -158,7 +157,6 @@
         "video": "order-food.mp4",
         "description": "A front-end app where you can order food online. \nThe idea is for user to order food from a nice looking app. \n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n Users order can be placed after you have added some of the items to the order list, add a credit card and your location.",
         "imagePath": "order-food/",
-        "imagesPerRow": 4,
         "images": [
           "welcome.jpg",
           "choice.jpg",
@@ -191,7 +189,7 @@
         "github": "https://github.com/galeb9/moviesTMDB",
         "description": "A front-end project where I implement infinite scroll for movies. \n\nThis was a project where I was given a design and did to pixel perfect perfection.",
         "imagePath": "cinema/",
-        "imagesPerRow": 2,
+        "mobileType": false,
         "images": ["pic1.png", "pic2.png"],
         "type": "other"
       },
@@ -237,7 +235,7 @@
     "links": [
       {
         "text": "matej.grimsic@gmail.com",
-        "link": "",
+        "link": "mailto:matej.grimsic@gmail.com",
         "icon": { "prefix": "fas", "name": "envelope" }
       },
       {

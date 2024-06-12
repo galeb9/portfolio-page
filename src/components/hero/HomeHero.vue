@@ -1,21 +1,23 @@
 <template>
-  <BaseContainer class="home-hero" :minHeight="100">
-    <div class="home-hero__column">
-      <BaseHeading
-        animation="typewriter"
-        :text="data.title"
-        element="h1"
-        margin="0 0 18px"
-      />
-      <BaseText class="home-hero__text" :text="data.text" :moreLines="true" />
-      <div class="home-hero__btns">
-        <BaseButton tag="a" link="#contact">Get in touch</BaseButton>
-        <BaseSocialIcons :links="data.links" :iconsOnly="true" />
+  <BaseContainer>
+    <div class="home-hero">
+      <div class="home-hero__column">
+        <BaseHeading
+          animation="typewriter"
+          :text="data.title"
+          element="h1"
+          margin="0 0 18px"
+        />
+        <BaseText class="home-hero__text" :text="data.text" :moreLines="true" />
+        <div class="home-hero__btns">
+          <BaseButton tag="a" link="#contact">Get in touch</BaseButton>
+          <BaseSocialIcons :links="data.links" :iconsOnly="true" />
+        </div>
       </div>
+      <HeroImage :img="data.img" class="home-hero__column img-flex-end" />
     </div>
-    <HeroImage :img="data.img" class="home-hero__column img-flex-end" />
+    <ScrollDownMouse />
   </BaseContainer>
-  <ScrollDownMouse />
 </template>
 
 <script>
@@ -61,7 +63,7 @@ export default {
     text-align: center;
     gap: 30px;
     &__column {
-      width: 100%;
+      width: 90%;
     }
 
     &__btns {

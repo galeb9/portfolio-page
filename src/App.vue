@@ -115,6 +115,12 @@ a:visited {
   color: $lightText;
   box-shadow: $shadow2;
 }
+// used on skill items
+.noisy {
+  background: linear-gradient($primary, transparent 120%),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(100%) brightness(100%);
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -126,5 +132,10 @@ a:visited {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(59, 206, 172, 0.808);
+}
+
+// custom margins
+.mb-20 {
+  margin-bottom: 20px;
 }
 </style>

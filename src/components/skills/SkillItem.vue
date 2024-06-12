@@ -1,6 +1,6 @@
 <template>
   <div
-    class="skill-item"
+    class="skill-item noisy"
     ref="skillItem"
     @mouseenter="changeColor"
     @mouseleave="changeColorBack"
@@ -77,9 +77,6 @@ export default {
   transition: $transition;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
-  background: linear-gradient($primary, transparent 120%),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(100%) brightness(100%);
 
   &:hover .skill-item__icon,
   &:hover .skill-item__text-icon {

@@ -56,8 +56,10 @@ export default {
       box-shadow: $shadow3;
     }
     @media only screen and (max-width: 768px) {
+      margin-right: 0px;
       &__img {
         max-width: 250px;
+        min-width: 100px;
       }
       .tag {
         font-size: 12px;

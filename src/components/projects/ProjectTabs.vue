@@ -12,16 +12,13 @@
       />
     </div>
     <div class="tabs-body glass-bg">
-      <BaseVideoDisplay
-        v-if="activeTab == 'Video'"
-        :file="item.video"
-        maxWidth="0"
-      />
+      <VideoPlayer v-if="activeTab == 'Video'" :file="item.video" />
+
       <ImageGallery
         v-else-if="activeTab == 'Images'"
         :imagePath="item.imagePath"
         :images="item.images"
-        :rowSizeLimit="item.imagesPerRow"
+        :mobileType="item.mobileType"
       />
     </div>
   </div>
@@ -29,8 +26,13 @@
 
 <script>
 import ImageGallery from "@/components/projects/ImageGallery.vue";
+import VideoPlayer from "@/components/UI/VideoPlayer";
+
 export default {
-  components: { ImageGallery },
+  components: {
+    ImageGallery,
+    VideoPlayer,
+  },
   props: {
     item: { type: Object, default: () => {} },
   },
@@ -93,6 +95,9 @@ export default {
       display: flex;
       justify-content: center;
       padding-right: 0;
+    }
+    .tabs-body {
+      padding: 30px 10px;
     }
   }
 }

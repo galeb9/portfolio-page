@@ -10,10 +10,7 @@
         class="project-item__img"
         alt="Project image"
       />
-      <div
-        v-if="!hideOnDetail"
-        class="project-item__main-info glass-bg expanding-div"
-      >
+      <div v-if="!hideOnDetail" class="project-item__main-info glass-bg">
         <BaseHeading element="h3" :text="item.title" margin="10px 0" />
         <BaseText class="hidden-text" :text="item.text" />
       </div>
@@ -95,7 +92,7 @@ export default {
     color: $secondary !important;
   }
 
-  .project-item__main {
+  &__main {
     position: relative;
     margin-bottom: 8px;
     transition: $transition;
@@ -105,7 +102,7 @@ export default {
       width: 100%;
       border-radius: $radius;
     }
-    .project-item__main-info {
+    &-info {
       border-radius: 0 0 $radius $radius;
       width: 100%;
       position: absolute;
@@ -113,36 +110,34 @@ export default {
       left: 0;
       right: 0;
       padding: 10px 20px;
-      color: white;
-    }
-    .expanding-div {
+      color: $lightText;
+      transition: $transition;
       height: 100px;
-      overflow: hidden;
-      transition: height 0.3s ease-in-out; /* Add a smooth height transition */
-    }
-
-    .expanding-div:hover {
-      height: 180px; /* Expand the div on hover */
-    }
-
-    .hidden-text {
-      display: none; /* Initially hide the text */
-      padding-bottom: 10px;
-    }
-
-    .expanding-div:hover .hidden-text {
-      display: block; /* Show the text when the parent div is hovered */
+      .hidden-text {
+        height: 0;
+        display: none;
+        opacity: 0;
+        transition: $transition;
+      }
+      &:hover {
+        height: 100%;
+        .hidden-text {
+          height: max-content;
+          display: block;
+          opacity: 1;
+        }
+      }
     }
   }
 
-  .project-item__tech {
+  &__tech {
     padding: 10px 20px;
     border-radius: $radius $radius;
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    .project-item__tech-item {
+    &-item {
       opacity: 0.7;
       transition: $transition;
       &:hover {
@@ -151,7 +146,7 @@ export default {
     }
   }
 
-  .project-item__links-container {
+  &__links-container {
     padding: 10px 20px;
     border-radius: $radius $radius;
     display: flex;

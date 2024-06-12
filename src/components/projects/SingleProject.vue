@@ -1,9 +1,7 @@
 <template>
-  <BaseContainer>
-    <ProjectOverview :item="item">
-      <ProjectItem class="floating" :item="item" :hideOnDetail="true" />
-    </ProjectOverview>
-  </BaseContainer>
+  <ProjectOverview :item="item">
+    <ProjectItem class="floating" :item="item" :hideOnDetail="true" />
+  </ProjectOverview>
 </template>
 
 <script>

@@ -25,5 +25,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 </style>

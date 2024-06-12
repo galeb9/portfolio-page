@@ -71,6 +71,11 @@ export default {
     background: $bgDark;
   }
 
+  .carousel__pagination-button:not(.carousel__pagination-button--active)::after {
+    background: $lightText;
+    opacity: 0.6;
+  }
+
   // mobile
   @media only screen and (max-width: 768px) {
     // nav

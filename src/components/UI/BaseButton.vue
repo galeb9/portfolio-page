@@ -1,8 +1,8 @@
 <template>
   <component
     :is="tag"
-    v-bind="attributes"
     :class="['base-btn', 'base-btn--s-' + size]"
+    v-bind="attributes"
   >
     <slot></slot>
   </component>

@@ -19,18 +19,18 @@ const router = createRouter({
     },
     {
       path: "/skills",
-      name: "skills",
       component: SkillsPage,
     },
     {
-      path: "/projects",
       name: "projects",
+      path: "/projects",
       component: ProjectsPage,
     },
     {
-      path: "/projects/:id",
       name: "project",
+      path: "/projects/:id",
       component: ProjectPage,
+      props: true,
     },
     {
       path: "/:catchAll(.*)",

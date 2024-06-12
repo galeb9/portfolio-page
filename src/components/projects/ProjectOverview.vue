@@ -5,19 +5,18 @@
         <slot></slot>
       </div>
       <div class="project-overview__main-text">
-        <div>
+        <div class="mb-20">
           <BaseHeading
             :text="item.title"
             element="h3"
             class="border-bottom"
             margin="10px 0"
           />
-          <BaseHTMLtext :text="item.description" />
+          <BaseText :text="item.description" :moreLines="true" />
         </div>
-
         <BaseButton tag="router-link" link="/projects" size="s">
+          <font-awesome-icon :icon="['fas', 'arrow-left-long']" />
           Projects
-          <font-awesome-icon :icon="['fas', 'arrow-right-long']" />
         </BaseButton>
       </div>
     </div>
@@ -38,6 +37,8 @@ export default {
 
 <style lang="scss">
 .project-overview {
+  min-height: 100vh;
+  padding: 100px 0;
   &__main {
     display: flex;
     align-items: center;
@@ -53,22 +54,21 @@ export default {
       align-items: center;
       justify-content: center;
     }
+
     .project-item {
       max-width: 330px;
     }
     @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: center;
       text-align: center;
       .base-heading {
         margin-bottom: 20px !important;
       }
+      .base-btn {
+        margin: 40px auto;
+      }
     }
-  }
-
-  &__video-container,
-  &__images-gallery {
-    margin-top: 60px;
   }
 }
 </style>

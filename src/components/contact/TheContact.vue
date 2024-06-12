@@ -1,57 +1,63 @@
 <template>
-  <BaseContainer id="contact" :minHeight="100" class="contact__container">
-    <BaseHeading :text="data.title" :center="true" margin="0 0 20px 0" />
-    <div class="contact__icon">
-      <div :class="['contact__icon-plane', { 'move__plane-icon': movePlane }]">
-        <img
-          class="contact__icon-plane-img plane--dark"
-          :src="require('@/assets/images/plane.png')"
-          alt="Plane image"
-        />
+  <BaseContainer id="contact" :title="data.title">
+    <div class="contact__container">
+      <div class="contact__icon">
+        <div
+          :class="['contact__icon-plane', { 'move__plane-icon': movePlane }]"
+        >
+          <img
+            class="contact__icon-plane-img plane--dark"
+            :src="require('@/assets/images/plane.png')"
+            alt="Plane image"
+          />
+        </div>
+
+        <div class="contact__icon-hands">
+          <img
+            class="contact__icon-hands-img"
+            :src="require('@/assets/images/hands-colored.png')"
+            alt="Hands image"
+          />
+        </div>
+      </div>
+      <div class="contact__btns">
+        <BaseButton
+          tag="a"
+          link="/files/m_grimsic_cv_eng.pdf"
+          target="_blank"
+          download
+        >
+          <font-awesome-icon :icon="['fas', 'circle-down']" />
+          CV
+        </BaseButton>
+        <BaseButton
+          @click="openMailClient"
+          tag="a"
+          link="mailto:matej.grimsic@gmail.com"
+        >
+          <font-awesome-icon
+            class="download-icon"
+            :icon="['fas', 'envelope']"
+          />
+          {{ data.btn }}
+        </BaseButton>
       </div>
 
-      <div class="contact__icon-hands">
-        <img
-          class="contact__icon-hands-img"
-          :src="require('@/assets/images/hands-colored.png')"
-          alt="Hands image"
-        />
+      <div class="contact__or-message">
+        <BaseText :text="data.or" />
+        <font-awesome-icon :icon="['fa', 'arrow-down-long']" />
       </div>
-    </div>
-    <div class="contact__btns">
-      <BaseButton
-        tag="a"
-        link="/files/m_grimsic_cv_eng.pdf"
-        target="_blank"
-        download
-      >
-        <font-awesome-icon :icon="['fas', 'circle-down']" />
-        CV
-      </BaseButton>
-      <BaseButton
-        @click="openMailClient"
-        tag="a"
-        link="mailto:matej.grimsic@gmail.com"
-      >
-        <font-awesome-icon class="download-icon" :icon="['fas', 'envelope']" />
-        {{ data.btn }}
-      </BaseButton>
-    </div>
-
-    <div class="contact__or-message">
-      <BaseText :text="data.or" />
-      <font-awesome-icon :icon="['fa', 'arrow-down-long']" />
-    </div>
-    <div class="contact__copy-email" @click="copyText(data.email)">
-      <p>{{ data.email }}</p>
-      <font-awesome-icon class="copy-icon" :icon="['far', 'clone']" />
-    </div>
-    <div class="copied-notification__container">
-      <transition name="fade-in-from-bottom">
-        <p v-show="isCopied" class="notification--copied">
-          Email copied to clipboard
-        </p>
-      </transition>
+      <div class="contact__copy-email" @click="copyText(data.email)">
+        <p>{{ data.email }}</p>
+        <font-awesome-icon class="copy-icon" :icon="['far', 'clone']" />
+      </div>
+      <div class="copied-notification__container">
+        <transition name="fade-in-from-bottom">
+          <p v-show="isCopied" class="notification--copied">
+            Email copied to clipboard
+          </p>
+        </transition>
+      </div>
     </div>
   </BaseContainer>
 </template>
@@ -91,7 +97,6 @@ export default {
   gap: 30px;
   .contact__icon {
     max-width: 500px;
-    // border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +127,9 @@ export default {
   }
   .contact__btns {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap-reverse;
     gap: 40px;
   }
   .contact__or-message {

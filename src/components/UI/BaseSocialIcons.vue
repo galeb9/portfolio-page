@@ -1,5 +1,5 @@
 <template>
-  <div class="social-icons">
+  <div :class="['social-icons', { 'social-icons--only': !iconsOnly }]">
     <a
       v-for="(link, index) in links"
       :key="index"
@@ -61,7 +61,9 @@ export default {
       }
     }
   }
-  @media only screen and (max-width: 658px) {
+}
+@media only screen and (max-width: 768px) {
+  .social-icons {
     gap: 30px;
     .social-icon__link {
       display: flex;
@@ -72,6 +74,9 @@ export default {
         font-size: 20px;
       }
     }
+  }
+  .social-icons--only {
+    flex-direction: column;
   }
 }
 </style>

@@ -1,53 +1,75 @@
 <template>
   <div class="image-gallery">
-    <ImageGalleryRow
-      v-for="(images, index) in galleryImages"
-      :key="index"
-      :images="images"
-      :imagePath="imagePath"
-      :isSingle="singleInRow(images)"
-    />
+    <carousel :items-to-show="1" :breakpoints="breakpoints">
+      <slide v-for="(img, index) in images" :key="index">
+        <img
+          :src="require('@/assets/images/' + imagePath + img)"
+          :style="{ 'max-width': mobileType ? '250px' : '600px' }"
+          class="image-gallery__img"
+          alt="Project image"
+        />
+      </slide>
+
+      <template #addons>
+        <navigation />
+        <pagination />
+      </template>
+    </carousel>
   </div>
 </template>
 
 <script>
-import ImageGalleryRow from "./ImageGalleryRow.vue";
+// https://github.com/ismail9k/vue3-carousel
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
 export default {
   name: "ImageGallery",
   components: {
-    ImageGalleryRow,
-  },
-  props: {
-    images: { type: Array, default: () => [] },
-    rowSizeLimit: { type: Number, default: 5 },
-    imagePath: { type: String, default: "" },
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
   data() {
     return {
-      incomingData: null,
-      galleryImages: null,
-      isSingle: null,
+      breakpoints: {
+        // 700px and up
+        700: {
+          itemsToShow: this.images.length >= 3 ? 3 : 1,
+          snapAlign: "center",
+        },
+      },
     };
   },
-  created() {
-    this.incomingData = [...this.images];
-    this.galleryImages = this.breakIntoRows(
-      this.incomingData,
-      this.rowSizeLimit
-    );
-  },
-  methods: {
-    breakIntoRows(items, size) {
-      const rows = [];
-      items = [].concat(...items);
-      while (items.length) {
-        rows.push(items.splice(0, size));
-      }
-      return rows;
-    },
-    singleInRow(images) {
-      return images.length === 1 ? true : false;
-    },
+  props: {
+    images: { type: Array, default: () => {} },
+    imagePath: { type: String, default: "" },
+    mobileType: { type: Boolean, default: true }, // desktop -> false
   },
 };
 </script>
+
+<style lang="scss">
+.image-gallery {
+  &__img {
+    border-radius: $radius;
+    @media only screen and (max-width: 768px) {
+      max-width: 90% !important;
+    }
+  }
+
+  // carousel config
+  .carousel__pagination {
+    margin: 40px 0;
+  }
+  .carousel__icon {
+    background: $secondary;
+    border-radius: $radius;
+    color: $lightText;
+  }
+  .carousel__pagination-button--active::after {
+    background: $secondary;
+  }
+}
+</style>

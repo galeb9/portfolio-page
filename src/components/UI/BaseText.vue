@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss">
 .base-text {
+  line-height: 1.4;
   @media only screen and (max-width: 768px) {
     font-size: 15px;
   }

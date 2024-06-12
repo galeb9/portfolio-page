@@ -1,15 +1,11 @@
 <template>
-  <div
-    ref="elementRef"
-    class="base-container scroll-element"
-    :class="{
-      'base-container__horizontal': horizontal,
-      'base-container__align-center': alignCenter,
-      reveal: revealed,
-    }"
-    :style="{ margin: marginY + 'px 0', 'min-height': minHeight + 'vh' }"
-  >
-    <slot></slot>
+  <div class="base-container">
+    <div>
+      <BaseHeading v-if="title" element="h2" :text="title" :center="true" />
+      <div class="base-container__body">
+        <slot></slot>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,66 +13,37 @@
 export default {
   name: "BaseContainer",
   props: {
-    marginY: { type: Number, default: 0 },
-    minHeight: { type: Number, default: 90 },
-    horizontal: { type: Boolean, default: false },
-    alignCenter: { type: Boolean, default: false },
-    justifyCenter: { type: Boolean, default: false },
+    title: { type: String, default: "" },
   },
-  data() {
-    return {
-      revealed: false,
-    };
-  },
-  // methods: {
-  //   handleScroll() {
-  //     const element = this.$refs.elementRef;
-  //     if (element) {
-  //       const elementTop = element.getBoundingClientRect().top;
-  //       const windowHeight = window.innerHeight;
-  //       this.revealed = elementTop < windowHeight;
-  //     }
-  //   },
-  // },
-  // mounted() {
-  //   window.addEventListener("scroll", this.handleScroll);
-  // },
-  // beforeUnmount() {
-  //   window.removeEventListener("scroll", this.handleScroll);
-  // },
 };
 </script>
 
 <style lang="scss">
 .base-container {
-  padding: 50px 0;
-}
-.base-container__horizontal {
+  // background: red;
+  padding: 100px 0;
   display: flex;
-}
-.base-container__align-center {
+  justify-content: center;
   align-items: center;
-}
-@media only screen and (max-width: 768px) {
-  .base-container {
+  min-height: 95vh;
+  & > div > .base-heading {
+    margin-bottom: 80px !important;
+  }
+  // &__body {
+  // background: blue;
+  // }
+  @media only screen and (max-width: 768px) {
+    padding: 50px 0;
     margin: 0 !important;
-    min-height: 99vh !important;
+    // display: block;
+    // min-height: 99vh !important;
+    .base-heading {
+      margin-bottom: 50px !important;
+    }
   }
-  .base-container__horizontal {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  & + .base-container {
+    // background: red;
+    padding-bottom: 50px;
   }
 }
-
-/* Style your scroll-revealed element here */
-// .scroll-element {
-//   opacity: 0;
-//   transform: translateY(120px);
-//   transition: all 2s, transform 0.2s;
-// }
-// .scroll-element.reveal {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
 </style>

@@ -15,13 +15,13 @@ export default {};
   justify-content: center;
   color: $secondary !important;
   gap: 10px;
-  transform: translateY(-100px);
+  transform: translateY(160px);
   opacity: 0.8;
   transition: $transition;
   &:hover {
     opacity: 1;
     border-bottom-color: $secondary !important;
-    transform: translateY(-105px);
+    transform: translateY(150px);
   }
   @media only screen and (max-width: 768px) {
     display: none;
