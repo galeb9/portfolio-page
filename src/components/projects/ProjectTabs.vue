@@ -13,7 +13,6 @@
     </div>
     <div class="tabs-body glass-bg">
       <VideoPlayer v-if="activeTab == 'Video'" :file="item.video" />
-
       <ImageGallery
         v-else-if="activeTab == 'Images'"
         :imagePath="item.imagePath"

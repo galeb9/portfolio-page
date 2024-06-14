@@ -3,6 +3,7 @@
     "title": "<web-developer>",
     "text": "I am a programmer with a passion for web development and various programming challenges.\n\nAlways on the lookout for new technologies, I am dedicated to enhancing my skills and continually striving for mastery on my journey.",
     "img": "profile/profile-07.jpg",
+    "skills": ["vue", "sass", "laravel"],
     "btn": "Get in touch",
     "links": [
       {
@@ -18,6 +19,31 @@
     ]
   },
   "skills": {
+    "title": "<brain-skills>",
+    "left": [
+      "git",
+      "js",
+      "vue",
+      "angular",
+      "react",
+      "nuxt",
+      "php",
+      "laravel",
+      "python"
+    ],
+    "right": [
+      "html",
+      "css",
+      "sass",
+      "bootstrap",
+      "firebase",
+      "tailwind",
+      "sql",
+      "nodejs",
+      "figma"
+    ]
+  },
+  "skill2": {
     "title": "<brain-skills>",
     "left": [
       {
@@ -127,7 +153,7 @@
         "github": "https://github.com/galeb9/GreekGeek",
         "liveAt": "https://pushups-150a1.web.app",
         "video": "greek-geek.mp4",
-        "description": "An app to inspire users to do pushups anywhere. \n\nYou can use it to set you daily goal and track how much you do in a single day. \n\nIt is possible to add friends and make arenas (groups), where you can see who is winning for most pushups today. You can also check your pushup history and status for each day by months. \n\nUsers must login or register for use of app.",
+        "description": "This app is designed to inspire users to do pushups anywhere.\n\nUsers can set daily goals and track their progress throughout the day. Additionally, they can add friends and create arenas (groups) to compete for the highest number of pushups in a day. The app also provides a detailed pushup history and monthly status overview.\n\nTo access these features, users are required to log in or register, ensuring personalized tracking and motivation for achieving fitness goals.",
         "imagePath": "greek-geek/",
         "images": [
           "register.jpg",
@@ -151,11 +177,11 @@
         "title": "Food order app",
         "img": "order-food/order-food.jpg",
         "text": "A front-end app where you can order food online. For mobile only.",
-        "tech": ["Vue", "Firebase", "Sass", "Figma"],
+        "tech": ["Vue", "Sass", "Figma"],
         "github": "https://github.com/galeb9/web-food-app",
         "liveAt": "https://order-food-app-f84eb.web.app",
         "video": "order-food.mp4",
-        "description": "A front-end app where you can order food online. \nThe idea is for user to order food from a nice looking app. \n\n You can tap on an item you would like to add and select the quantity. You can choose from different  categories (food or drinks). \n\n Users order can be placed after you have added some of the items to the order list, add a credit card and your location.",
+        "description": "This front-end project involved implementing an infinite scroll feature for a movie listing. \n\nI was provided with a design and aimed to replicate it with pixel-perfect accuracy.\n\nAs a small project, it highlights my ability to faithfully translate design specifications into a working web interface.",
         "imagePath": "order-food/",
         "images": [
           "welcome.jpg",
@@ -173,7 +199,7 @@
         "title": "Portfolio page",
         "img": "portfolio-project-bg.png",
         "text": "My portfolio page you are currently viewing.",
-        "description": "I have made my own designs in Figma and coded them to reality with the Vue.js framework, using Firebase as the hosting service.",
+        "description": "This is the current website you are viewing. \n\nIt was conceptualized with custom designs crafted in Figma and brought to life using Vue.js 3 and SCSS. \n\nThe site is hosted on Firebase, showcasing my skill in front-end development and responsive design implementation.",
         "tech": ["Vue", "Sass", "Figma"],
         "liveAt": "https://matej-grimsic.web.app/home",
         "github": "https://github.com/galeb9/portfolio-page",
@@ -200,7 +226,7 @@
         "text": "A website made for a company where I did my internship.",
         "tech": ["Vue", "Nuxt", "Sass"],
         "liveAt": "https://www.hudlajf.com/sl/",
-        "description": "I was given all the design files and coded the website working closely with the design team, checking back for the best possible outcome.",
+        "description": "This project was completed during my tenure at my first company, where I closely collaborated with the designer, marketing team, and tech leader to create a webpage.\n\nI utilized Nuxt2 to develop the site, ensuring seamless integration of design and functionality.\n\nThis experience allowed me to refine my skills in teamwork, frontend development, and project coordination, demonstrating my ability to contribute effectively in a collaborative environment.",
         "type": "website"
       },
       {
@@ -210,7 +236,7 @@
         "text": "A website for a nails saloon, I am making for a friend.",
         "tech": ["Vue", "Sass", "Figma"],
         "liveAt": "https://gabi.si",
-        "description": "I have taken the requests of the client, made the design and now I am coding the website in my spare time.",
+        "description": "This website project is for a friend's nail salon.\n\nI took the client's requests and translated them into a detailed design using Figma.\n\nNow, I am in the final stages of coding the website with Nuxt2 and styling it with SASS.\n\nThis project demonstrates my ability to understand client needs, create visually appealing designs, and implement them using modern web development frameworks.",
         "type": "website"
       },
       {
@@ -220,8 +246,19 @@
         "text": "A front-end project with mock json server and use of bootstrap.",
         "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
         "github": "https://github.com/galeb9/bucket-storage",
-        "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls.",
+        "description": "This front-end project, built with Angular and styled using Bootstrap CSS, uses a mock JSON server for HTTP calls. \n\nUsers can create and delete buckets and add files to them. This project demonstrates my skills in dynamic data handling and building interactive web applications.",
         "type": "app"
+      },
+      {
+        "id": 8,
+        "title": "Panna cakes",
+        "img": "panna-cakes/panna-logo.png",
+        "text": "A Next.js (React) website for a cake business, featuring an option to send emails.",
+        "tech": ["React", "Bootstrap", "Sass"],
+        "liveAt": "https://panna-cakes.vercel.app",
+        "github": "https://github.com/galeb9/panna-torte",
+        "description": "This project is a website developed using Next.js (React) for a friend's cake baking business.\n\nThe website features a convenient email-based system for customers to submit cake requests, improving communication and order management.\n\nImplemented with React for interactive features, Bootstrap for responsive design, and Sass for styling, this project serves as a practical learning experience in Next.js and React development.",
+        "type": "website"
       }
     ]
   },

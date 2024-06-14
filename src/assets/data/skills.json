@@ -1,0 +1,104 @@
+{
+  "skills": {
+    "firebase": {
+      "name": "Firebase",
+      "img": "firebase.png",
+      "color": "#FFCB2B"
+    },
+    "python": {
+      "name": "Python",
+      "img": "python.png",
+      "color": "#ffc331"
+    },
+    "git": {
+      "name": "GIT",
+      "icon": "git-alt",
+      "color": "#f1502f"
+    },
+    "php": {
+      "name": "PHP",
+      "img": "php.png",
+      "color": "#7777ac"
+    },
+    "sql": {
+      "name": "SQL",
+      "img": "sql.png",
+      "color": "#00758f"
+    },
+    "mongoose": {
+      "name": "Mongoose",
+      "img": "mongoose.png",
+      "color": "#890000"
+    },
+    "nodejs": {
+      "name": "Node.js",
+      "icon": "node-js",
+      "color": "#6cc24a"
+    },
+    "mongodb": {
+      "name": "MongoDB",
+      "img": "mongoDB.png",
+      "color": "#589636"
+    },
+    "react": {
+      "name": "React",
+      "icon": "react",
+      "color": "#61DBFB"
+    },
+    "html": {
+      "name": "HTML",
+      "icon": "html5",
+      "color": "#e34f26"
+    },
+    "css": {
+      "name": "CSS",
+      "icon": "css3-alt",
+      "color": "#2465F1"
+    },
+    "sass": {
+      "name": "SASS",
+      "icon": "sass",
+      "color": "#CD6799"
+    },
+    "js": {
+      "name": "JavaScript",
+      "icon": "square-js",
+      "color": "#f7df1e"
+    },
+    "vue": {
+      "name": "Vue.js",
+      "icon": "vuejs",
+      "color": "#42b883"
+    },
+    "nuxt": {
+      "name": "Nuxt.js",
+      "img": "nuxt.png",
+      "color": "#41b883"
+    },
+    "figma": {
+      "name": "Figma",
+      "icon": "figma",
+      "color": "rgba(128, 128, 128, 0.5)"
+    },
+    "angular": {
+      "name": "Angular",
+      "icon": "angular",
+      "color": "#a6120d"
+    },
+    "bootstrap": {
+      "name": "Bootstrap",
+      "icon": "bootstrap",
+      "color": "#563d7c"
+    },
+    "laravel": {
+      "name": "Laravel",
+      "icon": "laravel",
+      "color": "#f23c30"
+    },
+    "tailwind": {
+      "name": "Tailwind",
+      "img": "tailwind.png",
+      "color": "#0ea5e9"
+    }
+  }
+}

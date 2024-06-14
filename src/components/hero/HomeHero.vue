@@ -14,7 +14,11 @@
           <BaseSocialIcons :links="data.links" :iconsOnly="true" />
         </div>
       </div>
-      <HeroImage :img="data.img" class="home-hero__column img-flex-end" />
+      <HeroImage
+        :img="data.img"
+        :skills="data.skills"
+        class="home-hero__column img-flex-end"
+      />
     </div>
     <ScrollDownMouse />
   </BaseContainer>

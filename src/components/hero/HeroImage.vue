@@ -8,15 +8,20 @@
       />
       <div class="tag xp-tag">Experience: 2 years</div>
       <div class="tag name-tag">Matej Grimšič</div>
+      <SkillsRow class="hero-skills" :skills="skills" :isColumn="true" />
     </div>
   </div>
 </template>
 
 <script>
+import SkillsRow from "@/components/skills/SkillsRow.vue";
+
 export default {
   name: "HeroImage",
+  components: { SkillsRow },
   props: {
     img: { type: String },
+    skills: { type: Array, default: () => [] },
   },
 };
 </script>
@@ -27,6 +32,11 @@ export default {
     position: relative;
     margin-right: 20px;
     width: max-content;
+    .hero-skills {
+      position: absolute;
+      bottom: 25px;
+      left: 20px;
+    }
     .tag {
       padding: 12px 30px;
       border-radius: $radius;

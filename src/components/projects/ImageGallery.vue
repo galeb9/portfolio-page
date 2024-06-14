@@ -1,5 +1,6 @@
 <template>
   <div class="image-gallery">
+    <!-- <div v-if="!images">Loading...</div> -->
     <carousel :items-to-show="1" :breakpoints="breakpoints">
       <slide v-for="(img, index) in images" :key="index">
         <img
@@ -58,7 +59,6 @@ export default {
       max-width: 90% !important;
     }
   }
-
   // carousel config
   .carousel__pagination {
     margin: 40px 0;

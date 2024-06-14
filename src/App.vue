@@ -138,4 +138,7 @@ a:visited {
 .mb-20 {
   margin-bottom: 20px;
 }
+.mt-40 {
+  margin-top: 40px;
+}
 </style>

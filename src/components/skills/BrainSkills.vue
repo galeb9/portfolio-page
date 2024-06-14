@@ -3,11 +3,11 @@
     <div class="brain-skills__container">
       <div class="brain">
         <div class="brain-skills">
-          <BrainPart class="left-part floating" :skills="data.left" />
+          <BrainPart class="left-part floating" :skills="leftSkills" />
           <BrainPart
             class="right-part floating"
             side="right"
-            :skills="data.right"
+            :skills="rightSkills"
           />
         </div>
       </div>
@@ -17,14 +17,29 @@
 
 <script>
 import BrainPart from "./BrainPart.vue";
+import { skills } from "@/assets/data/skills.json";
 
 export default {
   name: "BrainSkills",
+  skills,
   components: {
     BrainPart,
   },
   props: {
     data: { type: Object, default: () => {} },
+  },
+  computed: {
+    leftSkills() {
+      return this.buildBrainPart(this.data.left);
+    },
+    rightSkills() {
+      return this.buildBrainPart(this.data.right);
+    },
+  },
+  methods: {
+    buildBrainPart(arr) {
+      return arr.map((skill) => this.$options.skills[skill]);
+    },
   },
 };
 </script>

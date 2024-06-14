@@ -23,7 +23,7 @@
         alt="Skill image"
       />
     </div>
-    <div :class="['skill-item__pointer', side]">
+    <div v-if="hasPointerLine" :class="['skill-item__pointer', side]">
       <p class="skill-item__pointer-text">{{ item.name || "name" }}</p>
       <div class="skill-item__pointer-line"></div>
     </div>
@@ -36,6 +36,7 @@ export default {
   props: {
     item: { type: Object, default: () => {} },
     side: { type: String, default: "left" },
+    hasPointerLine: { type: Boolean, default: true },
   },
   data() {
     return {};
@@ -71,7 +72,7 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 3px;
-  cursor: pointer;
+  cursor: default;
   z-index: 10;
   color: $darkText;
   transition: $transition;

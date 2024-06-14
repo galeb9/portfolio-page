@@ -33,6 +33,7 @@ import {
   faAws,
   faReact,
   faLinkedin,
+  faLaravel,
 } from "@fortawesome/free-brands-svg-icons";
 
 const icons = [
@@ -64,6 +65,7 @@ const icons = [
   faMugHot,
   faLinkedin,
   faComputerMouse,
+  faLaravel,
 ];
 
 for (let i = 0; i < icons.length; i++) {
