@@ -1,14 +1,14 @@
 <template>
   <div
     class="skill-item noisy"
-    ref="skillItem"
-    @mouseenter="changeColor"
-    @mouseleave="changeColorBack"
+    @mouseenter="hovered = true"
+    @mouseleave="hovered = false"
+    :style="itemBackground"
   >
     <div class="skill-item__icon-container">
       <font-awesome-icon
         v-if="item.icon"
-        :icon="['fab', item.icon]"
+        :icon="item.icon"
         class="skill-item__icon"
       />
       <p v-if="item.text" class="skill-item__text-icon">{{ item.text }}</p>
@@ -19,7 +19,7 @@
           { mongoose__img: item.img === 'mongoose.png' },
         ]"
         :src="require('@/assets/images/skills/' + item.img)"
-        ref="skillImage"
+        :style="imgFilterStyle"
         alt="Skill image"
       />
     </div>
@@ -34,28 +34,27 @@
 export default {
   name: "SkillItem",
   props: {
-    item: { type: Object, default: () => {} },
+    item: { type: Object, default: () => ({}) },
     side: { type: String, default: "left" },
     hasPointerLine: { type: Boolean, default: true },
   },
   data() {
-    return {};
+    return {
+      hovered: false,
+    };
   },
-  methods: {
-    changeColor() {
-      if (this.$refs.skillItem)
-        this.$refs.skillItem.style.background = `linear-gradient( ${this.item.color} , transparent   120% )`;
-
-      if (this.$refs.skillImage) {
-        this.$refs.skillImage.style.filter = "invert(100%)";
-        this.$refs.skillImage.style.filter = "invert(100%)";
-      }
+  computed: {
+    itemBackground() {
+      return {
+        background: this.hovered
+          ? `linear-gradient(${this.item.color}, transparent 120%)`
+          : `linear-gradient(#dee2e6, transparent 120%), url(https://grainy-gradients.vercel.app/noise.svg)`,
+      };
     },
-    changeColorBack() {
-      if (this.$refs.skillItem)
-        this.$refs.skillItem.style.background = `linear-gradient( #dee2e6 ,  transparent 120% ), url(https://grainy-gradients.vercel.app/noise.svg)`;
-
-      if (this.$refs.skillImage) this.$refs.skillImage.style.filter = "none";
+    imgFilterStyle() {
+      return {
+        filter: this.hovered ? "invert(100%)" : "none",
+      };
     },
   },
 };
@@ -83,6 +82,7 @@ export default {
   &:hover .skill-item__text-icon {
     color: white;
   }
+
   .skill-item__icon-container {
     .skill-item__text-icon {
       font-weight: 700;
@@ -90,25 +90,31 @@ export default {
       font-size: 14px;
       transition: $transition;
     }
+
     .skill-item__icon {
       font-size: 22px;
       transition: $transition;
     }
+
     .skill-item__img {
       max-height: 20px;
       transition: $transition;
     }
+
     .mongoose__img {
       max-height: 15px;
     }
   }
+
   .skill-item__pointer {
     position: absolute;
     top: 2px;
+
     .skill-item__pointer-text {
       padding: 0 6px 2px;
       font-weight: 700;
     }
+
     .skill-item__pointer-line {
       transition: $transition;
       width: 190px;
@@ -121,6 +127,7 @@ export default {
   .left {
     right: 50px;
   }
+
   .right {
     left: 50px;
     text-align: right;
@@ -132,6 +139,7 @@ export default {
         .skill-item__pointer-text {
           color: $secondary !important;
         }
+
         .skill-item__pointer-line {
           width: 230px;
           background: $secondary !important;
@@ -139,6 +147,7 @@ export default {
       }
     }
   }
+
   @media only screen and (max-width: 800px) {
     &:hover {
       .skill-item__pointer {
@@ -146,26 +155,31 @@ export default {
           font-size: 16px;
           color: $secondary;
         }
+
         .skill-item__pointer-line {
           width: 50vw;
           background: $secondary;
         }
       }
     }
+
     .skill-item__pointer {
       .skill-item__pointer-text {
         font-size: 14px;
       }
+
       .skill-item__pointer-line {
         width: calc(100vw - 300px);
       }
     }
   }
+
   @media only screen and (max-width: 520px) {
     .skill-item__pointer .skill-item__pointer-line {
       width: calc(100vw - 220px);
     }
   }
+
   @media only screen and (max-width: 355px) {
     .skill-item__pointer .skill-item__pointer-line {
       width: calc(100vw - 180px);

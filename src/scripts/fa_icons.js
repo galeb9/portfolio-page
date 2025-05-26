@@ -1,5 +1,4 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-
 import {
   faBars,
   faXmark,
@@ -14,10 +13,9 @@ import {
   faEnvelope,
   faMugHot,
   faComputerMouse,
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
-
 import { faClone } from "@fortawesome/free-regular-svg-icons";
-
 import {
   faFigma,
   faCss3Alt,
@@ -34,9 +32,11 @@ import {
   faReact,
   faLinkedin,
   faLaravel,
+  faPython,
+  faPhp,
 } from "@fortawesome/free-brands-svg-icons";
 
-const icons = [
+const solidIcons = [
   faBars,
   faXmark,
   faCircleHalfStroke,
@@ -46,8 +46,16 @@ const icons = [
   faArrowRightLong,
   faArrowLeftLong,
   faArrowDownLong,
-  faClone,
-  faGithub,
+  faCircleDown,
+  faEnvelope,
+  faMugHot,
+  faComputerMouse,
+  faDatabase,
+];
+
+const regularIcons = [faClone];
+
+const brandIcons = [
   faFigma,
   faCss3Alt,
   faHtml5,
@@ -56,18 +64,15 @@ const icons = [
   faGitAlt,
   faVuejs,
   faNodeJs,
+  faGithub,
   faAngular,
   faBootstrap,
   faAws,
   faReact,
-  faCircleDown,
-  faEnvelope,
-  faMugHot,
   faLinkedin,
-  faComputerMouse,
   faLaravel,
+  faPython,
+  faPhp,
 ];
 
-for (let i = 0; i < icons.length; i++) {
-  library.add(icons[i]);
-}
+library.add(...solidIcons, ...regularIcons, ...brandIcons);

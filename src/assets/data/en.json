@@ -3,7 +3,7 @@
     "title": "<web-developer>",
     "text": "I am a programmer with a passion for web development and various programming challenges.\n\nAlways on the lookout for new technologies, I am dedicated to enhancing my skills and continually striving for mastery on my journey.",
     "img": "profile/profile-07.jpg",
-    "skills": ["vue", "sass", "laravel"],
+    "skills": ["angular", "sass", "python"],
     "btn": "Get in touch",
     "links": [
       {
@@ -41,104 +41,6 @@
       "sql",
       "nodejs",
       "figma"
-    ]
-  },
-  "skill2": {
-    "title": "<brain-skills>",
-    "left": [
-      {
-        "name": "HTML",
-        "img": "html.png",
-        "color": "#e34f26"
-      },
-      {
-        "name": "CSS",
-        "icon": "css3-alt",
-        "color": "#2465F1"
-      },
-      {
-        "name": "SASS",
-        "icon": "sass",
-        "color": "#CD6799"
-      },
-      {
-        "name": "JavaScript",
-        "icon": "square-js",
-        "color": "#f7df1e"
-      },
-      {
-        "name": "Vue.js",
-        "icon": "vuejs",
-        "color": "#42b883"
-      },
-      {
-        "name": "Nuxt.js",
-        "img": "nuxt.png",
-        "color": "#41b883"
-      },
-      {
-        "name": "Figma",
-        "icon": "figma",
-        "color": "rgba(128, 128, 128, 0.5)"
-      },
-      {
-        "name": "Angular",
-        "icon": "angular",
-        "color": "#a6120d"
-      },
-      {
-        "name": "Bootstrap",
-        "icon": "bootstrap",
-        "color": "#563d7c"
-      }
-    ],
-    "right": [
-      {
-        "name": "Firebase",
-        "img": "firebase.png",
-        "color": "#FFCB2B"
-      },
-      {
-        "name": "Python",
-        "img": "python.png",
-        "color": "#ffc331"
-      },
-      {
-        "name": "GIT",
-        "icon": "git-alt",
-        "color": "#f1502f"
-      },
-      {
-        "name": "PHP",
-        "img": "php.png",
-        "color": "#7777ac"
-      },
-      {
-        "name": "SQL",
-        "img": "sql.png",
-        "color": "#00758f"
-      },
-      {
-        "name": "Mongoose",
-        "img": "mongoose.png",
-        "color": "#890000"
-      },
-      {
-        "name": "Node.js",
-        "icon": "node-js",
-        "color": "#6cc24a"
-      },
-      {
-        "name": "MongoDB",
-        "img": "mongoDB.png",
-        "color": "#589636"
-      },
-
-      {
-        "name": "React",
-        "icon": "react",
-        "color": "#61DBFB"
-      }
     ]
   },
   "projects": {

@@ -7,22 +7,22 @@
     },
     "python": {
       "name": "Python",
-      "img": "python.png",
+      "icon": ["fab", "python"],
       "color": "#ffc331"
     },
     "git": {
       "name": "GIT",
-      "icon": "git-alt",
+      "icon": ["fab", "git-alt"],
       "color": "#f1502f"
     },
     "php": {
       "name": "PHP",
-      "img": "php.png",
+      "icon": ["fab", "php"],
       "color": "#7777ac"
     },
     "sql": {
       "name": "SQL",
-      "img": "sql.png",
+      "icon": ["fas", "database"],
       "color": "#00758f"
     },
     "mongoose": {
@@ -32,7 +32,7 @@
     },
     "nodejs": {
       "name": "Node.js",
-      "icon": "node-js",
+      "icon": ["fab", "node-js"],
       "color": "#6cc24a"
     },
     "mongodb": {
@@ -42,32 +42,32 @@
     },
     "react": {
       "name": "React",
-      "icon": "react",
+      "icon": ["fab", "react"],
       "color": "#61DBFB"
     },
     "html": {
       "name": "HTML",
-      "icon": "html5",
+      "icon": ["fab", "html5"],
       "color": "#e34f26"
     },
     "css": {
       "name": "CSS",
-      "icon": "css3-alt",
+      "icon": ["fab", "css3-alt"],
       "color": "#2465F1"
     },
     "sass": {
       "name": "SASS",
-      "icon": "sass",
+      "icon": ["fab", "sass"],
       "color": "#CD6799"
     },
     "js": {
       "name": "JavaScript",
-      "icon": "square-js",
+      "icon": ["fab", "square-js"],
       "color": "#f7df1e"
     },
     "vue": {
       "name": "Vue.js",
-      "icon": "vuejs",
+      "icon": ["fab", "vuejs"],
       "color": "#42b883"
     },
     "nuxt": {
@@ -77,22 +77,22 @@
     },
     "figma": {
       "name": "Figma",
-      "icon": "figma",
+      "icon": ["fab", "figma"],
       "color": "rgba(128, 128, 128, 0.5)"
     },
     "angular": {
       "name": "Angular",
-      "icon": "angular",
+      "icon": ["fab", "angular"],
       "color": "#a6120d"
     },
     "bootstrap": {
       "name": "Bootstrap",
-      "icon": "bootstrap",
+      "icon": ["fab", "bootstrap"],
       "color": "#563d7c"
     },
     "laravel": {
       "name": "Laravel",
-      "icon": "laravel",
+      "icon": ["fab", "laravel"],
       "color": "#f23c30"
     },
     "tailwind": {
