@@ -5,6 +5,11 @@
       "img": "firebase.png",
       "color": "#FFCB2B"
     },
+    "docker": {
+      "name": "Docker",
+      "icon": ["fab", "docker"],
+      "color": "#2596be"
+    },
     "python": {
       "name": "Python",
       "icon": ["fab", "python"],
@@ -31,7 +36,7 @@
       "color": "#890000"
     },
     "nodejs": {
-      "name": "Node.js",
+      "name": "Node",
       "icon": ["fab", "node-js"],
       "color": "#6cc24a"
     },
@@ -66,7 +71,7 @@
       "color": "#f7df1e"
     },
     "vue": {
-      "name": "Vue.js",
+      "name": "Vue",
       "icon": ["fab", "vuejs"],
       "color": "#42b883"
     },

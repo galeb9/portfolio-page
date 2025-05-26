@@ -34,6 +34,7 @@ import {
   faLaravel,
   faPython,
   faPhp,
+  faDocker,
 } from "@fortawesome/free-brands-svg-icons";
 
 const solidIcons = [
@@ -73,6 +74,7 @@ const brandIcons = [
   faLaravel,
   faPython,
   faPhp,
+  faDocker,
 ];
 
 library.add(...solidIcons, ...regularIcons, ...brandIcons);

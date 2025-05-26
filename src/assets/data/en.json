@@ -19,28 +19,28 @@
     ]
   },
   "skills": {
-    "title": "<brain-skills>",
+    "title": "<technical-skills>",
     "left": [
-      "git",
       "js",
-      "vue",
-      "angular",
-      "react",
-      "nuxt",
+      "nodejs",
+      "python",
       "php",
       "laravel",
-      "python"
+      "sql",
+      "docker",
+      "firebase",
+      "git"
     ],
     "right": [
+      "react",
+      "vue",
+      "angular",
       "html",
-      "css",
+      "figma",
       "sass",
+      "css",
       "bootstrap",
-      "firebase",
-      "tailwind",
-      "sql",
-      "nodejs",
-      "figma"
+      "tailwind"
     ]
   },
   "projects": {
