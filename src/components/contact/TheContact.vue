@@ -34,6 +34,7 @@
           @click="openMailClient"
           tag="a"
           link="mailto:matej.grimsic@gmail.com"
+          target="_blank"
         >
           <font-awesome-icon
             class="download-icon"

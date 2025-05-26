@@ -71,7 +71,7 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 3px;
-  cursor: default;
+  cursor: pointer;
   z-index: 10;
   color: $darkText;
   transition: $transition;

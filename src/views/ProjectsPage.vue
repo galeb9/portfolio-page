@@ -1,5 +1,5 @@
 <template>
-  <ProjectsList :data="$options.projects" />
+  <ProjectsList class="projects-page__container" :data="$options.projects" />
 </template>
 
 <script>
@@ -14,3 +14,9 @@ export default {
   projects,
 };
 </script>
+
+<style>
+.projects-page__container {
+  padding-bottom: 50px;
+}
+</style>

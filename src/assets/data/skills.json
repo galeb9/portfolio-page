@@ -3,107 +3,128 @@
     "firebase": {
       "name": "Firebase",
       "img": "firebase.png",
-      "color": "#FFCB2B"
+      "color": "#FFCB2B",
+      "experience": "Used Firebase for backend infrastructure in a web app, including Firestore for real-time data, Firebase Auth for user authentication, and Firebase Hosting for deployment."
     },
     "docker": {
       "name": "Docker",
       "icon": ["fab", "docker"],
-      "color": "#2596be"
+      "color": "#2596be",
+      "experience": "Used Docker for local development, containerizing full-stack applications and managing environments with Docker Compose. Worked with predefined and custom multi-container setups to streamline team workflows."
     },
     "python": {
       "name": "Python",
       "icon": ["fab", "python"],
-      "color": "#ffc331"
+      "color": "#ffc331",
+      "experience": "Used Python across scripting, API development, and data processing tasks. Built RESTful APIs with Flask and handled data transformations using Pandas and other libraries in personal, educational, and professional projects."
     },
     "git": {
       "name": "GIT",
       "icon": ["fab", "git-alt"],
-      "color": "#f1502f"
+      "color": "#f1502f",
+      "experience": "Used Git extensively in both solo and team projects, following best practices like feature branching, pull requests, and rebasing. Primarily work with Git via CLI, but also experienced with GUI tools when needed."
     },
     "php": {
       "name": "PHP",
       "icon": ["fab", "php"],
-      "color": "#7777ac"
+      "color": "#7777ac",
+      "experience": "Worked professionally with PHP, building TYPO3 modules and maintaining WordPress setups. Used both Laravel and plain PHP for backend development in client and internal projects."
     },
     "sql": {
       "name": "SQL",
       "icon": ["fas", "database"],
-      "color": "#00758f"
+      "color": "#00758f",
+      "experience": "Used SQL with MySQL and PostgreSQL for writing queries in both personal and professional projects. Still learning deeper aspects like schema design and performance optimization."
     },
     "mongoose": {
       "name": "Mongoose",
       "img": "mongoose.png",
-      "color": "#890000"
+      "color": "#890000",
+      "experience": ""
     },
     "nodejs": {
       "name": "Node",
       "icon": ["fab", "node-js"],
-      "color": "#6cc24a"
+      "color": "#6cc24a",
+      "experience": "Built RESTful APIs using Node.js and Express in both personal and professional projects. Focused on backend logic, routing, and middleware for web applications."
     },
     "mongodb": {
       "name": "MongoDB",
       "img": "mongoDB.png",
-      "color": "#589636"
+      "color": "#589636",
+      "experience": ""
     },
     "react": {
       "name": "React",
       "icon": ["fab", "react"],
-      "color": "#61DBFB"
+      "color": "#61DBFB",
+      "experience": "Built websites, SPAs, and reusable components using React. Utilized hooks and conexperience for state and logic management in personal projects focused on clean UI and modular design."
     },
     "html": {
       "name": "HTML",
       "icon": ["fab", "html5"],
-      "color": "#e34f26"
+      "color": "#e34f26",
+      "experience": "Used HTML professionally for building structured, accessible, and semantic layouts. Experienced with modern HTML5 standards and best practices across a wide range of web projects."
     },
     "css": {
       "name": "CSS",
       "icon": ["fab", "css3-alt"],
-      "color": "#2465F1"
+      "color": "#2465F1",
+      "experience": "Used both pure CSS and preprocessors like SCSS to create responsive layouts, animations, and UI styling. Comfortable with Flexbox, Grid, and media queries in both personal and professional projects."
     },
     "sass": {
       "name": "SASS",
       "icon": ["fab", "sass"],
-      "color": "#CD6799"
+      "color": "#CD6799",
+      "experience": "Used SASS extensively with features like variables, mixins, partials, and nesting. Applied BEM methodology and structured styles using scalable patterns in both personal and professional projects."
     },
     "js": {
       "name": "JavaScript",
       "icon": ["fab", "square-js"],
-      "color": "#f7df1e"
+      "color": "#f7df1e",
+      "experience": "Used JavaScript extensively with frameworks like Angular, Vue, and React, as well as in Node.js for API development. Proficient in ES6+ features and comfortable with direct DOM manipulation when needed, across both personal and professional projects."
     },
     "vue": {
       "name": "Vue",
       "icon": ["fab", "vuejs"],
-      "color": "#42b883"
+      "color": "#42b883",
+      "experience": "Built full-featured apps and reusable components using Vue. Experienced with Vue Router, Vuex/Pinia, and the Composition API in both personal and professional projects."
     },
     "nuxt": {
       "name": "Nuxt.js",
       "img": "nuxt.png",
-      "color": "#41b883"
+      "color": "#41b883",
+      "experience": ""
     },
     "figma": {
       "name": "Figma",
       "icon": ["fab", "figma"],
-      "color": "rgba(128, 128, 128, 0.5)"
+      "color": "rgba(128, 128, 128, 0.5)",
+      "experience": "Used Figma both for design and developer handoff. Created custom UI views and implemented them with pixel-perfect HTML and CSS. Applied in both personal and professional projects for consistent design execution."
     },
     "angular": {
       "name": "Angular",
       "icon": ["fab", "angular"],
-      "color": "#a6120d"
+      "color": "#a6120d",
+      "experience": "Developed Grafana-like dashboards, admin panels, and web apps using Angular. Experienced with Angular CLI, routing, reactive forms, and services in both personal and professional projects."
     },
     "bootstrap": {
       "name": "Bootstrap",
       "icon": ["fab", "bootstrap"],
-      "color": "#563d7c"
+      "color": "#563d7c",
+      "experience": "Used Bootstrap for layouts, UI components, and utility classes. Customized styles with SASS and overrides to fit design requirements in both personal and professional projects."
     },
     "laravel": {
       "name": "Laravel",
       "icon": ["fab", "laravel"],
-      "color": "#f23c30"
+      "color": "#f23c30",
+      "experience": "Built web applications using Laravel in professional settings. Utilized core features like Eloquent ORM and routing to manage backend logic and database interactions efficiently."
     },
     "tailwind": {
       "name": "Tailwind",
       "img": "tailwind.png",
-      "color": "#0ea5e9"
+      "color": "#0ea5e9",
+      "experience": "Used Tailwind CSS in both personal and professional projects for rapid prototyping and full UI development. Followed a utility-first approach and created reusable UI components with custom styling and configurations."
     }
   }
 }

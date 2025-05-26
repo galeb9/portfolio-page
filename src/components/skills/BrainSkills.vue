@@ -1,13 +1,33 @@
 <template>
-  <BaseContainer id="skills" :title="data.title">
+  <BaseContainer id="skills" :title="data.title" ref="skillsSection">
     <div class="brain-skills__container">
       <div class="brain">
         <div class="brain-skills">
-          <BrainPart class="left-part floating" :skills="leftSkills" />
+          <BrainPart
+            class="left-part floating"
+            :skills="leftSkills"
+            @select-skill="handleSkill"
+          />
+          <transition name="fade-in" mode="out-in">
+            <div
+              class="brain-skills__info"
+              v-if="selectedSkill"
+              :key="selectedSkill.name"
+            >
+              <font-awesome-icon
+                v-if="selectedSkill.icon"
+                :icon="selectedSkill.icon"
+              />
+              <b>{{ selectedSkill.name }}</b>
+              <p>{{ selectedSkill.experience }}</p>
+            </div>
+          </transition>
+
           <BrainPart
             class="right-part floating"
             side="right"
             :skills="rightSkills"
+            @select-skill="handleSkill"
           />
         </div>
       </div>
@@ -25,6 +45,12 @@ export default {
   components: {
     BrainPart,
   },
+  data() {
+    return {
+      selectedSkill: null,
+      observer: null,
+    };
+  },
   props: {
     data: { type: Object, default: () => {} },
   },
@@ -40,6 +66,12 @@ export default {
     buildBrainPart(arr) {
       return arr.map((skill) => this.$options.skills[skill]);
     },
+    handleSkill(skill) {
+      this.selectedSkill = skill;
+    },
+    // resetSelectedSkill() {
+    //   this.selectedSkill = null;
+    // },
   },
 };
 </script>
@@ -62,6 +94,23 @@ export default {
       gap: 30px;
       .right-part {
         animation-delay: 0.4s !important;
+      }
+      .brain-skills__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: 36px;
+        }
+        b {
+          margin: 12px 0;
+        }
+        p {
+          max-width: 260px;
+          text-align: center;
+          line-height: 24px;
+        }
       }
     }
   }

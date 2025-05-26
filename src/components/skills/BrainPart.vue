@@ -2,7 +2,11 @@
   <div :class="['brain-part', side + '-side']">
     <div class="brain-part__skill-container">
       <div class="brain-part__skill-single">
-        <SkillItem :side="side" :item="skills[0]" />
+        <SkillItem
+          :side="side"
+          :item="skills[0]"
+          @click="handleClick(skills[0])"
+        />
       </div>
       <div class="brain-part__skills">
         <SkillItem
@@ -10,6 +14,7 @@
           :key="index + 'A'"
           :item="item"
           :side="side"
+          @click="handleClick(item)"
         />
       </div>
     </div>
@@ -26,6 +31,8 @@ export default {
   data() {
     return {
       skillsArray: [],
+      choosenSkill: null,
+      selectedSkill: null,
     };
   },
   props: {
@@ -37,6 +44,9 @@ export default {
       arr = [...this.skills];
       arr.shift();
       return arr;
+    },
+    handleClick(item) {
+      this.$emit("select-skill", item);
     },
   },
   created() {
