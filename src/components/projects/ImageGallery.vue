@@ -1,7 +1,10 @@
 <template>
   <div class="image-gallery">
-    <!-- <div v-if="!images">Loading...</div> -->
-    <carousel :items-to-show="1" :breakpoints="breakpoints">
+    <carousel
+      :items-to-show="1"
+      breakpoint-mode="carousel"
+      :breakpoints="breakpoints"
+    >
       <slide v-for="(img, index) in images" :key="index">
         <img
           :src="require('@/assets/images/' + imagePath + img)"
@@ -20,7 +23,6 @@
 </template>
 
 <script>
-// https://github.com/ismail9k/vue3-carousel
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
@@ -35,16 +37,19 @@ export default {
   data() {
     return {
       breakpoints: {
-        // 700px and up
         700: {
-          itemsToShow: this.images.length >= 3 ? 3 : 1,
+          itemsToShow: 2,
           snapAlign: "center",
+        },
+        1000: {
+          itemsToShow: 3,
+          snapAlign: "start",
         },
       },
     };
   },
   props: {
-    images: { type: Array, default: () => {} },
+    images: { type: Array, default: () => [] },
     imagePath: { type: String, default: "" },
     mobileType: { type: Boolean, default: true }, // desktop -> false
   },
@@ -59,7 +64,6 @@ export default {
       max-width: 90% !important;
     }
   }
-  // carousel config
   .carousel__pagination {
     margin: 40px 0;
   }
