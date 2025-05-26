@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "<web-developer>",
-    "text": "I am a programmer with a passion for web development and various programming challenges.\n\nAlways on the lookout for new technologies, I am dedicated to enhancing my skills and continually striving for mastery on my journey.",
+    "text": "I am a programmer with a passion for web development and tackling diverse programming challenges.\n\nAlways eager to explore new technologies, I’m committed to improving my skills and continually striving for mastery in everything I build.",
     "img": "profile/profile-07.jpg",
     "skills": ["angular", "sass", "python"],
     "btn": "Get in touch",
