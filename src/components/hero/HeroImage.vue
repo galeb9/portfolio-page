@@ -8,7 +8,9 @@
       />
       <div class="tag xp-tag">Experience: 2 years</div>
       <div class="tag name-tag">Matej Grimšič</div>
-      <SkillsRow class="hero-skills" :skills="skills" isColumn />
+      <a href="#skills">
+        <SkillsRow class="hero-skills" :skills="skills" isColumn />
+      </a>
     </div>
   </div>
 </template>
