@@ -1,0 +1,30 @@
+{
+  "projects": {
+    "title": "<projects>",
+    "list": [
+      {
+        "id": 5,
+        "title": "Bucket storage",
+        "img": "bucket-storage/bucket-storage-bg.png",
+        "text": "A front-end project with mock json server and use of bootstrap.",
+        "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
+        "github": "https://github.com/galeb9/bucket-storage",
+        "description": "A front-end project with mock json server and use of bootstrap. \n\nYou can create, delete buckets and add files to them. It is using a mock JSON server for http calls.",
+        "type": "app"
+      },
+      {
+        "id": 6,
+        "title": "Cinema scroll",
+        "img": "cinema/cinema-logo.png",
+        "text": "A front-end project where I implement infinite scroll for movies.",
+        "tech": ["Vue", "Sass", "TMDBApi"],
+        "github": "https://github.com/galeb9/moviesTMDB",
+        "description": "A front-end project where I implement infinite scroll for movies. \n\nThis was a project where I was given a design and did to pixel perfect perfection.",
+        "imagePath": "cinema/",
+        "imagesPerRow": 2,
+        "images": ["pic1.png", "pic2.png"],
+        "type": "other"
+      }
+    ]
+  }
+}

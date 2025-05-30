@@ -50,12 +50,12 @@
         "id": 1,
         "title": "Greek Geek",
         "img": "greek-geek/greek-geek.png",
-        "text": "An app to inspire users to do pushups anywhere and track their progress from their phone.",
+        "text": "A gamified fitness tracker that motivates users to do pushups and compete with friends.",
+        "description": "Greek Geek is a mobile-first fitness app that encourages users to stay active by tracking pushups and joining friendly competitions.\n\nUsers can set daily goals, view progress, and compete in 'arenas' with friends. The app includes pushup history, performance charts, and notification features.\n\nI designed the UI in Figma and developed the frontend using Vue, with Firebase handling authentication, data storage, and deployment.",
         "tech": ["Vue", "Firebase", "Sass", "Figma"],
         "github": "https://github.com/galeb9/GreekGeek",
         "liveAt": "https://pushups-150a1.web.app",
         "video": "greek-geek.mp4",
-        "description": "This app is designed to inspire users to do pushups anywhere.\n\nUsers can set daily goals and track their progress throughout the day. Additionally, they can add friends and create arenas (groups) to compete for the highest number of pushups in a day. The app also provides a detailed pushup history and monthly status overview.\n\nTo access these features, users are required to log in or register, ensuring personalized tracking and motivation for achieving fitness goals.",
         "imagePath": "greek-geek/",
         "images": [
           "register.jpg",
@@ -75,15 +75,30 @@
         "type": "app"
       },
       {
+        "id": 4,
+        "title": "Realms World",
+        "img": "realms-world/realms-logo.png",
+        "text": "Contributed React components to Realms.World, a fully on-chain game ecosystem built on Starknet.",
+        "tech": ["React", "TypeScript", "Tailwind"],
+        "github": "",
+        "liveAt": "https://realms.world",
+        "video": "",
+        "description": "Worked on the frontend of Realms.World, a decentralized gaming platform powered by the Starknet Layer 2 blockchain. My contributions focused on building React components and pages, including a promotional landing page for 'Blob Arena'—a game in the Realms ecosystem. \n\nThis page was promoted via a QR code displayed in the octagon during a live MMA Knight fight. In a later video, Joe Rogan discussed the event (find the link bellow), and in the background, the Blob Arena character symbol and QR code were clearly visible. \n\nThe platform also features strategy games like Eternum, where players interact with AI agents and blockchain-based resources using the $LORDS token.",
+        "imagePath": "",
+        "images": [],
+        "type": "web"
+      },
+
+      {
         "id": 2,
         "title": "Food order app",
         "img": "order-food/order-food.jpg",
-        "text": "A front-end app where you can order food online. For mobile only.",
+        "text": "A mobile-focused food ordering UI built from Figma designs.",
+        "description": "This frontend-only project features a sleek food ordering interface tailored for mobile devices. I was provided with a UI mockup and replicated it with pixel-perfect accuracy using Vue and SCSS.\n\nThe app simulates a real ordering experience, with interactive item selection, error handling, and visual order confirmations. It highlights my ability to interpret designs and implement responsive user interfaces.",
         "tech": ["Vue", "Sass", "Figma"],
         "github": "https://github.com/galeb9/web-food-app",
         "liveAt": "https://order-food-app-f84eb.web.app",
         "video": "order-food.mp4",
-        "description": "This front-end project involved implementing an infinite scroll feature for a movie listing. \n\nI was provided with a design and aimed to replicate it with pixel-perfect accuracy.\n\nAs a small project, it highlights my ability to faithfully translate design specifications into a working web interface.",
         "imagePath": "order-food/",
         "images": [
           "welcome.jpg",
@@ -100,67 +115,46 @@
         "id": 3,
         "title": "Portfolio page",
         "img": "portfolio-project-bg.png",
-        "text": "My portfolio page you are currently viewing.",
-        "description": "This is the current website you are viewing. \n\nIt was conceptualized with custom designs crafted in Figma and brought to life using Vue.js 3 and SCSS. \n\nThe site is hosted on Firebase, showcasing my skill in front-end development and responsive design implementation.",
+        "text": "A responsive personal portfolio showcasing projects and frontend skills.",
+        "description": "This website serves as my personal portfolio. I designed it in Figma and developed it using Vue 3 and SCSS. It features animations, a categorized project list, and mobile-friendly design.\n\nThe site is hosted on Firebase and reflects my strengths in component-based architecture, visual design, and responsive layout implementation.",
         "tech": ["Vue", "Sass", "Figma"],
         "liveAt": "https://matej-grimsic.web.app/home",
         "github": "https://github.com/galeb9/portfolio-page",
         "type": "website"
       },
-
-      {
-        "id": 4,
-        "title": "Cinema scroll",
-        "img": "cinema/cinema-logo.png",
-        "text": "A front-end project where I implement infinite scroll for movies.",
-        "tech": ["Vue", "Sass", "TMDBApi"],
-        "github": "https://github.com/galeb9/moviesTMDB",
-        "description": "A front-end project where I implement infinite scroll for movies. \n\nThis was a project where I was given a design and did to pixel perfect perfection.",
-        "imagePath": "cinema/",
-        "mobileType": false,
-        "images": ["pic1.png", "pic2.png"],
-        "type": "other"
-      },
       {
         "id": 5,
         "title": "Hudlajf website",
         "img": "hudlajf/hudlajf-logo.png",
-        "text": "A website made for a company where I did my internship.",
+        "text": "A Nuxt-based marketing website developed during my internship.",
+        "description": "This project was completed during my internship at Hudlajf, where I collaborated with a designer, marketing team, and tech lead to build a clean, conversion-oriented website.\n\nI used Nuxt 2 to implement the frontend, ensuring fast performance and smooth integration of design and content. This experience helped me grow in team collaboration, communication, and frontend project ownership.",
         "tech": ["Vue", "Nuxt", "Sass"],
         "liveAt": "https://www.hudlajf.com/sl/",
-        "description": "This project was completed during my tenure at my first company, where I closely collaborated with the designer, marketing team, and tech leader to create a webpage.\n\nI utilized Nuxt2 to develop the site, ensuring seamless integration of design and functionality.\n\nThis experience allowed me to refine my skills in teamwork, frontend development, and project coordination, demonstrating my ability to contribute effectively in a collaborative environment.",
-        "type": "website"
+        "type": "website",
+        "images": []
       },
       {
         "id": 6,
         "title": "Gabi tvoja lepotilnica",
         "img": "gabi-website/nails-bg2.png",
-        "text": "A website for a nails saloon, I am making for a friend.",
+        "text": "A personal website for a local nail salon, built in Vue and Nuxt.",
+        "description": "I designed and developed this website for a friend's nail salon. After gathering requirements and creating the UI in Figma, I built the site using Nuxt 2 and styled it with SCSS.\n\nThe site is responsive and highlights the salon’s services in a clean and modern layout. This project shows my ability to understand client needs and deliver fully customized web solutions.",
         "tech": ["Vue", "Sass", "Figma"],
         "liveAt": "https://gabi.si",
-        "description": "This website project is for a friend's nail salon.\n\nI took the client's requests and translated them into a detailed design using Figma.\n\nNow, I am in the final stages of coding the website with Nuxt2 and styling it with SASS.\n\nThis project demonstrates my ability to understand client needs, create visually appealing designs, and implement them using modern web development frameworks.",
-        "type": "website"
-      },
-      {
-        "id": 7,
-        "title": "Bucket storage",
-        "img": "bucket-storage/bucket-storage-bg.png",
-        "text": "A front-end project with mock json server and use of bootstrap.",
-        "tech": ["Angular", "Bootstrap", "Sass", "JSON-server"],
-        "github": "https://github.com/galeb9/bucket-storage",
-        "description": "This front-end project, built with Angular and styled using Bootstrap CSS, uses a mock JSON server for HTTP calls. \n\nUsers can create and delete buckets and add files to them. This project demonstrates my skills in dynamic data handling and building interactive web applications.",
-        "type": "app"
+        "type": "website",
+        "images": []
       },
       {
         "id": 8,
         "title": "Panna cakes",
         "img": "panna-cakes/panna-logo.png",
-        "text": "A Next.js (React) website for a cake business, featuring an option to send emails.",
+        "text": "A bakery website built in Next.js with integrated email order requests.",
+        "description": "Panna Cakes is a responsive bakery website developed using Next.js for a friend’s cake business. The site allows customers to browse cake options and send order inquiries via email.\n\nI used React for interactive elements, Bootstrap for layout, and Sass for styling. This project served as a practical introduction to Next.js and demonstrated my ability to build functional business websites using React.",
         "tech": ["React", "Bootstrap", "Sass"],
         "liveAt": "https://panna-cakes.vercel.app",
         "github": "https://github.com/galeb9/panna-torte",
-        "description": "This project is a website developed using Next.js (React) for a friend's cake baking business.\n\nThe website features a convenient email-based system for customers to submit cake requests, improving communication and order management.\n\nImplemented with React for interactive features, Bootstrap for responsive design, and Sass for styling, this project serves as a practical learning experience in Next.js and React development.",
-        "type": "website"
+        "type": "website",
+        "images": []
       }
     ]
   },

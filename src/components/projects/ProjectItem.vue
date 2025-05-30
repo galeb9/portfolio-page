@@ -2,10 +2,11 @@
   <div class="project-item">
     <div
       class="project-item__main"
-      @click="!hideOnDetail ? navigateToProject() : null"
-      ref="projectMain"
+      :class="{ 'is-clickable': !hideOnDetail }"
+      @click="handleClick"
     >
       <img
+        v-if="item.img"
         :src="require('@/assets/images/' + item.img)"
         class="project-item__img"
         alt="Project image"
@@ -16,17 +17,13 @@
       </div>
     </div>
 
-    <div v-if="item.tech.length" class="project-item__tech glass-bg">
-      <p
-        class="project-item__tech-item"
-        v-for="(el, index) in item.tech"
-        :key="index"
-      >
-        {{ "#" + el }}
+    <div v-if="item.tech?.length" class="project-item__tech glass-bg">
+      <p v-for="tech in item.tech" :key="tech" class="project-item__tech-item">
+        {{ "#" + tech }}
       </p>
     </div>
 
-    <div v-if="linksVisible" class="project-item__links-container glass-bg">
+    <div v-if="hasLinks" class="project-item__links-container glass-bg">
       <div class="project-item__links">
         <a
           v-if="item.github"
@@ -53,12 +50,11 @@
         v-if="item.description && !hideOnDetail"
         :to="`/projects/${item.id}`"
         class="view-more project-item__links-item open-popup__btn"
-        ref="openPopup"
       >
         View more
         <font-awesome-icon
-          class="project-link__icon"
           :icon="['fa', 'arrow-right-long']"
+          class="project-link__icon"
         />
       </router-link>
     </div>
@@ -69,25 +65,35 @@
 export default {
   name: "ProjectItem",
   props: {
-    item: { type: Object, default: () => {} },
-    hideOnDetail: { type: Boolean, default: false },
+    item: {
+      type: Object,
+      required: true,
+      default: () => ({}),
+    },
+    hideOnDetail: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
-    linksVisible() {
-      return this.item.github || this.item.liveAt || this.item.description;
+    hasLinks() {
+      return Boolean(this.item.github || this.item.liveAt);
     },
   },
   methods: {
-    navigateToProject() {
-      this.$router.push(`/projects/${this.item.id}`);
+    handleClick() {
+      if (!this.hideOnDetail) {
+        this.$router.push(`/projects/${this.item.id}`);
+      }
     },
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-item {
   max-width: 270px;
+
   &:hover .view-more {
     color: $secondary !important;
   }
@@ -96,34 +102,40 @@ export default {
     position: relative;
     margin-bottom: 8px;
     transition: $transition;
-    cursor: pointer;
+
+    &.is-clickable {
+      cursor: pointer;
+    }
 
     .project-item__img {
       width: 100%;
       border-radius: $radius;
     }
+
     &-info {
-      border-radius: 0 0 $radius $radius;
-      width: 100%;
       position: absolute;
       bottom: -10px;
       left: 0;
       right: 0;
       padding: 10px 20px;
-      color: $lightText;
-      transition: $transition;
+      width: 100%;
       height: 100px;
+      color: $lightText;
+      border-radius: 0 0 $radius $radius;
+      transition: $transition;
+
       .hidden-text {
-        height: 0;
         display: none;
+        height: 0;
         opacity: 0;
         transition: $transition;
       }
+
       &:hover {
         height: 100%;
         .hidden-text {
-          height: max-content;
           display: block;
+          height: max-content;
           opacity: 1;
         }
       }
@@ -131,15 +143,17 @@ export default {
   }
 
   &__tech {
-    padding: 10px 20px;
-    border-radius: $radius $radius;
-    font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: $radius;
+
     &-item {
       opacity: 0.7;
       transition: $transition;
+
       &:hover {
         opacity: 1;
       }
@@ -147,39 +161,43 @@ export default {
   }
 
   &__links-container {
-    padding: 10px 20px;
-    border-radius: $radius $radius;
     display: flex;
+    padding: 10px 20px;
+    border-radius: $radius;
+
+    .project-item__links-item {
+      cursor: pointer;
+
+      .project-link__icon {
+        font-size: 20px;
+        transition: $transition;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+      & + .project-item__links-item {
+        margin-left: 16px;
+      }
+    }
+
     .view-more {
       margin-left: auto;
       display: flex;
       gap: 8px;
       transition: $transition;
+
       &:hover {
         color: $secondary;
+
         .project-link__icon {
           color: $secondary;
         }
       }
     }
+  }
 
-    .project-item__links-item {
-      cursor: pointer;
-      .project-link__icon {
-        font-size: 20px;
-        transition: $transition;
-        &:hover {
-          color: $secondary;
-        }
-      }
-    }
-    .project-item__links-item + .project-item__links-item {
-      margin-left: 16px;
-    }
-  }
-  .view-more__color {
-    color: $secondary !important;
-  }
   @media only screen and (max-width: 768px) {
     max-width: 350px;
     min-width: 220px;
